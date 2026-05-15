@@ -35,6 +35,6 @@ jobs:
         run: |
           git config user.name "yaain-bot"
           git config user.email "actions@github.com"
-          git add feed.xml yaain/seen.json
+          git add feed.xml yaain/seen.json ratings.json blocklist.json
           git diff --cached --quiet || git commit -m "chore: daily feed update $(date -u +%Y-%m-%d)"
           git push
