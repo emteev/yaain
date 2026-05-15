@@ -148,7 +148,15 @@ def fetch_scrape(source: dict) -> list[dict]:
                 continue
             seen_urls.add(href)
 
-            title = a.get_text(strip=True)
+            # Prefer a heading element inside the link for a clean title.
+            h = a.find(["h1", "h2", "h3", "h4", "h5", "h6"])
+            if h and h.get_text(strip=True):
+                title = h.get_text(strip=True)
+            else:
+                # Use space separator so concatenated chunks don't smash together.
+                title = a.get_text(separator=" ", strip=True)
+                if len(title) > 140:
+                    title = title[:140].rsplit(" ", 1)[0] + "…"
             if len(title) < 10:
                 continue  # skip nav/icon links
 
