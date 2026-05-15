@@ -1,70 +1,73 @@
 """
-filter.py — Claude-powered relevance filter.
+filter.py — Claude-powered topic gate.
 
-For each candidate item:
-  1. If it has an extracted summary (from RSS), use that + ask Claude for include/why only
-  2. If no summary, ask Claude for include/summary/why
+For each candidate item, asks Claude one question: is this specifically about
+the Claude family of products? Editorial quality (depth, novelty, hype) is
+judged downstream by the human ranker (rank.html), so this filter deliberately
+does not gatekeep on those dimensions.
 
-Returns only items that pass, each augmented with:
-  summary    : str   (extracted from source or Claude-generated)
-  why        : str   (Claude-generated)
-  author     : str   (preserved from source)
-  image      : str   (preserved from source)
+For each passing item:
+  summary    : str   (extracted from source if present, else Claude-generated)
+  why        : str   (Claude-generated, 1 sentence)
 """
 
 import json
 import anthropic
 
-SYSTEM_PROMPT_WITH_SUMMARY = """You are a strict content filter for a professional RSS feed.
+SYSTEM_PROMPT_WITH_SUMMARY = """You are a topic gate for an RSS feed about Anthropic's Claude products.
 
-The feed covers ONLY the Claude family of AI products made by Anthropic:
-- Claude models (claude.ai, API, mobile)
-- Claude Code (the CLI/agentic coding tool)
-- Cowork (the desktop automation tool)
-- Anthropic's research directly related to Claude
-- Changes, updates, techniques, or discoveries that specifically affect how Claude tools work or can be used
+INCLUDE the item if it is specifically about any of:
+- Claude models (claude.ai, the API, the mobile app)
+- Claude Code (the CLI / agentic coding tool)
+- Cowork (Anthropic's desktop automation tool)
+- The Anthropic API, SDKs, or developer platform
+- Anthropic research, papers, or company news
+- A direct, useful comparison between Claude and another model
 
-You are NOT interested in:
-- General AI news not specific to Claude
-- Other AI products (GPT, Gemini, Llama, Mistral, etc.) unless directly compared to Claude in a useful way
-- Opinion pieces without concrete Claude-specific information
-- Hype, announcements of announcements, or vague "AI is changing everything" content
-- Basic how-to content aimed at beginners (the audience is professional practitioners)
+EXCLUDE only:
+- General AI / industry news that does not mention Claude or Anthropic
+- Posts about other models (GPT, Gemini, Llama, etc.) with no Claude angle
 
-For each item, return a JSON object with this exact shape:
+Do NOT exclude for being "basic", "opinion", "community discussion", "how-to",
+or "not substantive enough". A human will rate everything that passes; this
+gate's only job is on-topic vs off-topic.
+
+Return a JSON object with this exact shape:
 {
   "include": true | false,
-  "why": "1 sentence. What this means for someone using Claude tools professionally."
+  "why": "1 sentence. What this means for someone using Claude tools."
 }
 
 If include is false, why should be an empty string.
-Return ONLY the JSON object. No preamble, no explanation."""
+Return ONLY the JSON object."""
 
-SYSTEM_PROMPT_NO_SUMMARY = """You are a strict content filter for a professional RSS feed.
+SYSTEM_PROMPT_NO_SUMMARY = """You are a topic gate for an RSS feed about Anthropic's Claude products.
 
-The feed covers ONLY the Claude family of AI products made by Anthropic:
-- Claude models (claude.ai, API, mobile)
-- Claude Code (the CLI/agentic coding tool)
-- Cowork (the desktop automation tool)
-- Anthropic's research directly related to Claude
-- Changes, updates, techniques, or discoveries that specifically affect how Claude tools work or can be used
+INCLUDE the item if it is specifically about any of:
+- Claude models (claude.ai, the API, the mobile app)
+- Claude Code (the CLI / agentic coding tool)
+- Cowork (Anthropic's desktop automation tool)
+- The Anthropic API, SDKs, or developer platform
+- Anthropic research, papers, or company news
+- A direct, useful comparison between Claude and another model
 
-You are NOT interested in:
-- General AI news not specific to Claude
-- Other AI products (GPT, Gemini, Llama, Mistral, etc.) unless directly compared to Claude in a useful way
-- Opinion pieces without concrete Claude-specific information
-- Hype, announcements of announcements, or vague "AI is changing everything" content
-- Basic how-to content aimed at beginners (the audience is professional practitioners)
+EXCLUDE only:
+- General AI / industry news that does not mention Claude or Anthropic
+- Posts about other models (GPT, Gemini, Llama, etc.) with no Claude angle
 
-For each item, return a JSON object with this exact shape:
+Do NOT exclude for being "basic", "opinion", "community discussion", "how-to",
+or "not substantive enough". A human will rate everything that passes; this
+gate's only job is on-topic vs off-topic.
+
+Return a JSON object with this exact shape:
 {
   "include": true | false,
-  "summary": "2 sentences. What happened or what was discovered. Specific, factual, no filler.",
-  "why": "1 sentence. What this means for someone using Claude tools professionally."
+  "summary": "2 sentences. What happened or what was discovered. Factual, no filler.",
+  "why": "1 sentence. What this means for someone using Claude tools."
 }
 
 If include is false, summary and why should be empty strings.
-Return ONLY the JSON object. No preamble, no explanation."""
+Return ONLY the JSON object."""
 
 
 def filter_items(items: list[dict], api_key: str) -> list[dict]:
@@ -89,7 +92,6 @@ Title: {title}
 Body excerpt:
 {body[:1500] if body else "(no body text available)"}"""
 
-        # Choose prompt based on whether we have an extracted summary
         has_summary = bool(extracted_summary)
         system_prompt = SYSTEM_PROMPT_WITH_SUMMARY if has_summary else SYSTEM_PROMPT_NO_SUMMARY
 
@@ -102,7 +104,6 @@ Body excerpt:
             )
             raw = response.content[0].text.strip()
 
-            # Strip markdown code fences if present
             if raw.startswith("```"):
                 raw = raw.split("```")[1]
                 if raw.startswith("json"):
@@ -112,15 +113,12 @@ Body excerpt:
             result = json.loads(raw)
 
             if result.get("include"):
-                # Use extracted summary if available, otherwise use Claude's
                 if has_summary:
                     item["summary"] = extracted_summary
                 else:
                     item["summary"] = result.get("summary", "")
-                
+
                 item["why"] = result.get("why", "")
-                # Preserve author and image from source
-                # Clean internal fields
                 item.pop("_source_notes", None)
                 item.pop("body", None)
                 passed.append(item)
