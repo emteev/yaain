@@ -9,6 +9,7 @@ Optional env vars:
     STATE_PATH  : path to seen.json (default: ./seen.json)
 """
 
+import json
 import os
 import sys
 
@@ -33,6 +34,10 @@ def main():
         "STATE_PATH",
         os.path.join(os.path.dirname(__file__), "seen.json"),
     )
+    blocklist_path = os.environ.get(
+        "BLOCKLIST_PATH",
+        os.path.join(os.path.dirname(__file__), "..", "blocklist.json"),
+    )
 
     print("── YAAIN ─────────────────────────────────────────")
     print("Step 1: Fetching sources...")
@@ -53,8 +58,17 @@ def main():
     print(f"  {len(passed)} items passed the filter")
 
     print("Step 4: Updating feed...")
+    blocklist = set()
+    if os.path.exists(blocklist_path):
+        try:
+            with open(blocklist_path) as f:
+                blocklist = set(json.load(f))
+            if blocklist:
+                print(f"  Blocklist: {len(blocklist)} url(s) excluded")
+        except Exception as e:
+            print(f"  [blocklist warning] {e}")
     existing = load_existing_items(feed_path)
-    build_feed(passed, existing, feed_path)
+    build_feed(passed, existing, feed_path, blocklist)
 
     print("Step 5: Saving state...")
     state_module.mark_seen(new_candidates, seen)
