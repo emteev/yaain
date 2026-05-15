@@ -1,12 +1,12 @@
 """
 filter.py — Claude-powered relevance filter.
 
-For each candidate item, asks Claude:
-  - Is this specifically about the Claude family of AI products?
-  - If yes: produce a 2-sentence summary + 1-sentence "why it matters"
+For each candidate item:
+  1. If it has an extracted summary (from RSS), use that + ask Claude for include/why only
+  2. If no summary, ask Claude for include/summary/why
 
 Returns only items that pass, each augmented with:
-  summary    : str   (Claude-generated)
+  summary    : str   (extracted from source or Claude-generated)
   why        : str   (Claude-generated)
   author     : str   (preserved from source)
   image      : str   (preserved from source)
@@ -15,7 +15,32 @@ Returns only items that pass, each augmented with:
 import json
 import anthropic
 
-SYSTEM_PROMPT = """You are a strict content filter for a professional RSS feed.
+SYSTEM_PROMPT_WITH_SUMMARY = """You are a strict content filter for a professional RSS feed.
+
+The feed covers ONLY the Claude family of AI products made by Anthropic:
+- Claude models (claude.ai, API, mobile)
+- Claude Code (the CLI/agentic coding tool)
+- Cowork (the desktop automation tool)
+- Anthropic's research directly related to Claude
+- Changes, updates, techniques, or discoveries that specifically affect how Claude tools work or can be used
+
+You are NOT interested in:
+- General AI news not specific to Claude
+- Other AI products (GPT, Gemini, Llama, Mistral, etc.) unless directly compared to Claude in a useful way
+- Opinion pieces without concrete Claude-specific information
+- Hype, announcements of announcements, or vague "AI is changing everything" content
+- Basic how-to content aimed at beginners (the audience is professional practitioners)
+
+For each item, return a JSON object with this exact shape:
+{
+  "include": true | false,
+  "why": "1 sentence. What this means for someone using Claude tools professionally."
+}
+
+If include is false, why should be an empty string.
+Return ONLY the JSON object. No preamble, no explanation."""
+
+SYSTEM_PROMPT_NO_SUMMARY = """You are a strict content filter for a professional RSS feed.
 
 The feed covers ONLY the Claude family of AI products made by Anthropic:
 - Claude models (claude.ai, API, mobile)
@@ -51,6 +76,7 @@ def filter_items(items: list[dict], api_key: str) -> list[dict]:
         body = item.get("body", "").strip()
         source = item.get("source_name", "")
         notes = item.get("_source_notes", "")
+        extracted_summary = item.get("summary", "").strip()
 
         if not title:
             continue
@@ -63,11 +89,15 @@ Title: {title}
 Body excerpt:
 {body[:1500] if body else "(no body text available)"}"""
 
+        # Choose prompt based on whether we have an extracted summary
+        has_summary = bool(extracted_summary)
+        system_prompt = SYSTEM_PROMPT_WITH_SUMMARY if has_summary else SYSTEM_PROMPT_NO_SUMMARY
+
         try:
             response = client.messages.create(
                 model="claude-sonnet-4-6",
                 max_tokens=300,
-                system=SYSTEM_PROMPT,
+                system=system_prompt,
                 messages=[{"role": "user", "content": user_content}],
             )
             raw = response.content[0].text.strip()
@@ -82,10 +112,14 @@ Body excerpt:
             result = json.loads(raw)
 
             if result.get("include"):
-                item["summary"] = result.get("summary", "")
+                # Use extracted summary if available, otherwise use Claude's
+                if has_summary:
+                    item["summary"] = extracted_summary
+                else:
+                    item["summary"] = result.get("summary", "")
+                
                 item["why"] = result.get("why", "")
                 # Preserve author and image from source
-                # (already in item, just make sure they're not removed)
                 # Clean internal fields
                 item.pop("_source_notes", None)
                 item.pop("body", None)
