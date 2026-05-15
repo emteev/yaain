@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YAAIN — Rank</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background: #f5f4f0;
+    color: #1a1a18;
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  a:hover { text-decoration: underline; color: #534AB7; }
+
+  .page {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+
+  /* Masthead */
+  .masthead {
+    border-bottom: 1.5px solid #1a1a18;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .masthead h1 {
+    font-size: 22px; font-weight: 700; letter-spacing: -0.3px;
+  }
+  .masthead .right { display: flex; align-items: center; gap: 12px; font-size: 11px; color: #888780; }
+  .masthead a { color: #534AB7; }
+
+  .status-pill {
+    font-size: 11px; font-weight: 600; padding: 3px 9px;
+    border-radius: 100px; letter-spacing: 0.02em;
+  }
+  .status-idle    { background: #ebe9df; color: #5f5e5a; }
+  .status-saving  { background: #FAEEDA; color: #633806; }
+  .status-saved   { background: #E1F5EE; color: #085041; }
+  .status-error   { background: #FBEAF0; color: #72243E; }
+
+  /* Pills */
+  .source-pill {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.03em;
+    padding: 2px 7px; border-radius: 100px; white-space: nowrap;
+  }
+  .pill-latent    { background: #EEEDFE; color: #3C3489; }
+  .pill-anthropic { background: #E1F5EE; color: #085041; }
+  .pill-release   { background: #FAEEDA; color: #633806; }
+  .pill-changelog { background: #E6F1FB; color: #0C447C; }
+  .pill-code      { background: #FAECE7; color: #712B13; }
+  .pill-external  { background: #F1EFE8; color: #444441; }
+  .pill-news      { background: #FBEAF0; color: #72243E; }
+
+  /* Items */
+  .item {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 1.25rem;
+    padding: 1rem 0;
+    border-bottom: 0.5px solid #d3d1c7;
+    align-items: start;
+  }
+  .item:last-child { border-bottom: none; }
+  .item-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 0.35rem; flex-wrap: wrap; }
+  .item-date { font-size: 11px; color: #888780; }
+  .item-title {
+    font-size: 15px; font-weight: 600; line-height: 1.35;
+    margin-bottom: 0.3rem;
+  }
+  .item-desc { font-size: 12.5px; color: #5f5e5a; }
+
+  /* Slider block */
+  .rate {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .rate-label {
+    font-size: 10px; font-weight: 700; letter-spacing: 0.1em;
+    text-transform: uppercase; color: #888780;
+    min-width: 28px;
+  }
+  .rate-value {
+    font-size: 18px; font-weight: 700; color: #1a1a18;
+    min-width: 18px; text-align: center;
+  }
+  .rate-value.v5 { color: #72243E; }
+  .rate-value.v0 { color: #c9c7bc; }
+
+  input[type=range] {
+    flex: 1;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 4px;
+    background: #d3d1c7;
+    border-radius: 2px;
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none; appearance: none;
+    width: 18px; height: 18px; border-radius: 50%;
+    background: #1a1a18; cursor: pointer;
+  }
+  input[type=range]::-moz-range-thumb {
+    width: 18px; height: 18px; border: none; border-radius: 50%;
+    background: #1a1a18; cursor: pointer;
+  }
+
+  .scale-hint {
+    margin-top: 0.4rem;
+    display: flex; justify-content: space-between;
+    font-size: 9px; color: #aaa89e; letter-spacing: 0.05em;
+  }
+
+  /* Gate */
+  .gate {
+    max-width: 380px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background: white;
+    border: 0.5px solid #d3d1c7;
+    border-radius: 6px;
+  }
+  .gate h2 { font-size: 16px; margin-bottom: 1rem; }
+  .gate label {
+    display: block;
+    font-size: 11px; font-weight: 600; letter-spacing: 0.06em;
+    text-transform: uppercase; color: #5f5e5a;
+    margin-bottom: 0.4rem; margin-top: 1rem;
+  }
+  .gate input {
+    width: 100%; padding: 0.6rem 0.75rem;
+    border: 0.5px solid #d3d1c7; border-radius: 4px;
+    font: inherit; background: #fafaf7;
+  }
+  .gate button {
+    margin-top: 1.25rem;
+    width: 100%; padding: 0.65rem;
+    background: #1a1a18; color: white;
+    border: none; border-radius: 4px;
+    font: inherit; font-weight: 600;
+    cursor: pointer;
+  }
+  .gate .help {
+    margin-top: 1rem;
+    font-size: 11px; color: #888780; line-height: 1.5;
+  }
+  .gate .err {
+    margin-top: 0.75rem;
+    font-size: 12px; color: #72243E;
+  }
+
+  .footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1.5px solid #1a1a18;
+    font-size: 11px;
+    color: #888780;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .footer button {
+    background: none; border: none; padding: 0;
+    font: inherit; color: #534AB7; cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .placeholder { padding: 4rem 0; text-align: center; color: #888780; font-size: 13px; }
+
+  @media (max-width: 720px) {
+    .item { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Gate: shown until password + PAT entered -->
+<div id="gate" class="gate" style="display:none">
+  <h2>YAAIN — Rank</h2>
+  <label for="pwd">Password</label>
+  <input id="pwd" type="password" autocomplete="off">
+  <label for="pat">GitHub fine-grained PAT</label>
+  <input id="pat" type="password" autocomplete="off" placeholder="github_pat_…">
+  <button id="unlock">Unlock</button>
+  <div class="help">
+    The PAT needs <strong>Contents: read &amp; write</strong> on the <code>emteev/yaain</code> repo only.
+    Both values are stored in your browser's localStorage — never sent anywhere except api.github.com.
+  </div>
+  <div class="err" id="gate-err" style="display:none"></div>
+</div>
+
+<!-- App -->
+<div id="app" class="page" style="display:none">
+  <div class="masthead">
+    <h1>Rank</h1>
+    <div class="right">
+      <span id="status" class="status-pill status-idle">Ready</span>
+      <a href="index.html">↗ View homepage</a>
+    </div>
+  </div>
+
+  <div id="items"><div class="placeholder">Loading…</div></div>
+
+  <div class="footer">
+    <span>0 = hidden · 1 = hero · 2 = featured · 3 = brief · 4 = bullet · 5 = delete</span>
+    <span>
+      <button id="lock">Lock</button>
+      &nbsp;·&nbsp;
+      <button id="reset-pat">Replace PAT</button>
+    </span>
+  </div>
+</div>
+
+<script>
+  // ─────────────────────────────────────────────────────────────────────
+  // CONFIG — set these once
+  // ─────────────────────────────────────────────────────────────────────
+  const REPO_OWNER = "emteev";
+  const REPO_NAME  = "yaain";
+  const BRANCH     = "main";
+
+  // SHA-256 hex of your chosen password. Generate locally with:
+  //   echo -n "yourpassword" | shasum -a 256
+  // Default below = "change-me". REPLACE BEFORE PUSHING.
+  const PASSWORD_SHA256 = "e2186dbdb1bb4193608605e84f33208765b5693b55edd4f730a719a100eeea6f";
+
+  const RATINGS_PATH   = "ratings.json";
+  const BLOCKLIST_PATH = "blocklist.json";
+  const FEED_PATH      = "feed.xml";
+
+  const COMMIT_DEBOUNCE_MS = 1000;
+
+  // Source → pill class (matches index.html)
+  const SOURCE_PILL = {
+    "Anthropic News":            "news",
+    "Anthropic Release Notes":   "release",
+    "Claude Docs Changelog":     "changelog",
+    "Claude Code Docs":          "code",
+    "Anthropic Research Blog":   "anthropic",
+    "Simon Willison's Blog":     "external",
+    "Nathan Lambert — Interconnects": "external",
+    "Latent Space":              "latent",
+    "The AI Corner":             "external",
+    "AI Maker":                  "external",
+    "r/ClaudeAI":                "external",
+    "r/ClaudeCode":              "external",
+    "r/LocalLLaMA":              "external",
+    "Hacker News":               "external",
+  };
+
+  // ─────────────────────────────────────────────────────────────────────
+  // Gate
+  // ─────────────────────────────────────────────────────────────────────
+  async function sha256Hex(s) {
+    const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(s));
+    return [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2, "0")).join("");
+  }
+
+  function show(el) { el.style.display = ""; }
+  function hide(el) { el.style.display = "none"; }
+
+  async function tryUnlock() {
+    const pwd = document.getElementById("pwd").value;
+    const pat = document.getElementById("pat").value.trim();
+    const err = document.getElementById("gate-err");
+
+    if (!pwd || !pat) { err.textContent = "Both fields required."; show(err); return; }
+    const hex = await sha256Hex(pwd);
+    if (hex !== PASSWORD_SHA256) { err.textContent = "Wrong password."; show(err); return; }
+
+    localStorage.setItem("yaain_unlock", hex);
+    localStorage.setItem("yaain_pat", pat);
+    hide(err);
+    enterApp();
+  }
+
+  function enterApp() {
+    hide(document.getElementById("gate"));
+    show(document.getElementById("app"));
+    loadAll();
+  }
+
+  document.getElementById("unlock").addEventListener("click", tryUnlock);
+  document.getElementById("pwd").addEventListener("keydown", e => { if (e.key === "Enter") tryUnlock(); });
+  document.getElementById("pat").addEventListener("keydown", e => { if (e.key === "Enter") tryUnlock(); });
+
+  document.getElementById("lock").addEventListener("click", () => {
+    localStorage.removeItem("yaain_unlock");
+    location.reload();
+  });
+  document.getElementById("reset-pat").addEventListener("click", () => {
+    localStorage.removeItem("yaain_pat");
+    location.reload();
+  });
+
+  // Auto-enter if already unlocked
+  if (localStorage.getItem("yaain_unlock") === PASSWORD_SHA256 && localStorage.getItem("yaain_pat")) {
+    enterApp();
+  } else {
+    show(document.getElementById("gate"));
+  }
+
+  // ─────────────────────────────────────────────────────────────────────
+  // GitHub API helpers
+  // ─────────────────────────────────────────────────────────────────────
+  function authHeaders() {
+    return {
+      "Authorization": "Bearer " + localStorage.getItem("yaain_pat"),
+      "Accept": "application/vnd.github+json",
+      "X-GitHub-Api-Version": "2022-11-28",
+    };
+  }
+
+  function contentsUrl(path) {
+    return `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${path}?ref=${BRANCH}`;
+  }
+
+  async function ghGetFile(path) {
+    const r = await fetch(contentsUrl(path), { headers: authHeaders(), cache: "no-store" });
+    if (r.status === 404) return { sha: null, json: null };
+    if (!r.ok) throw new Error(`GET ${path} → ${r.status}`);
+    const meta = await r.json();
+    const content = atob(meta.content.replace(/\s/g, ""));
+    let json = null;
+    try { json = JSON.parse(content); } catch {}
+    return { sha: meta.sha, json };
+  }
+
+  async function ghPutFile(path, sha, jsonValue, message) {
+    const body = {
+      message,
+      content: btoa(unescape(encodeURIComponent(JSON.stringify(jsonValue, null, 2) + "\n"))),
+      branch: BRANCH,
+    };
+    if (sha) body.sha = sha;
+    const r = await fetch(
+      `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${path}`,
+      { method: "PUT", headers: { ...authHeaders(), "Content-Type": "application/json" }, body: JSON.stringify(body) }
+    );
+    if (!r.ok) {
+      const t = await r.text();
+      throw new Error(`PUT ${path} → ${r.status}: ${t}`);
+    }
+    return (await r.json()).content.sha;
+  }
+
+  // ─────────────────────────────────────────────────────────────────────
+  // App state
+  // ─────────────────────────────────────────────────────────────────────
+  let ratings = {};      // {url: 0-5}
+  let ratingsSha = null;
+  let blocklist = [];    // [url]
+  let blocklistSha = null;
+  let ratingsDirty = false;
+  let blocklistDirty = false;
+  let commitTimer = null;
+
+  function setStatus(kind, text) {
+    const el = document.getElementById("status");
+    el.className = "status-pill status-" + kind;
+    el.textContent = text;
+  }
+
+  function scheduleCommit() {
+    setStatus("saving", "Saving…");
+    if (commitTimer) clearTimeout(commitTimer);
+    commitTimer = setTimeout(commit, COMMIT_DEBOUNCE_MS);
+  }
+
+  async function commit() {
+    try {
+      if (ratingsDirty) {
+        ratingsSha = await ghPutFile(RATINGS_PATH, ratingsSha, ratings, "rank: update ratings");
+        ratingsDirty = false;
+      }
+      if (blocklistDirty) {
+        blocklistSha = await ghPutFile(BLOCKLIST_PATH, blocklistSha, blocklist, "rank: update blocklist");
+        blocklistDirty = false;
+      }
+      setStatus("saved", "Saved ✓");
+    } catch (e) {
+      console.error(e);
+      setStatus("error", "Save failed");
+      // If SHA conflict (someone else wrote), refresh and retry once.
+      if (String(e).includes("409") || String(e).includes("422")) {
+        try {
+          const a = await ghGetFile(RATINGS_PATH);
+          const b = await ghGetFile(BLOCKLIST_PATH);
+          ratingsSha = a.sha; blocklistSha = b.sha;
+          setStatus("idle", "Retrying…");
+          commitTimer = setTimeout(commit, 200);
+        } catch (e2) { console.error(e2); }
+      }
+    }
+  }
+
+  // ─────────────────────────────────────────────────────────────────────
+  // Feed parsing + rendering
+  // ─────────────────────────────────────────────────────────────────────
+  async function fetchFeed() {
+    const r = await fetch(FEED_PATH + "?t=" + Date.now(), { cache: "no-store" });
+    if (!r.ok) throw new Error("feed.xml " + r.status);
+    const xml = await r.text();
+    const doc = new DOMParser().parseFromString(xml, "application/xml");
+    const items = [];
+    for (const el of doc.querySelectorAll("item")) {
+      const url = el.querySelector("link")?.textContent?.trim() || "";
+      if (!url) continue;
+      items.push({
+        url,
+        title: el.querySelector("title")?.textContent?.trim() || "",
+        description: el.querySelector("description")?.textContent?.trim() || "",
+        published: el.querySelector("pubDate")?.textContent?.trim() || "",
+        source: el.querySelector("source")?.textContent?.trim() || "",
+      });
+    }
+    return items;
+  }
+
+  function escapeHtml(s) {
+    return String(s || "").replace(/[&<>"']/g, c => ({
+      "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+    }[c]));
+  }
+
+  function formatDate(iso) {
+    if (!iso) return "";
+    const d = new Date(iso);
+    if (isNaN(d)) return iso;
+    return d.toLocaleDateString("en-US", { day: "numeric", month: "short", year: "numeric" });
+  }
+
+  function pill(source) {
+    const cls = SOURCE_PILL[source] || "external";
+    return `<span class="source-pill pill-${cls}">${escapeHtml(source)}</span>`;
+  }
+
+  function renderItem(item) {
+    const val = ratings[item.url] || 0;
+    return `
+      <div class="item" data-url="${escapeHtml(item.url)}">
+        <div>
+          <div class="item-meta">
+            ${pill(item.source)}
+            <span class="item-date">${formatDate(item.published)}</span>
+          </div>
+          <div class="item-title">
+            <a href="${escapeHtml(item.url)}" target="_blank" rel="noopener">${escapeHtml(item.title)}</a>
+          </div>
+          <div class="item-desc">${escapeHtml(item.description)}</div>
+        </div>
+        <div>
+          <div class="rate">
+            <span class="rate-label">Rank</span>
+            <input type="range" min="0" max="5" step="1" value="${val}" data-url="${escapeHtml(item.url)}">
+            <span class="rate-value v${val}">${val}</span>
+          </div>
+          <div class="scale-hint">
+            <span>hide</span><span>1</span><span>2</span><span>3</span><span>4</span><span>del</span>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function attachSliders() {
+    document.querySelectorAll('input[type=range]').forEach(slider => {
+      slider.addEventListener("change", () => {
+        const url = slider.dataset.url;
+        const v = parseInt(slider.value, 10);
+        const prev = ratings[url] || 0;
+        ratings[url] = v;
+        ratingsDirty = true;
+
+        // 5 = delete: add to blocklist (idempotent).
+        // Un-set 5: remove from blocklist.
+        const idx = blocklist.indexOf(url);
+        if (v === 5 && idx === -1) { blocklist.push(url); blocklistDirty = true; }
+        if (v !== 5 && prev === 5 && idx !== -1) { blocklist.splice(idx, 1); blocklistDirty = true; }
+
+        // Update display
+        const display = slider.parentElement.querySelector(".rate-value");
+        display.textContent = v;
+        display.className = "rate-value v" + v;
+
+        scheduleCommit();
+      });
+    });
+  }
+
+  // ─────────────────────────────────────────────────────────────────────
+  // Initial load
+  // ─────────────────────────────────────────────────────────────────────
+  async function loadAll() {
+    try {
+      const [feedItems, r, b] = await Promise.all([
+        fetchFeed(),
+        ghGetFile(RATINGS_PATH),
+        ghGetFile(BLOCKLIST_PATH),
+      ]);
+
+      ratings = (r.json && typeof r.json === "object") ? r.json : {};
+      ratingsSha = r.sha;
+      blocklist = Array.isArray(b.json) ? b.json : [];
+      blocklistSha = b.sha;
+
+      // Sort newest first
+      feedItems.sort((a, b) => new Date(b.published) - new Date(a.published));
+
+      const html = feedItems.map(renderItem).join("");
+      document.getElementById("items").innerHTML = html ||
+        `<div class="placeholder">No items in feed.xml yet.</div>`;
+      attachSliders();
+      setStatus("idle", `${feedItems.length} items`);
+    } catch (e) {
+      console.error(e);
+      document.getElementById("items").innerHTML =
+        `<div class="placeholder">Failed to load: ${escapeHtml(String(e.message))}</div>`;
+      setStatus("error", "Load failed");
+    }
+  }
+</script>
+</body>
+</html>

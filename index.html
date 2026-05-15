@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YAAIN — Claude Signal</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background: #f5f4f0;
+    color: #1a1a18;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .page {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 5rem;
+  }
+
+  /* Masthead */
+  .masthead {
+    border-bottom: 1.5px solid #1a1a18;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .masthead-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.4rem;
+  }
+  .wordmark {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.15em;
+    text-transform: uppercase; color: #5f5e5a;
+  }
+  .issue-date { font-size: 11px; color: #888780; letter-spacing: 0.05em; }
+  .masthead h1 {
+    font-size: 30px; font-weight: 700; letter-spacing: -0.5px; line-height: 1.15;
+  }
+  .masthead .tagline { margin-top: 0.4rem; font-size: 13px; color: #5f5e5a; }
+
+  /* Pills */
+  .source-pill {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.03em;
+    padding: 2px 8px; border-radius: 100px; white-space: nowrap;
+  }
+  .pill-latent    { background: #EEEDFE; color: #3C3489; }
+  .pill-anthropic { background: #E1F5EE; color: #085041; }
+  .pill-release   { background: #FAEEDA; color: #633806; }
+  .pill-changelog { background: #E6F1FB; color: #0C447C; }
+  .pill-code      { background: #FAECE7; color: #712B13; }
+  .pill-external  { background: #F1EFE8; color: #444441; }
+  .pill-news      { background: #FBEAF0; color: #72243E; }
+
+  .item-meta { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .item-date { font-size: 11px; color: #888780; }
+
+  /* Tier 1: hero */
+  .tier-1 {
+    border-top: 1.5px solid #1a1a18;
+    border-bottom: 1.5px solid #1a1a18;
+    padding: 2.5rem 0;
+    margin-bottom: 3rem;
+  }
+  .tier-1 .item-meta { margin-bottom: 1rem; }
+  .tier-1 h2 {
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.25rem;
+  }
+  .tier-1 .lede {
+    font-size: 18px;
+    line-height: 1.55;
+    color: #2c2c28;
+    max-width: 720px;
+  }
+  .tier-1 .lede p + p { margin-top: 0.9rem; }
+  .tier-1 .byline {
+    margin-top: 1.25rem;
+    font-size: 12px;
+    color: #5f5e5a;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  /* Section labels */
+  .section-label {
+    font-size: 10px; font-weight: 700; letter-spacing: 0.18em;
+    text-transform: uppercase; color: #888780;
+    margin: 2.5rem 0 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.5px solid #d3d1c7;
+  }
+
+  /* Tier 2: 2 columns */
+  .tier-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  .tier-2 .item { padding: 0.25rem 0; }
+  .tier-2 .item-meta { margin-bottom: 0.5rem; }
+  .tier-2 h3 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.6rem;
+    letter-spacing: -0.01em;
+  }
+  .tier-2 p { font-size: 14px; color: #2c2c28; line-height: 1.6; }
+
+  /* Tier 3: 4 columns */
+  .tier-3 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .tier-3 .item-meta { margin-bottom: 0.4rem; }
+  .tier-3 h4 {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 0.4rem;
+  }
+  .tier-3 p {
+    font-size: 12.5px;
+    color: #5f5e5a;
+    line-height: 1.5;
+  }
+
+  /* Tier 4: bulleted */
+  .tier-4 { margin-bottom: 1rem; }
+  .tier-4 .item-row {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    padding: 0.4rem 0;
+    border-bottom: 0.5px solid #ebe9df;
+    font-size: 14px;
+  }
+  .tier-4 .item-row:last-child { border-bottom: none; }
+  .tier-4 .dot { color: #c9c7bc; font-size: 10px; }
+  .tier-4 .pub { color: #888780; font-size: 11px; }
+  .tier-4 .date { color: #aaa89e; font-size: 11px; white-space: nowrap; }
+  .tier-4 a { font-weight: 500; }
+
+  /* Footer */
+  .footer {
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    border-top: 1.5px solid #1a1a18;
+    font-size: 11px;
+    color: #888780;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .footer a { color: #5f5e5a; }
+
+  /* Empty / loading */
+  .placeholder {
+    padding: 4rem 0;
+    text-align: center;
+    color: #888780;
+    font-size: 13px;
+  }
+
+  /* Mobile */
+  @media (max-width: 800px) {
+    .tier-2 { grid-template-columns: 1fr; gap: 1.5rem; }
+    .tier-3 { grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    .tier-4 .item-row { flex-wrap: wrap; }
+  }
+  @media (max-width: 480px) {
+    .tier-3 { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="masthead">
+    <div class="masthead-top">
+      <span class="wordmark">YAAIN</span>
+      <span class="issue-date" id="issue-date"></span>
+    </div>
+    <h1>Claude Signal</h1>
+    <p class="tagline">High-signal Claude family content, filtered daily for professional practitioners.</p>
+  </div>
+
+  <main id="content">
+    <div class="placeholder">Loading…</div>
+  </main>
+
+  <div class="footer">
+    <span>YAAIN — auto-refreshes every 5 minutes</span>
+    <span><a href="feed.xml">RSS</a></span>
+  </div>
+</div>
+
+<script>
+  // ── Configuration ──────────────────────────────────────────────────────
+  const REFRESH_MS = 5 * 60 * 1000; // 5 minutes
+
+  // Source → section + pill class
+  const SOURCE_MAP = {
+    "Anthropic News":            { section: "Anthropic News",        pill: "news" },
+    "Anthropic Release Notes":   { section: "Release Notes",         pill: "release" },
+    "Claude Docs Changelog":     { section: "Docs Changelog",        pill: "changelog" },
+    "Claude Code Docs":          { section: "Claude Code",           pill: "code" },
+    "Anthropic Research Blog":   { section: "Anthropic Research",    pill: "anthropic" },
+    "Simon Willison's Blog":     { section: "Analysis & Commentary", pill: "external" },
+    "Nathan Lambert — Interconnects": { section: "Analysis & Commentary", pill: "external" },
+    "Latent Space":              { section: "Analysis & Commentary", pill: "latent" },
+    "The AI Corner":             { section: "Analysis & Commentary", pill: "external" },
+    "AI Maker":                  { section: "Analysis & Commentary", pill: "external" },
+    "r/ClaudeAI":                { section: "Community",             pill: "external" },
+    "r/ClaudeCode":              { section: "Community",             pill: "external" },
+    "r/LocalLLaMA":              { section: "Community",             pill: "external" },
+    "Hacker News":               { section: "Community",             pill: "external" },
+  };
+
+  const SECTION_ORDER = [
+    "Anthropic News", "Anthropic Research", "Release Notes",
+    "Docs Changelog", "Claude Code", "Analysis & Commentary", "Community"
+  ];
+
+  function categorize(source) {
+    return SOURCE_MAP[source] || { section: "Other", pill: "external" };
+  }
+
+  // ── Fetch helpers ──────────────────────────────────────────────────────
+  function bust(url) { return url + "?t=" + Date.now(); }
+
+  async function fetchText(url) {
+    const r = await fetch(bust(url), { cache: "no-store" });
+    if (!r.ok) throw new Error(url + " → " + r.status);
+    return r.text();
+  }
+  async function fetchJSON(url, fallback) {
+    try { return JSON.parse(await fetchText(url)); }
+    catch { return fallback; }
+  }
+
+  function parseFeed(xmlText) {
+    const doc = new DOMParser().parseFromString(xmlText, "application/xml");
+    const items = [];
+    for (const el of doc.querySelectorAll("item")) {
+      const url = el.querySelector("link")?.textContent?.trim() || "";
+      if (!url) continue;
+      items.push({
+        url,
+        title: el.querySelector("title")?.textContent?.trim() || "",
+        description: el.querySelector("description")?.textContent?.trim() || "",
+        published: el.querySelector("pubDate")?.textContent?.trim() || "",
+        source: el.querySelector("source")?.textContent?.trim() || "",
+      });
+    }
+    return items;
+  }
+
+  // Split summary + why back out. feed.py joins them with a single space;
+  // we treat the first sentence-ish chunk as summary, the rest as why.
+  function splitDescription(desc) {
+    if (!desc) return { summary: "", why: "" };
+    // Find the boundary after the first ". " that ends a sentence followed by capital.
+    const m = desc.match(/^(.+?[.!?])\s+([A-Z].*)$/s);
+    if (m) return { summary: m[1].trim(), why: m[2].trim() };
+    return { summary: desc.trim(), why: "" };
+  }
+
+  function formatDate(iso) {
+    if (!iso) return "";
+    const d = new Date(iso);
+    if (isNaN(d)) return iso;
+    return d.toLocaleDateString("en-US", { day: "numeric", month: "short", year: "numeric" });
+  }
+
+  function pill(source) {
+    const c = categorize(source);
+    const safe = source.replace(/&/g, "&amp;").replace(/</g, "&lt;");
+    return `<span class="source-pill pill-${c.pill}">${safe}</span>`;
+  }
+
+  // ── Renderers ─────────────────────────────────────────────────────────
+  function renderTier1(items) {
+    return items.map(item => {
+      const parts = splitDescription(item.description);
+      const sum = parts.summary ? `<p>${parts.summary}</p>` : "";
+      const why = parts.why ? `<p>${parts.why}</p>` : "";
+      return `
+        <div class="tier-1">
+          <div class="item-meta">
+            ${pill(item.source)}
+            <span class="item-date">${formatDate(item.published)}</span>
+          </div>
+          <h2><a href="${item.url}" target="_blank" rel="noopener">${escapeHtml(item.title)}</a></h2>
+          <div class="lede">${sum}${why}</div>
+          <div class="byline">${escapeHtml(item.source)}</div>
+        </div>`;
+    }).join("");
+  }
+
+  function renderTier2(items) {
+    if (!items.length) return "";
+    const cards = items.map(item => {
+      const sum = splitDescription(item.description).summary;
+      return `
+        <div class="item">
+          <div class="item-meta">
+            ${pill(item.source)}
+            <span class="item-date">${formatDate(item.published)}</span>
+          </div>
+          <h3><a href="${item.url}" target="_blank" rel="noopener">${escapeHtml(item.title)}</a></h3>
+          <p>${escapeHtml(sum)}</p>
+        </div>`;
+    }).join("");
+    return `<div class="tier-2">${cards}</div>`;
+  }
+
+  function renderTier3(items) {
+    if (!items.length) return "";
+    const cards = items.map(item => {
+      const sum = splitDescription(item.description).summary;
+      const short = sum.length > 140 ? sum.slice(0, 137).trimEnd() + "…" : sum;
+      return `
+        <div class="item">
+          <div class="item-meta">
+            ${pill(item.source)}
+          </div>
+          <h4><a href="${item.url}" target="_blank" rel="noopener">${escapeHtml(item.title)}</a></h4>
+          <p>${escapeHtml(short)}</p>
+        </div>`;
+    }).join("");
+    return `<div class="tier-3">${cards}</div>`;
+  }
+
+  function renderTier4(items) {
+    if (!items.length) return "";
+    const rows = items.map(item => `
+      <div class="item-row">
+        <a href="${item.url}" target="_blank" rel="noopener">${escapeHtml(item.title)}</a>
+        <span class="dot">·</span>
+        <span class="pub">${escapeHtml(item.source)}</span>
+        <span class="dot">·</span>
+        <span class="date">${formatDate(item.published)}</span>
+      </div>
+    `).join("");
+    return `<div class="tier-4">${rows}</div>`;
+  }
+
+  function escapeHtml(s) {
+    return String(s || "").replace(/[&<>"']/g, c => ({
+      "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+    }[c]));
+  }
+
+  // ── Pipeline ──────────────────────────────────────────────────────────
+  function tierFor(url, ratings, blocklist) {
+    if (blocklist.has(url)) return -1;     // hidden
+    const r = ratings[url];
+    if (!r || r === 0) return 0;            // unrated → hidden
+    if (r === 5) return -1;                 // also hidden
+    return r;                                // 1, 2, 3, 4
+  }
+
+  function byDateDesc(a, b) {
+    return new Date(b.published) - new Date(a.published);
+  }
+
+  async function load() {
+    document.getElementById("issue-date").textContent =
+      new Date().toLocaleDateString("en-US", { weekday: "short", day: "numeric", month: "short", year: "numeric" });
+
+    let xml, ratings, blocklist;
+    try {
+      xml = await fetchText("feed.xml");
+    } catch (e) {
+      document.getElementById("content").innerHTML =
+        `<div class="placeholder">No feed yet. The daily pipeline will publish here.</div>`;
+      return;
+    }
+    ratings = await fetchJSON("ratings.json", {});
+    const bl = await fetchJSON("blocklist.json", []);
+    blocklist = new Set(bl);
+
+    const items = parseFeed(xml).sort(byDateDesc);
+    const buckets = { 1: [], 2: [], 3: [], 4: [] };
+    for (const item of items) {
+      const t = tierFor(item.url, ratings, blocklist);
+      if (t >= 1 && t <= 4) buckets[t].push(item);
+    }
+
+    const target = document.getElementById("content");
+    const parts = [];
+    parts.push(renderTier1(buckets[1]));
+
+    if (buckets[2].length) {
+      parts.push(`<div class="section-label">Featured</div>`);
+      parts.push(renderTier2(buckets[2]));
+    }
+    if (buckets[3].length) {
+      parts.push(`<div class="section-label">More</div>`);
+      parts.push(renderTier3(buckets[3]));
+    }
+    if (buckets[4].length) {
+      parts.push(`<div class="section-label">Briefs</div>`);
+      parts.push(renderTier4(buckets[4]));
+    }
+
+    if (!parts.join("").trim()) {
+      target.innerHTML = `<div class="placeholder">Nothing rated for the homepage yet. Rate items in <a href="rank.html">rank.html</a> to populate.</div>`;
+    } else {
+      target.innerHTML = parts.join("");
+    }
+  }
+
+  load();
+  setInterval(load, REFRESH_MS);
+</script>
+</body>
+</html>
