@@ -59,8 +59,12 @@ def load_existing_items(feed_path: str) -> list[dict]:
     return items
 
 
-def build_feed(new_items: list[dict], existing_items: list[dict], feed_path: str):
+def build_feed(new_items: list[dict], existing_items: list[dict], feed_path: str, blocklist: set | None = None):
     """Merge new items into the feed, write to feed_path."""
+    blocklist = blocklist or set()
+    if blocklist:
+        new_items = [it for it in new_items if it.get("url") not in blocklist]
+        existing_items = [it for it in existing_items if it.get("guid") not in blocklist]
     existing_guids = {item["guid"] for item in existing_items}
 
     added = 0
