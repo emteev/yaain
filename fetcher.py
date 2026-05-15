@@ -5,7 +5,10 @@ Returns a list of dicts:
   source_name : str
   title       : str
   url         : str
+  summary     : str   (short excerpt, ~100-200 chars)
   body        : str   (capped at 2000 chars)
+  author      : str   (empty if not available)
+  image       : str   (URL of first image in content, empty if none)
   published   : str   (ISO 8601 or empty)
 """
 
@@ -42,23 +45,64 @@ def _iso(t) -> str:
     return str(t)
 
 
+def _extract_first_image(html: str) -> str:
+    """Extract the first image URL from HTML content."""
+    try:
+        soup = BeautifulSoup(html, "html.parser")
+        img = soup.find("img")
+        if img and img.get("src"):
+            return img["src"]
+    except Exception:
+        pass
+    return ""
+
+
+def _extract_author(entry: dict) -> str:
+    """Extract author name from feedparser entry."""
+    if hasattr(entry, "author"):
+        return entry.author
+    if hasattr(entry, "author_detail") and entry.author_detail:
+        return entry.author_detail.get("name", "")
+    if hasattr(entry, "authors") and entry.authors:
+        return entry.authors[0].get("name", "") if entry.authors[0] else ""
+    return ""
+
+
 # ── Source-type handlers ───────────────────────────────────────────────────────
 
 def fetch_rss(source: dict) -> list[dict]:
     items = []
     feed = feedparser.parse(source["url"])
     for entry in feed.entries[:20]:
-        body = ""
+        # Extract body (full HTML content or summary)
+        body_html = ""
         if hasattr(entry, "content"):
-            body = entry.content[0].value
+            body_html = entry.content[0].value
         elif hasattr(entry, "summary"):
-            body = entry.summary
-        body = BeautifulSoup(body, "html.parser").get_text(separator=" ", strip=True)
+            body_html = entry.summary
+        
+        # Extract plain text body
+        body = BeautifulSoup(body_html, "html.parser").get_text(separator=" ", strip=True)
+        
+        # Extract summary (short excerpt)
+        summary = ""
+        if hasattr(entry, "summary"):
+            summary = BeautifulSoup(entry.summary, "html.parser").get_text(strip=True)
+        
+        # Extract author
+        author = _extract_author(entry)
+        
+        # Extract first image
+        image = _extract_first_image(body_html)
+        
         items.append({
             "source_name": source["name"],
             "title": entry.get("title", ""),
             "url": entry.get("link", ""),
+            "summary": summary,
             "body": body[:2000],
+            "author": author,
+            "image": image,
             "published": _iso(entry.get("published_parsed") or entry.get("updated_parsed")),
         })
     return items
@@ -78,11 +122,23 @@ def fetch_reddit(source: dict) -> list[dict]:
             body = p.get("selftext", "").strip()
             if body in ("[removed]", "[deleted]"):
                 body = ""
+            
+            # Reddit doesn't have author in JSON easily, skip for now
+            # Extract image if available
+            image = ""
+            if p.get("url_overridden_by_dest"):
+                url = p.get("url_overridden_by_dest", "")
+                if url.lower().endswith((".jpg", ".png", ".gif", ".jpeg")):
+                    image = url
+            
             items.append({
                 "source_name": source["name"],
                 "title": p.get("title", ""),
                 "url": f"https://reddit.com{p.get('permalink', '')}",
+                "summary": "",
                 "body": body[:2000],
+                "author": p.get("author", ""),
+                "image": image,
                 "published": datetime.fromtimestamp(
                     p.get("created_utc", 0), tz=timezone.utc
                 ).isoformat(),
@@ -108,7 +164,10 @@ def fetch_hn(source: dict) -> list[dict]:
                 "source_name": source["name"],
                 "title": hit.get("title", ""),
                 "url": hit.get("url") or f"https://news.ycombinator.com/item?id={hit.get('objectID')}",
+                "summary": "",
                 "body": hit.get("story_text") or "",
+                "author": hit.get("author", ""),
+                "image": "",
                 "published": hit.get("created_at", ""),
             })
     except Exception as e:
@@ -155,7 +214,10 @@ def fetch_scrape(source: dict) -> list[dict]:
                 "source_name": source["name"],
                 "title": title,
                 "url": href,
+                "summary": "",
                 "body": body,
+                "author": "",
+                "image": "",
                 "published": "",
             })
     except Exception as e:
@@ -204,7 +266,10 @@ def fetch_release_notes(source: dict) -> list[dict]:
                 "source_name": source["name"],
                 "title": f"Release notes: {date_str}",
                 "url": url,
+                "summary": "",
                 "body": body,
+                "author": "",
+                "image": "",
                 "published": "",
             })
     except Exception as e:
@@ -243,7 +308,10 @@ def fetch_changelog_md(source: dict) -> list[dict]:
                 "source_name": source["name"],
                 "title": f"Claude Code {heading}",
                 "url": url,
+                "summary": "",
                 "body": body,
+                "author": "",
+                "image": "",
                 "published": "",
             })
     except Exception as e:
