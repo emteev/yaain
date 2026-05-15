@@ -2,7 +2,7 @@ name: Daily feed update
 
 on:
   schedule:
-    - cron: "0 12 * * *"   # noon UTC = 8am ET
+- cron: "0 0,4,8,12,16,20 * * *"   # every 4 hours
   workflow_dispatch:         # allow manual trigger
 
 permissions:
