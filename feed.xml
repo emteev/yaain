@@ -5,77 +5,13 @@
     <link>https://github.com/hotstacks/yaain</link>
     <description>High-signal Claude family content, filtered daily for professional practitioners.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 15 May 2026 19:42:33 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 16 May 2026 00:37:52 +0000</lastBuildDate>
     <atom:link href="https://github.com/hotstacks/yaain/feed.xml" rel="self" type="application/rss+xml"/>
-    <item>
-      <title>[AINews] Agents for Everything Else: Codex for Knowledge Work, Claude for Creative Work</title>
-      <link>https://www.latent.space/p/ainews-agents-for-everything-else</link>
-      <guid isPermaLink="true">https://www.latent.space/p/ainews-agents-for-everything-else</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
-      <source>Latent Space</source>
-      <description>Anthropic launched Claude Security, a code review tool, amid increasing security vulnerabilities in AI systems. The excerpt also references Claude Cowork's planning UI as a benchmark that Codex is now explicitly designing against, with Codex rejecting Cowork's toggle approach in favor of agent-routed UI. Claude Security is a new product-level offering practitioners should evaluate for code review workflows, and the Cowork UI comparison signals how Anthropic's desktop automation design choices are influencing the broader agentic tool landscape.</description>
-    </item>
-    <item>
-      <title>[AINews] Silicon Valley gets Serious about Services</title>
-      <link>https://www.latent.space/p/ainews-silicon-valley-gets-serious</link>
-      <guid isPermaLink="true">https://www.latent.space/p/ainews-silicon-valley-gets-serious</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
-      <source>Latent Space</source>
-      <description>Anthropic has announced an unnamed joint venture with Blackstone, Hellman &amp; Friedman, and Goldman Sachs, funded with $1.5B, to deliver enterprise Claude deployments as a managed service. Engagements involve small teams working alongside Anthropic Applied AI staff to build Claude-powered systems tailored to specific organizational operations. This signals Anthropic is moving into direct enterprise implementation services, which could affect how large organizations procure and deploy Claude versus going through the API independently.</description>
-    </item>
-    <item>
-      <title>[AINews] Anthropic-SpaceXai's 300MW/$5B/yr deal for Colossus I, ARR growth is 8000% annualized</title>
-      <link>https://www.latent.space/p/ainews-anthropic-spacexais-300mw5byr</link>
-      <guid isPermaLink="true">https://www.latent.space/p/ainews-anthropic-spacexais-300mw5byr</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
-      <source>Latent Space</source>
-      <description>Anthropic held its second annual developer event announcing a SpaceX/xAI Colossus partnership (estimated ~$5B/year deal for compute), 3 new features for Claude Managed Agents, and reported 8000% annualized ARR growth (~80x). Dario Amodei highlighted trends around tiny teams and agentic AI, predicting a one-person billion-dollar company by 2026. The Colossus compute deal and new Claude Managed Agents features signal significant infrastructure scaling and agentic capability expansion relevant to professional Claude API users.</description>
-    </item>
-    <item>
-      <title>[AINews] Codex Rises, Claude Meters Programmatic Usage</title>
-      <link>https://www.latent.space/p/ainews-codex-rises-claude-meters</link>
-      <guid isPermaLink="true">https://www.latent.space/p/ainews-codex-rises-claude-meters</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
-      <source>Latent Space</source>
-      <description>Anthropic has changed Claude subscription pricing so that each plan (e.g., $200/month) now provides both interactive usage on Claude.ai/Claude Code AND an equivalent dollar amount in API credits for programmatic/third-party harness usage. This replaces an informal subsidy that effectively gave third-party tool users a 70-90% discount off API pricing, which users of tools like OpenClaw are experiencing as a significant price increase. Teams using Claude through third-party harnesses or custom API integrations need to immediately reassess their cost models, as the previous undocumented pricing advantage has been formalized away and programmatic usage now costs at standard API rates against a capped monthly credit.</description>
-    </item>
-    <item>
-      <title>Using Claude Code: The Unreasonable Effectiveness of HTML</title>
-      <link>https://simonwillison.net/2026/May/8/unreasonable-effectiveness-of-html/#atom-everything</link>
-      <guid isPermaLink="true">https://simonwillison.net/2026/May/8/unreasonable-effectiveness-of-html/#atom-everything</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
-      <source>Simon Willison's Blog</source>
-      <description>A member of the Claude Code team at Anthropic published a piece advocating HTML over Markdown as a Claude output format, arguing that HTML enables richer outputs including SVG diagrams, interactive widgets, and inline annotations. The article includes curated examples and concrete prompt patterns for requesting structured HTML artifacts from Claude for tasks like PR reviews. Switching from Markdown to HTML output requests in Claude can unlock significantly richer, more navigable responses—especially valuable for complex technical explanations or code reviews where inline annotations and visual structure matter.</description>
-    </item>
-    <item>
-      <title>Claude Code Enterprise</title>
-      <link>https://claude.com/product/claude-code/enterprise</link>
-      <guid isPermaLink="true">https://claude.com/product/claude-code/enterprise</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
-      <source>Anthropic Research Blog</source>
-      <description>Anthropic has published research or documentation about Claude Code Enterprise, an enterprise tier of their CLI/agentic coding tool. No further details are available from the excerpt alone. Enterprise practitioners evaluating or deploying Claude Code at scale should review this publication for enterprise-specific capabilities, pricing, or policy details.</description>
-    </item>
-    <item>
-      <title>Apr 14, 2026 Alignment Automated Alignment Researchers: Using large language models to scale scalable oversight</title>
-      <link>https://www.anthropic.com/research/automated-alignment-researchers</link>
-      <guid isPermaLink="true">https://www.anthropic.com/research/automated-alignment-researchers</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
-      <source>Anthropic Research Blog</source>
-      <description>Anthropic published research on using large language models to automate and scale scalable oversight, a key alignment technique. The work explores how LLMs can be used as alignment researchers to address the challenge of supervising AI systems beyond human ability. This research directly affects the safety and alignment architecture underlying Claude models, with implications for how future Claude versions are trained and supervised.</description>
-    </item>
-    <item>
-      <title>Apr 29, 2026 Science Evaluating Claude’s bioinformatics research capabilities with BioMysteryBench</title>
-      <link>https://www.anthropic.com/research/Evaluating-Claude-For-Bioinformatics-With-BioMysteryBench</link>
-      <guid isPermaLink="true">https://www.anthropic.com/research/Evaluating-Claude-For-Bioinformatics-With-BioMysteryBench</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
-      <source>Anthropic Research Blog</source>
-      <description>Anthropic published research evaluating Claude's bioinformatics research capabilities using a benchmark called BioMysteryBench. The evaluation assesses Claude's performance on bioinformatics research tasks. Practitioners using Claude for scientific research or bioinformatics work should review this benchmark to understand Claude's current capabilities and limitations in this domain.</description>
-    </item>
     <item>
       <title>Project Vend: Phase two</title>
       <link>https://www.anthropic.com/research/project-vend-2</link>
       <guid isPermaLink="true">https://www.anthropic.com/research/project-vend-2</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
+      <pubDate>Sat, 16 May 2026 00:37:52 +0000</pubDate>
       <source>Anthropic Research Blog</source>
       <description>Anthropic has published 'Project Vend: Phase Two,' continuing their experiment where Claude autonomously buys, sells, and negotiates in a real marketplace on behalf of employees. The broader research blog also references a new paper on reducing agentic misalignment published May 8, 2026. The agentic misalignment research and real-world autonomous negotiation experiments directly inform how Claude behaves in multi-step, autonomous task contexts—critical for practitioners deploying Claude in agentic workflows.</description>
     </item>
@@ -83,7 +19,7 @@
       <title>What 81,000 people want from AI</title>
       <link>https://www.anthropic.com/81k-interviews</link>
       <guid isPermaLink="true">https://www.anthropic.com/81k-interviews</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
+      <pubDate>Sat, 16 May 2026 00:37:52 +0000</pubDate>
       <source>Anthropic Research Blog</source>
       <description>Anthropic surveyed nearly 81,000 Claude.ai users about their AI usage patterns, aspirations, and concerns. The research provides direct user data on how Claude is being used and what users want from the tool. Understanding the aggregated user intent and concern data can inform how practitioners frame Claude deployments and anticipate user expectations.</description>
     </item>
@@ -91,7 +27,7 @@
       <title>Project Deal</title>
       <link>https://www.anthropic.com/features/project-deal</link>
       <guid isPermaLink="true">https://www.anthropic.com/features/project-deal</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
+      <pubDate>Sat, 16 May 2026 00:37:52 +0000</pubDate>
       <source>Anthropic Research Blog</source>
       <description>Anthropic ran an internal experiment called Project Deal, creating a marketplace where Claude acted as an autonomous agent to buy, sell, and negotiate on behalf of Anthropic employees. This appears to be a controlled study of Claude's agentic negotiation and decision-making capabilities in real economic interactions. Provides concrete evidence of Claude's agentic capabilities in multi-party negotiation scenarios, relevant for practitioners building autonomous Claude agents that handle transactions or negotiations.</description>
     </item>
@@ -99,111 +35,23 @@
       <title>Teaching Claude why</title>
       <link>https://www.anthropic.com/research/teaching-claude-why</link>
       <guid isPermaLink="true">https://www.anthropic.com/research/teaching-claude-why</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
+      <pubDate>Sat, 16 May 2026 00:37:52 +0000</pubDate>
       <source>Anthropic Research Blog</source>
       <description>Anthropic published new research on reducing agentic misalignment in Claude, titled 'Teaching Claude Why,' focused on improving how Claude understands reasoning behind its guidelines. A second study, 'Project Deal,' tested Claude as an autonomous negotiating agent in a real employee marketplace setting. The agentic misalignment research directly affects reliability and safety assumptions when deploying Claude in autonomous or multi-step agentic workflows.</description>
-    </item>
-    <item>
-      <title>Natural Language Autoencoders: Turning Claude’s thoughts into text</title>
-      <link>https://www.anthropic.com/research/natural-language-autoencoders</link>
-      <guid isPermaLink="true">https://www.anthropic.com/research/natural-language-autoencoders</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
-      <source>Anthropic Research Blog</source>
-      <description>Anthropic researchers have trained Claude to translate its internal numerical representations ('thoughts') into human-readable text using natural language autoencoders. This interpretability research enables direct inspection of Claude's intermediate reasoning states in natural language form. This advances mechanistic understanding of Claude's reasoning process, with potential implications for debugging model behavior, auditing outputs, and building more reliable Claude-based systems.</description>
     </item>
     <item>
       <title>Secret protection Stop leaks before they start</title>
       <link>https://github.com/security/advanced-security/secret-protection</link>
       <guid isPermaLink="true">https://github.com/security/advanced-security/secret-protection</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
+      <pubDate>Sat, 16 May 2026 00:37:52 +0000</pubDate>
       <source>Claude Code Docs</source>
       <description>Claude Code has added a secret protection feature designed to prevent credential and API key leaks before they occur. The feature appears to detect and block secrets from being exposed during coding sessions. Practitioners using Claude Code for real codebases can now rely on an automated safeguard against accidentally leaking credentials, tokens, or API keys through the tool.</description>
-    </item>
-    <item>
-      <title>Responsible Scaling Policy</title>
-      <link>https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy</link>
-      <guid isPermaLink="true">https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
-      <source>Claude Docs Changelog</source>
-      <description>Anthropic updated their Responsible Scaling Policy documentation in the Claude docs changelog. The policy governs how Anthropic scales Claude models in relation to safety commitments and capability thresholds. Understanding RSP commitments helps practitioners anticipate capability gating, deployment restrictions, or safety evaluations that may affect Claude API availability or model access.</description>
-    </item>
-    <item>
-      <title>Code modernization</title>
-      <link>https://claude.com/solutions/code-modernization</link>
-      <guid isPermaLink="true">https://claude.com/solutions/code-modernization</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
-      <source>Claude Docs Changelog</source>
-      <description>Anthropic published a 'Code modernization' entry in the Claude API and docs changelog. No additional detail was provided in the excerpt. Practitioners using the Claude API should check the full changelog entry for any breaking changes or updated patterns affecting their integrations.</description>
-    </item>
-    <item>
-      <title>Managed Agents</title>
-      <link>https://docs.claude.com/docs/en/managed-agents/overview</link>
-      <guid isPermaLink="true">https://docs.claude.com/docs/en/managed-agents/overview</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
-      <source>Claude Docs Changelog</source>
-      <description>Anthropic added a 'Managed Agents' entry to the Claude API and docs changelog. No further detail is available in the excerpt. Practitioners building agentic workflows with Claude should monitor this changelog entry for details on managed agent capabilities or infrastructure.</description>
-    </item>
-    <item>
-      <title>Introducing Claude Opus 4.6</title>
-      <link>http://anthropic.com/news/claude-opus-4-6</link>
-      <guid isPermaLink="true">http://anthropic.com/news/claude-opus-4-6</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
-      <source>Anthropic Release Notes</source>
-      <description>Anthropic has released Claude Opus 4.6, an upgrade to their most capable model with improved coding skills. The release is accompanied by a blog post with further details. Practitioners relying on Opus for complex reasoning or coding tasks should evaluate the new version for potential performance improvements in their workflows.</description>
-    </item>
-    <item>
-      <title>Access usage data with the Analytics API</title>
-      <link>https://support.claude.com/en/articles/13694757-access-usage-data-with-the-analytics-api</link>
-      <guid isPermaLink="true">https://support.claude.com/en/articles/13694757-access-usage-data-with-the-analytics-api</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
-      <source>Anthropic Release Notes</source>
-      <description>Anthropic has released an Enterprise Analytics API that provides programmatic access to usage and engagement data for Claude and Claude Code Remote, aggregated per organization per day. Each endpoint returns a snapshot for a single specified date. Teams managing Claude at scale can now automate usage monitoring, cost tracking, and reporting rather than relying on manual dashboard checks.</description>
-    </item>
-    <item>
-      <title>Manage Cowork plugins for your organization</title>
-      <link>https://support.claude.com/en/articles/13837433-manage-cowork-plugins-for-your-organization</link>
-      <guid isPermaLink="true">https://support.claude.com/en/articles/13837433-manage-cowork-plugins-for-your-organization</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
-      <source>Anthropic Release Notes</source>
-      <description>Anthropic has added organizational management capabilities for Cowork plugins. Administrators can now manage Cowork plugin access and settings at the organization level. Teams deploying Cowork for desktop automation can now centrally control which plugins are available to users, enabling standardized and governed rollouts across an organization.</description>
-    </item>
-    <item>
-      <title>Schedule recurring tasks in Cowork</title>
-      <link>https://support.claude.com/en/articles/13854387-schedule-recurring-tasks-in-cowork</link>
-      <guid isPermaLink="true">https://support.claude.com/en/articles/13854387-schedule-recurring-tasks-in-cowork</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
-      <source>Anthropic Release Notes</source>
-      <description>Cowork now supports scheduling recurring and on-demand tasks, enabling automated workflows without manual triggering. Claude Desktop also received a new Customize section consolidating skills, plugins, and connectors into a single location. Recurring task scheduling in Cowork opens up persistent automation workflows, reducing the need for manual intervention in repetitive desktop automation scenarios.</description>
-    </item>
-    <item>
-      <title>Import and export your memory from Claude</title>
-      <link>https://support.claude.com/en/articles/12123587-importing-and-exporting-your-memory-from-claude</link>
-      <guid isPermaLink="true">https://support.claude.com/en/articles/12123587-importing-and-exporting-your-memory-from-claude</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
-      <source>Anthropic Release Notes</source>
-      <description>Anthropic has added import and export functionality for Claude's memory feature. Users can now move their stored memories in and out of Claude. Professionals using Claude's memory for persistent context can now back up, transfer, or audit the data Claude retains about them.</description>
-    </item>
-    <item>
-      <title>Use Claude for Excel and PowerPoint with an LLM gateway</title>
-      <link>https://support.claude.com/en/articles/13945233-use-claude-in-excel-and-powerpoint-with-an-llm-gateway</link>
-      <guid isPermaLink="true">https://support.claude.com/en/articles/13945233-use-claude-in-excel-and-powerpoint-with-an-llm-gateway</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
-      <source>Anthropic Release Notes</source>
-      <description>Anthropic has released official guidance on using Claude with Excel and PowerPoint via an LLM gateway integration. This enables Claude to work directly within Microsoft Office applications through a gateway layer. Professional users can now integrate Claude into their existing Excel and PowerPoint workflows without leaving the Office environment, opening up automation and AI-assistance for spreadsheet and presentation tasks.</description>
-    </item>
-    <item>
-      <title>Work across Excel and PowerPoint</title>
-      <link>https://support.claude.com/en/articles/13892150-work-across-apps-with-cowork</link>
-      <guid isPermaLink="true">https://support.claude.com/en/articles/13892150-work-across-apps-with-cowork</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
-      <source>Anthropic Release Notes</source>
-      <description>Anthropic has added cross-application support for Excel and PowerPoint in Claude. This update enables Claude to work across both applications, likely as part of the Cowork desktop automation tool. Practitioners using Cowork for desktop automation can now orchestrate workflows that span both Excel and PowerPoint, enabling end-to-end data-to-presentation pipelines.</description>
     </item>
     <item>
       <title>Custom visuals in chat</title>
       <link>https://support.claude.com/en/articles/13979539-custom-visuals-in-chat</link>
       <guid isPermaLink="true">https://support.claude.com/en/articles/13979539-custom-visuals-in-chat</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
+      <pubDate>Sat, 16 May 2026 00:37:52 +0000</pubDate>
       <source>Anthropic Release Notes</source>
       <description>Claude can now generate custom charts, diagrams, and other visualizations directly inline within chat responses. This is a new native capability added to the Claude chat interface. Practitioners can now get visual data representations, architecture diagrams, or other charts directly in conversation without needing to prompt Claude to write separate visualization code or use external tools.</description>
     </item>
@@ -211,79 +59,31 @@
       <title>Assign tasks to Claude from anywhere in Cowork</title>
       <link>https://support.claude.com/en/articles/13947068-assign-tasks-to-claude-from-anywhere-in-cowork</link>
       <guid isPermaLink="true">https://support.claude.com/en/articles/13947068-assign-tasks-to-claude-from-anywhere-in-cowork</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
+      <pubDate>Sat, 16 May 2026 00:37:52 +0000</pubDate>
       <source>Anthropic Release Notes</source>
       <description>Anthropic is rolling out a persistent agent thread feature in Cowork, allowing Pro and Max plan users to assign tasks via Claude Desktop or Claude iOS/Android apps. Max plan users get access starting today, with Pro plan users following within two days. Professional users can now manage Cowork automation tasks remotely from mobile or desktop outside of the Cowork interface itself, enabling more flexible agentic workflows.</description>
-    </item>
-    <item>
-      <title>Put Claude to work on your computer</title>
-      <link>https://claude.com/blog/dispatch-and-computer-use</link>
-      <guid isPermaLink="true">https://claude.com/blog/dispatch-and-computer-use</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
-      <source>Anthropic Release Notes</source>
-      <description>Anthropic has launched computer use capabilities within Cowork (formerly Dispatch) for Pro and Max plan users, enabling Claude to directly operate files, dev tools, and UI elements on the user's screen with no setup required. This is a production release of agentic computer control, not a beta or preview. Pro/Max subscribers can now delegate multi-step computer tasks to Claude autonomously, which significantly expands automation potential for development and operational workflows.</description>
     </item>
     <item>
       <title>Use interactive connectors in Claude</title>
       <link>https://support.claude.com/en/articles/13454812-use-interactive-connectors-in-claude</link>
       <guid isPermaLink="true">https://support.claude.com/en/articles/13454812-use-interactive-connectors-in-claude</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
+      <pubDate>Sat, 16 May 2026 00:37:52 +0000</pubDate>
       <source>Anthropic Release Notes</source>
       <description>Claude's mobile app now supports interactive connectors that render live charts, diagrams, and shareable assets directly within conversations. This moves beyond static text responses to fully interactive visual components embedded in the chat interface. Practitioners can now build and share visual outputs (charts, diagrams) natively in Claude mobile conversations, expanding use cases for client-facing work and data visualization without leaving the app.</description>
-    </item>
-    <item>
-      <title>setting up role-based permissions</title>
-      <link>https://support.claude.com/en/articles/13930458-set-up-role-based-entitlements-on-enterprise-plans</link>
-      <guid isPermaLink="true">https://support.claude.com/en/articles/13930458-set-up-role-based-entitlements-on-enterprise-plans</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
-      <source>Anthropic Release Notes</source>
-      <description>Anthropic has added role-based permissions to Claude's admin controls, allowing organizations to create groups (manually or via SCIM) and assign custom roles that define which Claude capabilities each group can access. Admins can now enable Claude Cowork for specific teams, restrict features by department, and set group-level spend limits. Enterprise Claude deployments can now enforce granular access control and cost management per team without manual user-by-user configuration, and can integrate with existing identity providers via SCIM.</description>
-    </item>
-    <item>
-      <title>Monitor Claude Cowork activity with OpenTelemetry</title>
-      <link>https://support.claude.com/en/articles/14477985-monitor-cowork-activity-with-opentelemetry</link>
-      <guid isPermaLink="true">https://support.claude.com/en/articles/14477985-monitor-cowork-activity-with-opentelemetry</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
-      <source>Anthropic Release Notes</source>
-      <description>Anthropic has added OpenTelemetry support to Claude Cowork, enabling activity monitoring and observability. Full details are available in the official monitoring documentation. Practitioners can now integrate Cowork activity into existing observability stacks (traces, metrics, logs) for auditing, debugging, and performance monitoring of desktop automation workflows.</description>
-    </item>
-    <item>
-      <title>Claude Enterprise Analytics API: Access engagement and adoption data</title>
-      <link>https://support.claude.com/en/articles/13694757-access-engagement-and-adoption-data-with-the-analytics-api</link>
-      <guid isPermaLink="true">https://support.claude.com/en/articles/13694757-access-engagement-and-adoption-data-with-the-analytics-api</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
-      <source>Anthropic Release Notes</source>
-      <description>Anthropic has added Claude Cowork data to the Enterprise Analytics API, allowing organizations to access engagement and adoption metrics for the desktop automation tool. This expands the Analytics API's coverage beyond Claude chat/API usage to include Cowork-specific data. Enterprise teams deploying Cowork can now programmatically track adoption and usage patterns alongside other Claude product metrics through a unified Analytics API.</description>
-    </item>
-    <item>
-      <title>Introducing Claude Opus 4.7</title>
-      <link>https://www.anthropic.com/news/claude-opus-4-7</link>
-      <guid isPermaLink="true">https://www.anthropic.com/news/claude-opus-4-7</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
-      <source>Anthropic Release Notes</source>
-      <description>Claude Opus 4.7 is now generally available, featuring improvements in software engineering and complex long-running coding tasks, plus higher-resolution image vision capabilities. This is a new model release from Anthropic in the Opus 4 family. Practitioners using Claude for agentic coding workflows or vision-heavy tasks should evaluate Opus 4.7 as a potential upgrade to their current model selection.</description>
     </item>
     <item>
       <title>Anthropic Labs</title>
       <link>https://www.anthropic.com/news/introducing-anthropic-labs</link>
       <guid isPermaLink="true">https://www.anthropic.com/news/introducing-anthropic-labs</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
+      <pubDate>Sat, 16 May 2026 00:37:52 +0000</pubDate>
       <source>Anthropic Release Notes</source>
       <description>Anthropic launched Claude Design, a new Labs product released alongside Opus 4.7 that enables collaborative creation of visual outputs including designs, prototypes, slides, and one-pagers. This is a new product category distinct from standard Claude interactions. Professional users now have a dedicated Claude-powered tool for visual/design work, expanding the Claude ecosystem beyond text and code tasks.</description>
-    </item>
-    <item>
-      <title>Claude Code Enterprise</title>
-      <link>https://claude.com/product/claude-code/enterprise</link>
-      <guid isPermaLink="true">https://claude.com/product/claude-code/enterprise</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
-      <source>Anthropic News</source>
-      <description>Anthropic has announced Claude Code Enterprise, an enterprise tier of their CLI/agentic coding tool. No further details are available from the excerpt provided. Professional teams evaluating or currently using Claude Code should investigate Enterprise tier features, pricing, and capabilities for organizational deployment.</description>
     </item>
     <item>
       <title>Apr 24, 2026 Announcements An update on our election safeguards</title>
       <link>https://www.anthropic.com/news/election-safeguards-update</link>
       <guid isPermaLink="true">https://www.anthropic.com/news/election-safeguards-update</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
+      <pubDate>Sat, 16 May 2026 00:37:52 +0000</pubDate>
       <source>Anthropic News</source>
       <description>Anthropic published an update on their election safeguards as of April 24, 2026. The excerpt does not provide specifics, but this is an official policy/safety update from Anthropic regarding how Claude handles election-related content. Practitioners using Claude for any content involving elections, voting, or political topics should review this update to understand current behavioral constraints and guardrails.</description>
     </item>
@@ -291,47 +91,15 @@
       <title>Apr 28, 2026 Announcements Claude for Creative Work</title>
       <link>https://www.anthropic.com/news/claude-for-creative-work</link>
       <guid isPermaLink="true">https://www.anthropic.com/news/claude-for-creative-work</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
+      <pubDate>Sat, 16 May 2026 00:37:52 +0000</pubDate>
       <source>Anthropic News</source>
       <description>Anthropic made an announcement on April 28, 2026 specifically focused on Claude for Creative Work. No further details are available in the excerpt provided. An official Anthropic announcement targeting creative use cases could signal new capabilities, modes, or features relevant to practitioners using Claude for content generation and creative tasks.</description>
-    </item>
-    <item>
-      <title>May 4, 2026 Announcements Building a new enterprise AI services company with Blackstone, Hellman &amp; Friedman, and Goldman Sachs</title>
-      <link>https://www.anthropic.com/news/enterprise-ai-services-company</link>
-      <guid isPermaLink="true">https://www.anthropic.com/news/enterprise-ai-services-company</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
-      <source>Anthropic News</source>
-      <description>Anthropic announced a new enterprise AI services company being built in partnership with Blackstone, Hellman &amp; Friedman, and Goldman Sachs. The announcement was made on May 4, 2026, though specific details about the venture's structure and scope are not included in the excerpt. A dedicated enterprise AI services company backed by major financial institutions suggests expanded professional deployment infrastructure and support channels for Claude in enterprise contexts.</description>
-    </item>
-    <item>
-      <title>May 6, 2026 Announcements Higher usage limits for Claude and a compute deal with SpaceX</title>
-      <link>https://www.anthropic.com/news/higher-limits-spacex</link>
-      <guid isPermaLink="true">https://www.anthropic.com/news/higher-limits-spacex</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
-      <source>Anthropic News</source>
-      <description>Anthropic announced higher usage limits for Claude and a compute deal with SpaceX on May 6, 2026. No further details are available in the excerpt. Higher usage limits directly affect how intensively Claude can be used in professional workflows and production systems.</description>
-    </item>
-    <item>
-      <title>May 13, 2026 Announcements Introducing Claude for Small Business</title>
-      <link>https://www.anthropic.com/news/claude-for-small-business</link>
-      <guid isPermaLink="true">https://www.anthropic.com/news/claude-for-small-business</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
-      <source>Anthropic News</source>
-      <description>Anthropic announced Claude for Small Business on May 13, 2026. No further details are available in the excerpt. A new Claude product tier targeting small businesses may offer different pricing, features, or access models relevant to practitioners advising or working with smaller organizations.</description>
-    </item>
-    <item>
-      <title>Announcements PwC is deploying Claude to build technology, execute deals, and reinvent enterprise functions for clients</title>
-      <link>https://www.anthropic.com/news/pwc-expanded-partnership</link>
-      <guid isPermaLink="true">https://www.anthropic.com/news/pwc-expanded-partnership</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
-      <source>Anthropic News</source>
-      <description>PwC is deploying Claude across its enterprise services to build technology, execute deals, and reinvent enterprise functions for clients. This represents a major professional services firm standardizing on Claude for client-facing work at scale. Enterprise practitioners can reference PwC's adoption as a benchmark for Claude's viability in high-stakes professional services contexts including M&amp;A, technology delivery, and business transformation.</description>
     </item>
     <item>
       <title>Claude is a space to think</title>
       <link>https://www.anthropic.com/news/claude-is-a-space-to-think</link>
       <guid isPermaLink="true">https://www.anthropic.com/news/claude-is-a-space-to-think</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
+      <pubDate>Sat, 16 May 2026 00:37:52 +0000</pubDate>
       <source>Anthropic News</source>
       <description>Anthropic launched Claude Design, a new Anthropic Labs product enabling collaboration with Claude to create visual outputs including designs, prototypes, slides, and one-pagers. A second initiative, Project Glasswing, was announced as a multi-company effort involving Anthropic alongside AWS, Apple, Google, Microsoft, NVIDIA, and others. Claude Design represents a new surface for Claude-powered creative and visual work that professional practitioners should evaluate for design and presentation workflows.</description>
     </item>
@@ -339,25 +107,9 @@
       <title>What 81,000 people want from AI</title>
       <link>https://www.anthropic.com/81k-interviews</link>
       <guid isPermaLink="true">https://www.anthropic.com/81k-interviews</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
+      <pubDate>Sat, 16 May 2026 00:37:52 +0000</pubDate>
       <source>Anthropic News</source>
       <description>Anthropic launched Claude Design, a new product from Anthropic Labs that enables collaborative creation of visual work including designs, prototypes, slides, and one-pagers. The excerpt also references Project Glasswing, a multi-company initiative involving Anthropic alongside AWS, Apple, Google, Microsoft, and others. Claude Design represents a new surface for professional Claude usage worth evaluating for visual and presentation workflows.</description>
-    </item>
-    <item>
-      <title>Introducing Claude Design by Anthropic Labs</title>
-      <link>https://www.anthropic.com/news/claude-design-anthropic-labs</link>
-      <guid isPermaLink="true">https://www.anthropic.com/news/claude-design-anthropic-labs</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
-      <source>Anthropic News</source>
-      <description>Anthropic Labs launched Claude Design, a new product enabling collaboration with Claude to create visual outputs including designs, prototypes, slides, and one-pagers. This is a distinct product from the core Claude API/chat interface, released April 17, 2026. Practitioners working on design, presentation, or prototyping workflows now have a dedicated Claude-powered tool purpose-built for visual deliverables.</description>
-    </item>
-    <item>
-      <title>Introducing Claude Opus 4.7</title>
-      <link>https://www.anthropic.com/news/claude-opus-4-7</link>
-      <guid isPermaLink="true">https://www.anthropic.com/news/claude-opus-4-7</guid>
-      <pubDate>Fri, 15 May 2026 19:42:33 +0000</pubDate>
-      <source>Anthropic News</source>
-      <description>Anthropic has released Claude Opus 4.7, a new model in the Opus line with improved performance in coding, agentic tasks, vision, and multi-step reasoning. The release emphasizes greater thoroughness and consistency compared to prior Opus models. Practitioners using Claude for complex agentic pipelines, coding workflows, or vision tasks should evaluate Opus 4.7 as a potential upgrade to their current model selection.</description>
     </item>
   </channel>
 </rss>
