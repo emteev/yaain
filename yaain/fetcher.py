@@ -250,6 +250,24 @@ def fetch_scrape(source: dict) -> list[dict]:
     return items
 
 
+def _parse_human_date(text: str) -> str:
+    """
+    "June 30, 2026" -> ISO. Returns "" when there is no date to be had.
+
+    ⚠️ Worth the few lines: an item with no `published` gets stamped with the
+    run time by feed.py, which both states a false publication date and sorts
+    a months-old release note to the TOP of the page. The date is right there
+    in the heading; use it.
+    """
+    t = re.sub(r"\s+", " ", (text or "")).strip().rstrip(".")
+    for fmt in ("%B %d, %Y", "%b %d, %Y", "%d %B %Y", "%Y-%m-%d"):
+        try:
+            return datetime.strptime(t, fmt).replace(tzinfo=timezone.utc).isoformat()
+        except ValueError:
+            continue
+    return ""
+
+
 def fetch_release_notes(source: dict) -> list[dict]:
     """
     Parses the Anthropic release notes page (support.claude.com).
@@ -295,7 +313,7 @@ def fetch_release_notes(source: dict) -> list[dict]:
                 "body": body,
                 "author": "",
                 "image": "",
-                "published": "",
+                "published": _parse_human_date(date_str),
             })
     except Exception as e:
         print(f"  [release notes error]: {e}")
