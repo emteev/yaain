@@ -27,6 +27,26 @@ the studio, or pinning/upgrading a tool, means updating `stack.json` in the
 same breath. Otherwise this project decays into exactly the staleness it
 exists to prevent.
 
+### The `chosen` blocks
+
+Every model also carries a dated `chosen` block: **why** we picked it, **when**,
+a **pointer** to the journal entry that is the real record, and where known what
+would **supersede** it. The point is that when something newer appears we can
+weigh it against the original reason rather than just mute it — a suppression
+list says *stop telling me*; a dated reason says *keep telling me, and here is
+what to weigh it against*.
+
+Three rules:
+
+- **It is a pointer, never a restatement.** The dated `observations.md` entry in
+  the chief-of-staff repo stays the source of record. Four copies of a rationale
+  is how you end up reading the wrong one.
+- **Where no decision was recorded, say so.** Two models say exactly that today.
+  An honest gap is information; an invented reason is the failure this exists to
+  prevent.
+- **The filter does not read them** — see the warning on `stack.render()`.
+  Putting them in the prompt is an experiment to be measured, not an edit.
+
 ---
 
 ## File map

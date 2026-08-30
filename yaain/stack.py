@@ -63,7 +63,17 @@ def resolve(stack: dict, claimed: str) -> str:
 
 
 def render(stack: dict) -> str:
-    """A compact text rendering of the stack for the system prompt."""
+    """A compact text rendering of the stack for the system prompt.
+
+    ⚠️ DELIBERATELY DOES NOT RENDER THE `chosen` BLOCKS. They are for a human
+    (and for the alerting digest) deciding whether a new thing supersedes an old
+    decision — not for the filter deciding relevance. Feeding them in would grow
+    the prompt by roughly a third, and OUR OWN BOOKS RECORD TWICE that editing a
+    tuned classification prompt moves it in ways nobody predicts (repo-hunter
+    projectfit 2026-08-21/22; this filter's own v3, which loosened while trying
+    to tighten). If you want them in the prompt, that is an EXPERIMENT: measure
+    it on the pinned batch with `bench.py --compare` before shipping it.
+    """
     lines = []
 
     lines.append("MACHINES WE RUN ON:")
