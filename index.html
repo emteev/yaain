@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>YAAIN — Claude Signal</title>
+<title>YAAIN — stack signal</title>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -197,6 +197,31 @@
   .item-row .pub { font-size: 11px; color: #888780; white-space: nowrap; }
   .item-row .date { font-size: 11px; color: #888780; white-space: nowrap; }
 
+  /* Verdict groups — the page's spine. The question each group answers is
+     printed above it, because "act" only means something if you say so. */
+  .vgroup { margin-bottom: 3rem; }
+  .vhead {
+    display: flex; align-items: baseline; gap: 0.6rem; flex-wrap: wrap;
+    border-bottom: 1.5px solid #1a1a18;
+    padding-bottom: 0.5rem; margin-bottom: 1.25rem;
+  }
+  .vhead h2 { font-size: 19px; font-weight: 700; letter-spacing: -0.2px; }
+  .vhead .vq { font-size: 12px; color: #5f5e5a; }
+  .vhead .vcount { font-size: 11px; color: #888780; margin-left: auto; }
+  .vgroup-act  .vhead { border-bottom-color: #9A2C13; }
+  .vgroup-act  .vhead h2 { color: #9A2C13; }
+  .vgroup-watch .vhead h2 { color: #633806; }
+
+  /* Stack badge — the whole point of the redesign: what does this touch? */
+  .stack-badge {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.02em;
+    padding: 2px 8px; border-radius: 3px;
+    background: #1a1a18; color: #f5f4f0; white-space: nowrap;
+  }
+  .vgroup-act .stack-badge { background: #9A2C13; }
+
+  .rated { font-size: 11px; color: #888780; }
+
   .placeholder {
     color: #888780;
     padding: 2rem 0;
@@ -213,7 +238,7 @@
       <div class="issue-date" id="issue-date"></div>
     </div>
     <h1>Y A A I N</h1>
-    <p class="tagline">The best ideas, news and updates on Claude, curated daily.</p>
+    <p class="tagline">What changed that affects something we run. Filtered against <a href="https://github.com/emteev/yaain/blob/main/yaain/stack.json" target="_blank" rel="noopener"><code>stack.json</code></a>.</p>
   </div>
 
   <div id="content"></div>
@@ -222,36 +247,43 @@
 <script>
   const REFRESH_MS = 5 * 60 * 1000;  // 5 minutes
 
-  const SOURCE_MAP = {
-    "Anthropic News": { section: "Anthropic News", pill: "anthropic" },
-    "Anthropic Release Notes": { section: "Release Notes", pill: "release" },
-    "Anthropic Research": { section: "Anthropic Research", pill: "anthropic" },
-    "Claude Docs Changelog": { section: "Docs Changelog", pill: "changelog" },
-    "Claude Code Changelog": { section: "Claude Code", pill: "code" },
-    "Simon Willison's Blog": { section: "Analysis & Commentary", pill: "external" },
-    "Nathan Lambert — Interconnects": { section: "Analysis & Commentary", pill: "external" },
-    "Latent Space": { section: "Analysis & Commentary", pill: "latent" },
-    "AI Maker": { section: "Analysis & Commentary", pill: "external" },
-    "r/ClaudeAI": { section: "Community", pill: "external" },
-    "r/ClaudeCode": { section: "Community", pill: "external" },
-    "r/LocalLLaMA": { section: "Community", pill: "external" },
-    "Hacker News": { section: "Community", pill: "external" },
-  };
-  const SECTION_ORDER = [
-    "Anthropic News", "Anthropic Research", "Release Notes",
-    "Docs Changelog", "Claude Code", "Analysis & Commentary", "Community"
+  // ── Verdict groups ────────────────────────────────────────────────────
+  // The page is organised by what the item DEMANDS, not by who published it.
+  const GROUPS = [
+    { key: "act",     title: "Act on this",   q: "Something we run has changed." },
+    { key: "watch",   title: "Worth watching", q: "We could run this, and might want to." },
+    { key: "context", title: "Context",        q: "Background worth having. Nothing to do." },
   ];
 
-  function categorize(source) {
-    return SOURCE_MAP[source] || { section: "Other", pill: "external" };
+  // Pills are only a visual cue for where an item came from; a source with no
+  // entry falls back to neutral rather than disappearing.
+  const PILL_BY_PREFIX = [
+    ["HF — ",            "latent"],
+    ["Anthropic",        "anthropic"],
+    ["Claude",           "code"],
+    ["Hacker News",      "external"],
+    ["Ollama",           "release"],
+    ["ComfyUI",          "release"],
+    ["llama.cpp",        "release"],
+    ["transformers",     "release"],
+    ["Hermes",           "release"],
+    ["trellis",          "release"],
+    ["Phoronix",         "news"],
+    ["TechPowerUp",      "news"],
+    ["ServeTheHome",     "news"],
+  ];
+  function pillClass(source) {
+    for (const [prefix, cls] of PILL_BY_PREFIX) {
+      if (source.startsWith(prefix)) return cls;
+    }
+    return "external";
   }
 
   // ── Fetch helpers ──────────────────────────────────────────────────────
   function bust(url) { return url + "?t=" + Date.now(); }
-
   async function fetchText(url) {
     const r = await fetch(bust(url), { cache: "no-store" });
-    if (!r.ok) throw new Error(url + " → " + r.status);
+    if (!r.ok) throw new Error(url + " " + r.status);
     return r.text();
   }
   async function fetchJSON(url, fallback) {
@@ -265,6 +297,13 @@
     for (const el of doc.querySelectorAll("item")) {
       const url = el.querySelector("link")?.textContent?.trim() || "";
       if (!url) continue;
+      // Verdict and affected stack item ride as RSS <category domain="...">.
+      let verdict = "", affects = "";
+      for (const cat of el.querySelectorAll("category")) {
+        const d = cat.getAttribute("domain");
+        if (d === "verdict") verdict = cat.textContent.trim();
+        else if (d === "stack") affects = cat.textContent.trim();
+      }
       items.push({
         url,
         title: el.querySelector("title")?.textContent?.trim() || "",
@@ -272,16 +311,15 @@
         published: el.querySelector("pubDate")?.textContent?.trim() || "",
         source: el.querySelector("source")?.textContent?.trim() || "",
         image: el.querySelector("image")?.textContent?.trim() || "",
+        verdict, affects,
       });
     }
     return items;
   }
 
-  // Split summary + why back out. feed.py joins them with a single space;
-  // we treat the first sentence-ish chunk as summary, the rest as why.
+  // feed.py joins summary + why with a single space; split them back out.
   function splitDescription(desc) {
     if (!desc) return { summary: "", why: "" };
-    // Find the boundary after the first ". " that ends a sentence followed by capital.
     const m = desc.match(/^(.+?[.!?])\s+([A-Z].*)$/s);
     if (m) return { summary: m[1].trim(), why: m[2].trim() };
     return { summary: desc.trim(), why: "" };
@@ -294,103 +332,93 @@
     return d.toLocaleDateString("en-US", { day: "numeric", month: "short", year: "numeric" });
   }
 
-  function pill(source) {
-    const c = categorize(source);
-    const safe = source.replace(/&/g, "&amp;").replace(/</g, "&lt;");
-    return `<span class="source-pill pill-${c.pill}">${safe}</span>`;
-  }
-
-  // ── Renderers ─────────────────────────────────────────────────────────
-  function renderTier1(items) {
-    return items.map(item => {
-      const parts = splitDescription(item.description);
-      const sum = parts.summary ? `<p>${parts.summary}</p>` : "";
-      const why = parts.why ? `<p>${parts.why}</p>` : "";
-      const imageHtml = item.image 
-        ? `<div class="tier-1-image"><img src="${escapeHtml(item.image)}" alt="" loading="lazy"></div>`
-        : "";
-      return `
-        <div class="tier-1">
-          <div class="tier-1-content">
-            <div class="tier-1-text">
-              <div class="item-meta">
-                ${pill(item.source)}
-                <span class="item-date">${formatDate(item.published)}</span>
-              </div>
-              <h2><a href="${item.url}" target="_blank" rel="noopener">${escapeHtml(item.title)}</a></h2>
-              <div class="lede">${sum}${why}</div>
-              <div class="byline">${escapeHtml(item.source)}</div>
-            </div>
-            ${imageHtml}
-          </div>
-        </div>`;
-    }).join("");
-  }
-
-  function renderTier2(items) {
-    if (!items.length) return "";
-    const cards = items.map(item => {
-      const sum = splitDescription(item.description).summary;
-      return `
-        <div class="item">
-          <div class="item-meta">
-            ${pill(item.source)}
-            <span class="item-date">${formatDate(item.published)}</span>
-          </div>
-          <h3><a href="${item.url}" target="_blank" rel="noopener">${escapeHtml(item.title)}</a></h3>
-          <p>${escapeHtml(sum)}</p>
-        </div>`;
-    }).join("");
-    return `<div class="tier-2">${cards}</div>`;
-  }
-
-  function renderTier3(items) {
-    if (!items.length) return "";
-    const cards = items.map(item => {
-      const sum = splitDescription(item.description).summary;
-      const short = sum.length > 140 ? sum.slice(0, 137).trimEnd() + "…" : sum;
-      return `
-        <div class="item">
-          <div class="item-meta">
-            ${pill(item.source)}
-          </div>
-          <h4><a href="${item.url}" target="_blank" rel="noopener">${escapeHtml(item.title)}</a></h4>
-          <p>${escapeHtml(short)}</p>
-        </div>`;
-    }).join("");
-    return `<div class="tier-3">${cards}</div>`;
-  }
-
-  function renderTier4(items) {
-    if (!items.length) return "";
-    const rows = items.map(item => `
-      <div class="item-row">
-        <a href="${item.url}" target="_blank" rel="noopener">${escapeHtml(item.title)}</a>
-        <span class="dot">·</span>
-        <span class="pub">${escapeHtml(item.source)}</span>
-        <span class="dot">·</span>
-        <span class="date">${formatDate(item.published)}</span>
-      </div>
-    `).join("");
-    return `<div class="tier-4">${rows}</div>`;
-  }
-
   function escapeHtml(s) {
     return String(s || "").replace(/[&<>"']/g, c => ({
       "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
     }[c]));
   }
 
-  // ── Pipeline ──────────────────────────────────────────────────────────
-  function tierFor(url, ratings, blocklist) {
-    if (blocklist.has(url)) return -1;     // hidden
-    const r = ratings[url];
-    if (!r || r === 0) return 0;            // unrated → hidden
-    if (r === 5) return -1;                 // also hidden
-    return r;                                // 1, 2, 3, 4
+  function pill(source) {
+    return `<span class="source-pill pill-${pillClass(source)}">${escapeHtml(source)}</span>`;
+  }
+  function stackBadge(affects) {
+    return affects ? `<span class="stack-badge">${escapeHtml(affects)}</span>` : "";
   }
 
-  function byDateDesc(a, b) {
+  // ── Renderers ─────────────────────────────────────────────────────────
+  // `act` gets the full treatment; watch and context get progressively less.
+  function renderAct(items) {
+    return items.map(item => {
+      const { summary, why } = splitDescription(item.description);
+      const image = item.image
+        ? `<div class="tier-1-image"><img src="${escapeHtml(item.image)}" alt="" loading="lazy"></div>` : "";
+      return `
+        <div class="tier-1">
+          <div class="tier-1-content">
+            <div class="tier-1-text">
+              <div class="item-meta">
+                ${stackBadge(item.affects)}
+                ${pill(item.source)}
+                <span class="item-date">${formatDate(item.published)}</span>
+                ${ratedTag(item)}
+              </div>
+              <h2><a href="${escapeHtml(item.url)}" target="_blank" rel="noopener">${escapeHtml(item.title)}</a></h2>
+              <div class="lede">${summary ? `<p>${escapeHtml(summary)}</p>` : ""}${why ? `<p>${escapeHtml(why)}</p>` : ""}</div>
+            </div>
+            ${image}
+          </div>
+        </div>`;
+    }).join("");
+  }
+
+  function renderWatch(items) {
+    const cards = items.map(item => {
+      const { summary, why } = splitDescription(item.description);
+      return `
+        <div class="item">
+          <div class="item-meta">
+            ${stackBadge(item.affects)}
+            ${pill(item.source)}
+            <span class="item-date">${formatDate(item.published)}</span>
+            ${ratedTag(item)}
+          </div>
+          <h3><a href="${escapeHtml(item.url)}" target="_blank" rel="noopener">${escapeHtml(item.title)}</a></h3>
+          <p>${escapeHtml(summary)}${why ? " " + escapeHtml(why) : ""}</p>
+        </div>`;
+    }).join("");
+    return `<div class="tier-2">${cards}</div>`;
+  }
+
+  function renderContext(items) {
+    const rows = items.map(item => `
+      <div class="item-row">
+        <a href="${escapeHtml(item.url)}" target="_blank" rel="noopener">${escapeHtml(item.title)}</a>
+        <span class="dot">·</span>
+        <span class="pub">${escapeHtml(item.source)}</span>
+        <span class="dot">·</span>
+        <span class="date">${formatDate(item.published)}</span>
+      </div>`).join("");
+    return `<div class="tier-4">${rows}</div>`;
+  }
+
+  function ratedTag(item) {
+    return item.rating ? `<span class="rated">rated ${item.rating}</span>` : "";
+  }
+
+  // ── Pipeline ──────────────────────────────────────────────────────────
+  //
+  // ⚠️ THE CHANGE THAT MATTERS. The old page rendered ONLY items a human had
+  // already rated 1–4, so an unrated item was invisible and the homepage
+  // showed nothing until Em worked through the ranker. Now the MACHINE's
+  // verdict lays the page out and the human rating is an overlay on top:
+  //   rating 5 / blocklist → hidden (the human's veto, unchanged)
+  //   rating 1–4           → sorts to the top of its group
+  //   unrated              → still shown, in its machine tier
+  // The ranker keeps its meaning; it stops being a precondition for the page
+  // existing at all.
+  function sortKey(a, b) {
+    const ra = a.rating || 99, rb = b.rating || 99;   // rated first, best first
+    if (ra !== rb) return ra - rb;
     return new Date(b.published) - new Date(a.published);
   }
 
@@ -398,47 +426,56 @@
     document.getElementById("issue-date").textContent =
       new Date().toLocaleDateString("en-US", { weekday: "short", day: "numeric", month: "short", year: "numeric" });
 
-    let xml, ratings, blocklist;
+    const target = document.getElementById("content");
+    let xml;
     try {
       xml = await fetchText("feed.xml");
     } catch (e) {
-      document.getElementById("content").innerHTML =
-        `<div class="placeholder">No feed yet. The daily pipeline will publish here.</div>`;
+      target.innerHTML = `<div class="placeholder">No feed yet. The pipeline publishes here every four hours.</div>`;
       return;
     }
-    ratings = await fetchJSON("ratings.json", {});
-    const bl = await fetchJSON("blocklist.json", []);
-    blocklist = new Set(bl);
+    const ratings = await fetchJSON("ratings.json", {});
+    const blocklist = new Set(await fetchJSON("blocklist.json", []));
 
-    const items = parseFeed(xml).sort(byDateDesc);
-    const buckets = { 1: [], 2: [], 3: [], 4: [] };
-    for (const item of items) {
-      const t = tierFor(item.url, ratings, blocklist);
-      if (t >= 1 && t <= 4) buckets[t].push(item);
+    const buckets = { act: [], watch: [], context: [] };
+    let hidden = 0, untiered = 0;
+    for (const item of parseFeed(xml)) {
+      if (blocklist.has(item.url)) { hidden++; continue; }
+      const r = ratings[item.url];
+      if (r === 5) { hidden++; continue; }
+      item.rating = (r >= 1 && r <= 4) ? r : 0;
+      // Items published before the stack-driven filter existed carry no
+      // verdict. Show them as context rather than dropping them silently.
+      const v = buckets[item.verdict] ? item.verdict : (untiered++, "context");
+      buckets[v].push(item);
     }
 
-    const target = document.getElementById("content");
     const parts = [];
-    parts.push(renderTier1(buckets[1]));
+    for (const g of GROUPS) {
+      const list = buckets[g.key].sort(sortKey);
+      if (!list.length) continue;
+      const body = g.key === "act" ? renderAct(list)
+                 : g.key === "watch" ? renderWatch(list)
+                 : renderContext(list);
+      parts.push(`
+        <div class="vgroup vgroup-${g.key}">
+          <div class="vhead">
+            <h2>${g.title}</h2>
+            <span class="vq">${g.q}</span>
+            <span class="vcount">${list.length}</span>
+          </div>
+          ${body}
+        </div>`);
+    }
 
-    if (buckets[2].length) {
-      parts.push(`<div class="section-label">Featured</div>`);
-      parts.push(renderTier2(buckets[2]));
+    if (!parts.length) {
+      target.innerHTML = `<div class="placeholder">Nothing in the feed yet. The pipeline publishes here every four hours.</div>`;
+      return;
     }
-    if (buckets[3].length) {
-      parts.push(`<div class="section-label">More</div>`);
-      parts.push(renderTier3(buckets[3]));
+    if (hidden) {
+      parts.push(`<div class="placeholder">${hidden} item${hidden === 1 ? "" : "s"} hidden by the ranker.</div>`);
     }
-    if (buckets[4].length) {
-      parts.push(`<div class="section-label">Briefs</div>`);
-      parts.push(renderTier4(buckets[4]));
-    }
-
-    if (!parts.join("").trim()) {
-      target.innerHTML = `<div class="placeholder">Nothing rated for the homepage yet. Rate items in <a href="rank.html">rank.html</a> to populate.</div>`;
-    } else {
-      target.innerHTML = parts.join("");
-    }
+    target.innerHTML = parts.join("");
   }
 
   load();

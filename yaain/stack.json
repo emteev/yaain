@@ -1,0 +1,68 @@
+{
+  "_README": "The manifest that decides what news matters. YAAIN's filter reads THIS, not a hardcoded prompt. If you install something on brownie or the studio, or pin/upgrade a tool, UPDATE THIS FILE IN THE SAME BREATH — otherwise YAAIN decays into exactly the staleness it exists to prevent. Last audited against the machines: 2026-08-30 (refs/yaain-landscape-review-2026-08-30.md part (a)).",
+  "updated": "2026-08-30",
+
+  "machines": [
+    {
+      "name": "studio",
+      "role": "local text inference for the whole fleet",
+      "hardware": "Apple M1 Ultra, 128GB unified memory",
+      "ceiling": "~96GB wired practical; ~100GB observed stall point. The real constraint is reading speed (~180 tok/s), not memory."
+    },
+    {
+      "name": "brownie",
+      "role": "image/video/3D generation + the vision tier",
+      "hardware": "NVIDIA RTX 5070 Ti, 16GB VRAM, 64GB RAM, Windows 11, Blackwell sm_120",
+      "ceiling": "16GB VRAM is a HARD WALL. A model needing 24GB is unusable to us at any price. Python 3.13.14 / torch 2.13.0+cu130 — an ABI mismatch is real breakage, not a detail."
+    },
+    {
+      "name": "mini-1",
+      "role": "orchestration, crawls, editorial tools",
+      "hardware": "Mac mini",
+      "ceiling": ""
+    }
+  ],
+
+  "models": [
+    { "name": "qwen3.6", "aliases": ["qwen3.6", "qwen 3.6", "qwen3", "bosun-brain", "qwen3.8", "qwen4"], "runs_on": "studio", "detail": "27b-bf16 / 27b-coding-bf16 / 27b-q8_0 / 27b-q4_K_M / 35b-a3b MoE. `bosun-brain` is the q4_K_M at 98,304 ctx, ~23.6GB resident.", "used_by": "Bosun's own brain; repo-hunter enrich+explain; mac-hunter llm_generic; takomagether social drafts + council attribution" },
+    { "name": "Qwen-Image", "aliases": ["qwen-image", "qwen image", "qwen_image"], "runs_on": "brownie", "detail": "qwen_image_fp8, 20.4GB on disk", "used_by": "image generation" },
+    { "name": "Wan 2.2", "aliases": ["wan2.2", "wan 2.2", "wan2", "wan 2", "wan2.1", "wan-ai", "vace"], "runs_on": "brownie", "detail": "14B suite (t2v/i2v/fun-control/fun-camera x high+low) + 5B ti2v/fun_control + Wan 2.1 VACE 1.3B", "used_by": "video generation; the promo/clip recipes" },
+    { "name": "LTX-2.3", "aliases": ["ltx", "ltx-2", "ltx-video", "lightricks", "ltxv"], "runs_on": "brownie", "detail": "LTX-2.3 22B dev + distilled Q4_K_M + a 7.6GB distilled LoRA. LOADS VIA UnetLoaderGGUF, not UNETLoader. Installed 2026-08-29 and NEVER RUN.", "used_by": "video generation (untested)" },
+    { "name": "SDXL", "aliases": ["sdxl", "stable diffusion", "stabilityai"], "runs_on": "brownie", "detail": "SDXL base", "used_by": "image generation in the promo recipes" },
+    { "name": "ACE-Step 1.5", "aliases": ["ace-step", "acestep", "ace step"], "runs_on": "brownie", "detail": "ACE-Step 1.5 turbo", "used_by": "music/audio beds" },
+    { "name": "Hunyuan3D 2.0", "aliases": ["hunyuan3d", "hunyuan 3d", "hy3d", "hy4", "tencent hunyuan"], "runs_on": "brownie", "detail": "DiT v2.0, shape + texture. LICENCE UNRESOLVED: Tencent Community licence excludes the EU/UK/South Korea including the OUTPUT — awaiting Em's ruling.", "used_by": "image-to-3D" },
+    { "name": "TRELLIS.2 (trellis.cpp)", "aliases": ["trellis", "trellis.cpp", "trellis2"], "runs_on": "brownie", "detail": "trellis.cpp, MIT, standalone C++/GGML, 16.5GB GGUF, no Python/torch. The Python wrapper route is DEAD on our torch 2.13 ABI.", "used_by": "image-to-3D (the licence-clean path)" },
+    { "name": "Qwen2.5-VL-7B", "aliases": ["qwen2.5-vl", "qwen2-vl", "qwen vl"], "runs_on": "brownie", "detail": "Apache-2.0, 16.6GB, one-shot by design (a resident critic would pin ~16GB on our only render tier)", "used_by": "the video judge; NDN's design critic" },
+    { "name": "gemma-3-12b", "aliases": ["gemma-3", "gemma3", "gemma"], "runs_on": "brownie", "detail": "gemma-3-12b-it + mmproj, the LTX-2 text encoder", "used_by": "LTX-2.3's text encoder" },
+    { "name": "phi4 / qwen2.5 / gemma2 (small studio models)", "aliases": ["phi4", "phi-4", "qwen2.5", "gemma2", "qwq"], "runs_on": "studio", "detail": "phi4 9.1GB, qwen2.5:14b, qwen2.5-coder:7b, qwen2.5:7b-instruct, gemma2:9b, qwq 19.9GB", "used_by": "takomagether social drafts; repo-hunter explain" }
+  ],
+
+  "tools": [
+    { "name": "Ollama", "aliases": ["ollama"], "detail": "serves every studio model, tailnet-bound. num_ctx pins and keep-alive behaviour are load-bearing for us.", "critical": true },
+    { "name": "ComfyUI", "aliases": ["comfyui", "comfy org", "comfy-org"], "detail": "brownie's generation front end, portable install, tailnet-only, NO AUTH (the bind is the security)", "critical": true },
+    { "name": "ComfyUI-GGUF", "aliases": ["comfyui-gguf", "unetloadergguf", "city96"], "detail": "provides UnetLoaderGGUF — THE ONLY WAY our LTX-2.3 models load. NO COMMIT SINCE 2026-01-12; an unmaintained load-bearing dependency.", "critical": true },
+    { "name": "llama.cpp", "aliases": ["llama.cpp", "llama-cpp", "ggml", "gguf"], "detail": "the GGUF lineage everything we quantise depends on", "critical": true },
+    { "name": "transformers", "aliases": ["transformers", "huggingface transformers"], "detail": "5.14.1 on brownie — the vision tier runs on it. Do NOT pip install into brownie's interpreter without --target.", "critical": true },
+    { "name": "torch", "aliases": ["pytorch", "torch"], "detail": "2.13.0+cu130 on brownie. A wheel built for another torch is a hard failure (this killed the TRELLIS.2 wrapper route).", "critical": true },
+    { "name": "Claude Code", "aliases": ["claude code", "claude-code"], "detail": "the agent this whole operation is built in; subscription, not metered", "critical": true },
+    { "name": "Hermes Agent", "aliases": ["hermes agent", "hermes-agent", "nousresearch"], "detail": "PINNED v0.20.1 at commit f80f453a — NEVER AUTO-UPDATE. Our loop patches are re-applied by hand after any update.", "critical": true },
+    { "name": "Blender", "aliases": ["blender"], "detail": "5.2 headless on brownie, camera-guide passes. Cannot write video — stills only.", "critical": false },
+    { "name": "ffmpeg", "aliases": ["ffmpeg", "ffprobe"], "detail": "every media recipe's assembly + the quality gate's measurement", "critical": false },
+    { "name": "Anthropic API", "aliases": ["anthropic api", "claude api", "messages api", "sonnet", "haiku", "opus"], "detail": "metered: the Hot Stacks raters, the day-file, YAAIN's own filter. Model deprecations cost us real work.", "critical": true }
+  ],
+
+  "constraints": [
+    "VRAM <= 16GB on brownie. This is the single most important filter on relevance — most model announcements are written for 24-80GB cards. A quantisation that brings a model under 16GB is itself the news.",
+    "LICENCE IS A HARD SPEC, NOT A PREFERENCE. Apache-2.0 and MIT are the defaults. TERRITORIAL RESTRICTIONS ARE DISQUALIFYING - MiniMax H3 was deleted over exactly this (2026-08-29), and Hunyuan3D 2.0's territorial exclusion of the EU/UK/South Korea is still awaiting a ruling. A gated model costs a human licence click.",
+    "Blackwell sm_120 compatibility on brownie is real breakage, not a footnote.",
+    "brownie runs Python 3.13.14 / torch 2.13.0+cu130. Wheels built for another torch do not load.",
+    "Off-API preference: local first, metered only where metering is the point.",
+    "Loader dependencies matter as much as models (LTX-2.3 loads through UnetLoaderGGUF, not UNETLoader)."
+  ],
+
+  "licence_policy": {
+    "preferred": ["apache-2.0", "mit", "bsd"],
+    "disqualifying": "any territorial restriction on use OR on the output; any non-commercial clause",
+    "needs_human": "gated models (a licence click), and any bespoke community licence"
+  }
+}
