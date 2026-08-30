@@ -73,7 +73,29 @@ def _extract_author(entry: dict) -> str:
 
 def fetch_rss(source: dict) -> list[dict]:
     items = []
-    feed = feedparser.parse(source["url"])
+    # ⚠️ Fetch through _get, NOT by handing feedparser the URL. feedparser does
+    # its own HTTP with its own user agent, so passing the URL silently bypasses
+    # our honest UA, our redirect policy and our timeout — and leaves us with no
+    # status code or byte count to diagnose with. Found 2026-08-30: two Substack
+    # feeds that are healthy from a residential IP returned nothing from the
+    # GitHub Actions runner, and there was no way to tell why.
+    resp = _get(source["url"], timeout=25)
+    if not resp:
+        return []
+    feed = feedparser.parse(resp.text)
+
+    # A 200 IS NOT CONTENT. A feed answering with an interstitial, an empty
+    # body, or HTML instead of XML parses to zero entries — and without this it
+    # is indistinguishable from a feed that simply has no new items. That silent
+    # rot is the thing this project exists to notice, so it must not be how our
+    # own fetcher fails.
+    if not feed.entries:
+        head = resp.text[:120].replace("\n", " ").strip()
+        print(f"  [empty feed] {source['name']}: HTTP {resp.status_code}, "
+              f"{len(resp.content)} bytes, 0 entries"
+              + (f" - bozo: {feed.bozo_exception}" if getattr(feed, "bozo", 0) else "")
+              + f" - starts: {head!r}")
+
     # Per-source cap: noisy feeds (hardware news at ~170 items) declare their
     # own `limit` so one source cannot dominate a run's API spend.
     for entry in feed.entries[:source.get("limit", 20)]:

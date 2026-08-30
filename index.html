@@ -472,8 +472,13 @@
       target.innerHTML = `<div class="placeholder">Nothing in the feed yet. The pipeline publishes here every four hours.</div>`;
       return;
     }
-    if (hidden) {
-      parts.push(`<div class="placeholder">${hidden} item${hidden === 1 ? "" : "s"} hidden by the ranker.</div>`);
+    const notes = [];
+    if (hidden) notes.push(`${hidden} item${hidden === 1 ? "" : "s"} hidden by the ranker`);
+    // Items published before the stack-driven filter existed carry no verdict.
+    // Say so rather than letting them quietly pad the Context list.
+    if (untiered) notes.push(`${untiered} from before the filter was rebuilt, shown as context`);
+    if (notes.length) {
+      parts.push(`<div class="placeholder">${notes.join(" · ")}.</div>`);
     }
     target.innerHTML = parts.join("");
   }
