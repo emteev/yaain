@@ -158,13 +158,13 @@
         "trellis2"
       ],
       "runs_on": "brownie",
-      "detail": "trellis.cpp, MIT, standalone C++/GGML, 16.5GB GGUF, no Python/torch. The Python wrapper route is DEAD on our torch 2.13 ABI.",
+      "detail": "trellis.cpp v0.6.0 (installed 2026-08-29), MIT, standalone C++/GGML, no Python/torch — so it cannot disturb ComfyUI. We run the f16 weights (~16.5GB); q8 (~9.5GB) and q4 (~6GB) exist since v0.5.4 via the installer's --quant flag and would sit well under the 16GB VRAM wall. The Python wrapper route is DEAD on our torch 2.13 ABI.",
       "used_by": "image-to-3D (the licence-clean path)",
       "chosen": {
         "date": "2026-08-29",
         "why": "Chosen as the LICENCE-CLEAN image-to-3D path, deliberately alongside Hunyuan3D rather than instead of it: MIT end to end (trellis.cpp, TRELLIS.2-4B, BiRefNet), and it uses ungated mirrors so it needs no DINOv3 licence click. A standalone C++/GGML binary with no Python or torch, so it cannot disturb the ComfyUI install — which is also why it sidesteps the torch-ABI wall that killed the Python wrapper route.",
         "ref": "observations.md 2026-08-29 (night, TRELLIS.2); refs/exec-2026-08-29-trellis2-local-run.md",
-        "revisit_if": "quality proves inadequate against Hunyuan3D (2 months old, 22 open issues, and its parity-with-reference claim is unverified by us), or the Hunyuan3D licence is ruled clean"
+        "revisit_if": "quality proves inadequate against Hunyuan3D, or the Hunyuan3D licence is ruled clean. Quality caveat softened 2026-08-30: the maintainer measured statistical parity with the reference pipeline at v0.4.3 (multi-seed, matched-conditioning A/B), but CUDA geometry then regressed at v0.5.4 and was fixed at v0.6.0 with no restated parity measurement, so parity is claimed for a build one regression-and-fix behind ours. Our own evidence on v0.6.0 is Em's by-sight approval of the pipe-holder render (2026-08-30), not a measurement."
       }
     },
     {
