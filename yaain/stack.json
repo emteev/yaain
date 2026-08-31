@@ -90,14 +90,15 @@
         "ltxv"
       ],
       "runs_on": "brownie",
-      "detail": "LTX-2.3 22B dev + distilled Q4_K_M + a 7.6GB distilled LoRA. LOADS VIA UnetLoaderGGUF, not UNETLoader. Installed 2026-08-29 and NEVER RUN.",
-      "used_by": "video generation (untested)",
+      "detail": "LTX-2.3 22B dev + distilled Q4_K_M + a 7.6GB distilled LoRA. LOADS VIA UnetLoaderGGUF, not UNETLoader. RUN + MEASURED 2026-08-31: ~30s warm for a 4.84s clip at 768x512/25fps, peak VRAM 15,215 MiB of 16,303 — ~3x faster than Wan ti2v_5B. Text encoder is DualCLIPLoaderGGUF type=ltxv (gemma GGUF + embeddings connector); the LTX-native loaders are closed to us because they want a full safetensors checkpoint in checkpoints/. VIDEO ONLY — the audio path needs one of those closed loaders. Graph: hermes/workflows/ltx2.3-t2v-gguf.api.json",
+      "used_by": "video generation (proven 2026-08-31, video only)",
       "chosen": {
         "date": "2026-08-29",
-        "why": "Installed as a second video path alongside Wan 2.2, notably for joint audio+video (the feature that distinguished MiniMax H3, deleted the same day on licence). NEVER RUN — installed is not proven, and its first run is still its own test.",
-        "ref": "observations.md 2026-08-29; projects.md brownie row",
-        "revisit_if": "ALREADY SUPERSEDED ON PAPER — LTX-2.5 shipped 2026-08-10, before we installed 2.3. It is gated with an 'other' licence, so it needs a licence read before it can replace anything. Run 2.3 once first: we have never measured the thing we already have."
-      }
+        "why": "Installed as a second video path alongside Wan 2.2, notably for joint audio+video. RUN 2026-08-31 and it is the faster path for short clips (~3x Wan at comparable resolution), so it earns its place.",
+        "ref": "observations.md 2026-08-31; hermes/workflows/ltx2.3-t2v-gguf.md",
+        "revisit_if": "LTX-2.5 (created 2026-07-23, gated=auto, same Community licence family) is the successor and ComfyUI shipped day-0 support. The IC-LoRAs (Clean-Plate, Relight) are likely better value than the version bump — they add capability to the 2.3 we already have. Both need Em's HF click-through. Also open: wiring LTX's audio path, which needs the safetensors checkpoint."
+      },
+      "licence": "LTX-2 Community License Agreement — worldwide, royalty-free, NO territorial exclusion; paid licence required only above $10M annual revenue. Read 2026-08-31. Clean for us."
     },
     {
       "name": "SDXL",
@@ -192,11 +193,11 @@
         "gemma"
       ],
       "runs_on": "brownie",
-      "detail": "gemma-3-12b-it + mmproj, the LTX-2 text encoder",
+      "detail": "gemma-3-12b-it + mmproj — LTX-2.3's text encoder, PROVEN IN USE 2026-08-31 via DualCLIPLoaderGGUF type=ltxv",
       "used_by": "LTX-2.3's text encoder",
       "chosen": {
         "date": "2026-08-29",
-        "why": "NOT A CHOICE — it arrived as LTX-2.3's required text encoder and is on disk because LTX-2.3 is. Its own vision weights are unusable to us (the GGUF mmproj is transposed by ComfyUI-GGUF), which is part of why the vision tier is a separate model.",
+        "why": "NOT A CHOICE — it arrived as LTX-2.3's required text encoder. Its TEXT role is proven working (2026-08-31, the LTX run). Its VISION weights remain unusable to us (the GGUF mmproj is transposed by ComfyUI-GGUF, and the Gemma3 commits in that repo add text support only), which is why the vision tier is a separate Qwen2.5-VL model.",
         "ref": "observations.md 2026-08-29 (night, vision)",
         "revisit_if": "LTX is replaced or upgraded — this follows whatever LTX needs"
       }
@@ -245,7 +246,7 @@
         "unetloadergguf",
         "city96"
       ],
-      "detail": "provides UnetLoaderGGUF — THE ONLY WAY our LTX-2.3 models load. NO COMMIT SINCE 2026-01-12; an unmaintained load-bearing dependency.",
+      "detail": "provides UnetLoaderGGUF + DualCLIPLoaderGGUF — THE ONLY WAY our LTX-2.3 model AND its gemma text encoder load. Verified 2026-08-31: we sit EXACTLY at upstream HEAD (6ea2651, rev-list 0/0), and upstream's newest commit is still 2026-01-12. Unmaintained (7.5 months) but NOT stale — there is nothing to take. The Gemma3 12B commits are already installed and add TEXT support only; they do NOT fix the transposed vision mmproj.",
       "critical": true
     },
     {
