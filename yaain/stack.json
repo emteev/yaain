@@ -68,16 +68,20 @@
         "wan 2",
         "wan2.1",
         "wan-ai",
-        "vace"
+        "vace",
+        "wan animate",
+        "animate",
+        "wan2.2-animate",
+        "pose"
       ],
       "runs_on": "brownie",
-      "detail": "14B suite (t2v/i2v/fun-control/fun-camera x high+low) + 5B ti2v/fun_control + Wan 2.1 VACE 1.3B",
+      "detail": "14B suite (t2v/i2v/fun-control/fun-camera x high+low) + 5B ti2v/fun_control + Wan 2.1 VACE 1.3B. PLUS Wan2.2-Animate-14B Q4_K_M (11.5GB GGUF, QuantStack, apache-2.0, ungated) added 2026-08-31 for pose-driven character animation, with clip_vision_h and the DWPose extractor (comfyui_controlnet_aux). Animate loads via UnetLoaderGGUF, the route proven by LTX-2.3 the same day.",
       "used_by": "video generation; the promo/clip recipes",
       "chosen": {
         "date": "2026-08-12",
         "why": "The Apache-2.0 default for video in the render-PC plan; installed and proven on brownie 2026-08-14 onward.",
         "ref": "refs/render-pc-software-plan-2026-08-12.md; projects.md brownie row",
-        "revisit_if": "a Wan successor, or another video model, at a licence at least as clean"
+        "revisit_if": "a Wan successor, or another video model, at a licence at least as clean. NOTE Wan2.2-Animate-2-14B is a PLACEHOLDER repo (0 downloads, no parameter count) despite ComfyUI shipping a WanAnimate2ToVideo node — do not plan around it. Wan2.2-S2V-14B (speech-to-video) is clean and NOT installed: Em's open call, adjacency to council clips and narrated promos."
       }
     },
     {
@@ -326,6 +330,21 @@
       ],
       "detail": "metered: the Hot Stacks raters, the day-file, YAAIN's own filter. Model deprecations cost us real work.",
       "critical": true
+    },
+    {
+      "name": "comfyui_controlnet_aux + segment-anything-2 + VideoHelperSuite",
+      "aliases": [
+        "controlnet_aux",
+        "dwpose",
+        "dwpreprocessor",
+        "sam2",
+        "segment anything",
+        "videohelpersuite",
+        "vhs",
+        "pose"
+      ],
+      "detail": "Added to brownie 2026-08-31 for the Wan Animate pipeline. DWPreprocessor extracts the pose skeleton that DRIVES Animate; SAM2 masks the character; VHS is video I/O. Installed behind a pip constraints file pinning torch/torchvision/numpy/transformers because controlnet_aux's requirements list unpinned torch -- the freeze diff was additions only, 0 changes, and LTX-2.3 re-ran clean as a regression check. FaceMaskFromPoseKeypoints was deliberately NOT installed (it needs ComfyUI-WanVideoWrapper, a 34MB parallel Wan implementation, for one OPTIONAL input).",
+      "critical": false
     }
   ],
   "constraints": [
