@@ -5,13 +5,13 @@
     <link>https://emteev.github.io/yaain</link>
     <description>AI news filtered against one specific stack: what changed that affects something we actually run. Tiered act / watch / context.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 05 Sep 2026 14:46:20 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 05 Sep 2026 17:59:32 +0000</lastBuildDate>
     <atom:link href="https://emteev.github.io/yaain/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Portal by Spotify cut my Claude Code token usage by 90%</title>
       <link>https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90</link>
       <guid isPermaLink="true">https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Hacker News — claude</source>
       <author>cebert</author>
       <category domain="verdict">context</category>
@@ -21,7 +21,7 @@
       <title>v0.4.0</title>
       <link>https://github.com/ggml-org/llama.cpp/releases/tag/v0.4.0</link>
       <guid isPermaLink="true">https://github.com/ggml-org/llama.cpp/releases/tag/v0.4.0</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>llama.cpp releases</source>
       <author>github-actions[bot]</author>
       <category domain="verdict">act</category>
@@ -32,7 +32,7 @@
       <title>Georgi Gerganov on llama.cpp/ggml future after Nvidia acquisition of HuggingFace</title>
       <link>https://twitter.com/ggerganov/status/2095897173376618881</link>
       <guid isPermaLink="true">https://twitter.com/ggerganov/status/2095897173376618881</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Hacker News — llama.cpp</source>
       <author>theanonymousone</author>
       <category domain="verdict">context</category>
@@ -42,7 +42,7 @@
       <title>NVIDIA to Buy Hugging Face for $12.9B, Promises to Keep It an Open Platform</title>
       <link>https://www.techpowerup.com/352319/nvidia-to-buy-hugging-face-for-usd-12-9b-promises-to-keep-it-an-open-platform</link>
       <guid isPermaLink="true">https://www.techpowerup.com/352319/nvidia-to-buy-hugging-face-for-usd-12-9b-promises-to-keep-it-an-open-platform</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>TechPowerUp</source>
       <author>Nomad76</author>
       <image>https://tpucdn.com/img/PmQirNzrpRKZCBeK_thm.jpg</image>
@@ -53,7 +53,7 @@
       <title>NVIDIA Acquiring Hugging Face For $12.93 Billion</title>
       <link>https://www.phoronix.com/news/NVIDIA-Hugging-Face</link>
       <guid isPermaLink="true">https://www.phoronix.com/news/NVIDIA-Hugging-Face</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Phoronix</source>
       <author>Michael Larabel</author>
       <category domain="verdict">context</category>
@@ -63,7 +63,7 @@
       <title>structured outputs</title>
       <link>https://docs.claude.com/docs/en/build-with-claude/structured-outputs</link>
       <guid isPermaLink="true">https://docs.claude.com/docs/en/build-with-claude/structured-outputs</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Claude Docs Changelog</source>
       <category domain="verdict">act</category>
       <category domain="stack">Anthropic API</category>
@@ -73,7 +73,7 @@
       <title>strict tool use</title>
       <link>https://docs.claude.com/docs/en/agents-and-tools/tool-use/strict-tool-use</link>
       <guid isPermaLink="true">https://docs.claude.com/docs/en/agents-and-tools/tool-use/strict-tool-use</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Claude Docs Changelog</source>
       <category domain="verdict">act</category>
       <category domain="stack">Anthropic API</category>
@@ -83,7 +83,7 @@
       <title>Prompt caching pricing</title>
       <link>https://docs.claude.com/docs/en/about-claude/pricing#prompt-caching</link>
       <guid isPermaLink="true">https://docs.claude.com/docs/en/about-claude/pricing#prompt-caching</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Claude Docs Changelog</source>
       <category domain="verdict">context</category>
       <description>Anthropic has introduced differentiated prompt caching pricing for Claude Fable 5.1 and Claude Mythos 5.1: cache reads cost $0.25/MTok (0.025x base input price), compared to 0.1x on other models. Cache writes pricing is unchanged. If any of our metered Anthropic API usage (Hot Stacks raters, day-file, YAAIN filter) migrates to Fable 5.1 or Mythos 5.1 with prompt caching, read costs would be 4x cheaper than current models — worth knowing before any model migration decision.</description>
@@ -92,7 +92,7 @@
       <title>adaptive thinking</title>
       <link>https://docs.claude.com/docs/en/build-with-claude/thinking</link>
       <guid isPermaLink="true">https://docs.claude.com/docs/en/build-with-claude/thinking</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Claude Docs Changelog</source>
       <category domain="verdict">act</category>
       <category domain="stack">Anthropic API</category>
@@ -102,7 +102,7 @@
       <title>Elevated errors for Claude Sonnet 5</title>
       <link>https://status.claude.com/incidents/ls6bn1x81m0w</link>
       <guid isPermaLink="true">https://status.claude.com/incidents/ls6bn1x81m0w</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic status</source>
       <category domain="verdict">context</category>
       <description>Sep2,21:44UTCResolved- The issue affecting Claude Sonnet 5 has been resolved. Impact occurred from 2:05pm PT / 21:05 UTC to 2:19pm PT / 21:19 UTC.Sep2,21:17UTCInvestigating- We are investigating elevated errors on requests to Claude Sonnet 5. We will provide an update as soon as possible. A 14-minute elevated-error window on Claude Sonnet 5 is now resolved; no action needed but confirms the API we depend on for raters and day-file had a brief outage today.</description>
@@ -111,7 +111,7 @@
       <title>[AINews] Claude Fable/Mythos 5.1: new SOTA model, 75% cache price cut but 70% more output tokens</title>
       <link>https://www.latent.space/p/ainews-claude-fablemythos-51-new</link>
       <guid isPermaLink="true">https://www.latent.space/p/ainews-claude-fablemythos-51-new</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Latent Space</source>
       <image>https://substackcdn.com/image/fetch/$s_!mLdF!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4c65cdfd-fd46-4b99-88f2-eb9be581afd1_2160x2250.png</image>
       <category domain="verdict">act</category>
@@ -122,7 +122,7 @@
       <title>GPU Prices Jumped 15% in One Month, RTX 5090 Now 136% Above MSRP</title>
       <link>https://www.techpowerup.com/352241/gpu-prices-jumped-15-in-one-month-rtx-5090-now-136-above-msrp</link>
       <guid isPermaLink="true">https://www.techpowerup.com/352241/gpu-prices-jumped-15-in-one-month-rtx-5090-now-136-above-msrp</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>TechPowerUp</source>
       <author>DrUsmanSaleem</author>
       <image>https://tpucdn.com/img/klpk1Yl2MpWca2n2_thm.jpg</image>
@@ -133,7 +133,7 @@
       <title>Claude Fable 5.1 made me a really nice animated pelican</title>
       <link>https://simonwillison.net/2026/Sep/1/claude-fable-5-1/</link>
       <guid isPermaLink="true">https://simonwillison.net/2026/Sep/1/claude-fable-5-1/</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Simon Willison's Blog</source>
       <image>https://static.simonwillison.net/static/2026/fable-5.1-low.png</image>
       <category domain="verdict">act</category>
@@ -144,7 +144,7 @@
       <title>Anthropic model deprecations — page changed</title>
       <link>https://docs.claude.com/en/docs/about-claude/model-deprecations#digest-58f5f5a9ae20</link>
       <guid isPermaLink="true">https://docs.claude.com/en/docs/about-claude/model-deprecations#digest-58f5f5a9ae20</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic model deprecations</source>
       <category domain="verdict">act</category>
       <category domain="stack">Anthropic API</category>
@@ -154,7 +154,7 @@
       <title>b10750</title>
       <link>https://github.com/ggml-org/llama.cpp/releases/tag/b10750</link>
       <guid isPermaLink="true">https://github.com/ggml-org/llama.cpp/releases/tag/b10750</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>llama.cpp releases</source>
       <author>github-actions[bot]</author>
       <category domain="verdict">act</category>
@@ -165,7 +165,7 @@
       <title>b10751</title>
       <link>https://github.com/ggml-org/llama.cpp/releases/tag/b10751</link>
       <guid isPermaLink="true">https://github.com/ggml-org/llama.cpp/releases/tag/b10751</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>llama.cpp releases</source>
       <author>github-actions[bot]</author>
       <category domain="verdict">act</category>
@@ -176,7 +176,7 @@
       <title>Claude Fable 5.1 and Claude Mythos 5.1</title>
       <link>https://www.anthropic.com/claude-fable-and-mythos-5-1</link>
       <guid isPermaLink="true">https://www.anthropic.com/claude-fable-and-mythos-5-1</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Hacker News — claude</source>
       <author>denysvitali</author>
       <category domain="verdict">act</category>
@@ -187,7 +187,7 @@
       <title>Release notes: September 1, 2026</title>
       <link>https://support.claude.com/en/articles/12138966-release-notes#september-1-2026</link>
       <guid isPermaLink="true">https://support.claude.com/en/articles/12138966-release-notes#september-1-2026</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic Release Notes</source>
       <category domain="verdict">act</category>
       <category domain="stack">Anthropic API</category>
@@ -197,7 +197,7 @@
       <title>Claude Code 2.1.257</title>
       <link>https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md#21257</link>
       <guid isPermaLink="true">https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md#21257</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Claude Code Changelog</source>
       <category domain="verdict">act</category>
       <category domain="stack">Claude Code</category>
@@ -207,7 +207,7 @@
       <title>Introducing Claude Fable 5.1 and Claude Mythos 5.1</title>
       <link>https://www.anthropic.com/claude-fable-and-mythos-5-1</link>
       <guid isPermaLink="true">https://www.anthropic.com/claude-fable-and-mythos-5-1</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic News</source>
       <category domain="verdict">act</category>
       <category domain="stack">Anthropic API</category>
@@ -217,7 +217,7 @@
       <title>b10737</title>
       <link>https://github.com/ggml-org/llama.cpp/releases/tag/b10737</link>
       <guid isPermaLink="true">https://github.com/ggml-org/llama.cpp/releases/tag/b10737</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>llama.cpp releases</source>
       <author>github-actions[bot]</author>
       <category domain="verdict">act</category>
@@ -228,7 +228,7 @@
       <title>NVIDIA GPU Frame Interpolation Support Lands in FFmpeg</title>
       <link>https://www.techpowerup.com/352206/nvidia-gpu-frame-interpolation-support-lands-in-ffmpeg</link>
       <guid isPermaLink="true">https://www.techpowerup.com/352206/nvidia-gpu-frame-interpolation-support-lands-in-ffmpeg</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>TechPowerUp</source>
       <author>AleksandarK</author>
       <image>https://tpucdn.com/img/pwH7bEpn2wsdb6EL_thm.jpg</image>
@@ -239,7 +239,7 @@
       <title>b10731</title>
       <link>https://github.com/ggml-org/llama.cpp/releases/tag/b10731</link>
       <guid isPermaLink="true">https://github.com/ggml-org/llama.cpp/releases/tag/b10731</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>llama.cpp releases</source>
       <author>github-actions[bot]</author>
       <category domain="verdict">act</category>
@@ -250,7 +250,7 @@
       <title>Hermes Agent v0.21.0 (v2026.8.31)</title>
       <link>https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.31</link>
       <guid isPermaLink="true">https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.31</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Hermes Agent releases</source>
       <author>teknium1</author>
       <category domain="verdict">act</category>
@@ -261,7 +261,7 @@
       <title>b10724</title>
       <link>https://github.com/ggml-org/llama.cpp/releases/tag/b10724</link>
       <guid isPermaLink="true">https://github.com/ggml-org/llama.cpp/releases/tag/b10724</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>llama.cpp releases</source>
       <author>github-actions[bot]</author>
       <category domain="verdict">act</category>
@@ -272,7 +272,7 @@
       <title>Claude Code reduces it's weekly limit by 17% – compared to today</title>
       <link>https://twitter.com/ClaudeDevs/status/2093742322525810912</link>
       <guid isPermaLink="true">https://twitter.com/ClaudeDevs/status/2093742322525810912</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Hacker News — claude</source>
       <author>partsch</author>
       <category domain="verdict">act</category>
@@ -283,7 +283,7 @@
       <title>b10707</title>
       <link>https://github.com/ggml-org/llama.cpp/releases/tag/b10707</link>
       <guid isPermaLink="true">https://github.com/ggml-org/llama.cpp/releases/tag/b10707</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>llama.cpp releases</source>
       <author>github-actions[bot]</author>
       <category domain="verdict">act</category>
@@ -294,7 +294,7 @@
       <title>v1.0.0</title>
       <link>https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.0.0</link>
       <guid isPermaLink="true">https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.0.0</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic Python SDK releases</source>
       <author>stainless-app[bot]</author>
       <category domain="verdict">act</category>
@@ -305,7 +305,7 @@
       <title>Release notes: June 30, 2026</title>
       <link>https://support.claude.com/en/articles/12138966-release-notes#june-30-2026</link>
       <guid isPermaLink="true">https://support.claude.com/en/articles/12138966-release-notes#june-30-2026</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic Release Notes</source>
       <category domain="verdict">act</category>
       <category domain="stack">Anthropic API</category>
@@ -315,7 +315,7 @@
       <title>Release notes: July 24, 2026</title>
       <link>https://support.claude.com/en/articles/12138966-release-notes#july-24-2026</link>
       <guid isPermaLink="true">https://support.claude.com/en/articles/12138966-release-notes#july-24-2026</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic Release Notes</source>
       <category domain="verdict">act</category>
       <category domain="stack">Anthropic API</category>
@@ -325,7 +325,7 @@
       <title>A postmortem of three recent issues</title>
       <link>https://www.anthropic.com/engineering/a-postmortem-of-three-recent-issues</link>
       <guid isPermaLink="true">https://www.anthropic.com/engineering/a-postmortem-of-three-recent-issues</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic Engineering</source>
       <category domain="verdict">context</category>
       <description>Anthropic published a postmortem covering three recent issues affecting their API/services, dated September 17, 2025. No specific details from the body excerpt are available beyond the title. We depend on the Anthropic API for metered workloads (Hot Stacks raters, day-file, YAAIN filter), so understanding past outage patterns informs our reliability expectations.</description>
@@ -334,7 +334,7 @@
       <title>Quantization-Aware Healing: a compressed, 4-bit model that outperforms its full-precision original</title>
       <link>https://huggingface.co/blog/MultiverseComputingCAI/quantization-aware-healing</link>
       <guid isPermaLink="true">https://huggingface.co/blog/MultiverseComputingCAI/quantization-aware-healing</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Hugging Face blog</source>
       <category domain="verdict">context</category>
       <description>Hugging Face describes a technique called Quantization-Aware Healing (QAH) that produces 4-bit quantized models outperforming their full-precision originals. No body text is available to identify specific models or implementation details. If QAH is applied to models we run (qwen3.6, phi4, etc.), it could yield better-than-fp16 quality at 4-bit sizes that fit our hardware — worth tracking when specific model releases appear.</description>
@@ -343,7 +343,7 @@
       <title>Recent Developments in LLM Architectures: KV Sharing, mHC, and Compressed Attention</title>
       <link>https://magazine.sebastianraschka.com/p/recent-developments-in-llm-architectures</link>
       <guid isPermaLink="true">https://magazine.sebastianraschka.com/p/recent-developments-in-llm-architectures</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Ahead of AI — Sebastian Raschka</source>
       <author>Sebastian Raschka, PhD</author>
       <image>https://substackcdn.com/image/fetch/$s_!D6nK!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd336da4a-46ee-4659-a976-1c42a27d5c64_2048x1614.png</image>
@@ -354,7 +354,7 @@
       <title>New on Hugging Face: unsloth/Qwen3.8-Flash-Next-GGUF</title>
       <link>https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF</link>
       <guid isPermaLink="true">https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>HF — unsloth (quants)</source>
       <author>unsloth</author>
       <category domain="verdict">act</category>
@@ -365,7 +365,7 @@
       <title>New on Hugging Face: bartowski/Qwen3.8-Flash-Next-GGUF</title>
       <link>https://huggingface.co/bartowski/Qwen3.8-Flash-Next-GGUF</link>
       <guid isPermaLink="true">https://huggingface.co/bartowski/Qwen3.8-Flash-Next-GGUF</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>HF — bartowski (quants)</source>
       <author>bartowski</author>
       <category domain="verdict">act</category>
@@ -376,7 +376,7 @@
       <title>New on Hugging Face: microsoft/Fara1.5-27B</title>
       <link>https://huggingface.co/microsoft/Fara1.5-27B</link>
       <guid isPermaLink="true">https://huggingface.co/microsoft/Fara1.5-27B</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>HF — microsoft</source>
       <author>microsoft</author>
       <category domain="verdict">context</category>
@@ -386,7 +386,7 @@
       <title>New on Hugging Face: city96/Wan2.1-FLF2V-14B-720P-gguf</title>
       <link>https://huggingface.co/city96/Wan2.1-FLF2V-14B-720P-gguf</link>
       <guid isPermaLink="true">https://huggingface.co/city96/Wan2.1-FLF2V-14B-720P-gguf</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>HF — city96</source>
       <author>city96</author>
       <category domain="verdict">act</category>
@@ -397,7 +397,7 @@
       <title>New on Hugging Face: city96/LTX-Video-0.9.6-dev-gguf</title>
       <link>https://huggingface.co/city96/LTX-Video-0.9.6-dev-gguf</link>
       <guid isPermaLink="true">https://huggingface.co/city96/LTX-Video-0.9.6-dev-gguf</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>HF — city96</source>
       <author>city96</author>
       <category domain="verdict">act</category>
@@ -408,7 +408,7 @@
       <title>New on Hugging Face: city96/LTX-Video-0.9.6-distilled-gguf</title>
       <link>https://huggingface.co/city96/LTX-Video-0.9.6-distilled-gguf</link>
       <guid isPermaLink="true">https://huggingface.co/city96/LTX-Video-0.9.6-distilled-gguf</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>HF — city96</source>
       <author>city96</author>
       <category domain="verdict">act</category>
@@ -419,7 +419,7 @@
       <title>New on Hugging Face: city96/Qwen-Image-gguf</title>
       <link>https://huggingface.co/city96/Qwen-Image-gguf</link>
       <guid isPermaLink="true">https://huggingface.co/city96/Qwen-Image-gguf</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>HF — city96</source>
       <author>city96</author>
       <category domain="verdict">act</category>
@@ -430,7 +430,7 @@
       <title>New on Hugging Face: Comfy-Org/Pixal3D</title>
       <link>https://huggingface.co/Comfy-Org/Pixal3D</link>
       <guid isPermaLink="true">https://huggingface.co/Comfy-Org/Pixal3D</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>HF — Comfy-Org</source>
       <author>Comfy-Org</author>
       <category domain="verdict">watch</category>
@@ -441,7 +441,7 @@
       <title>New on Hugging Face: Comfy-Org/Wan-Animate-2</title>
       <link>https://huggingface.co/Comfy-Org/Wan-Animate-2</link>
       <guid isPermaLink="true">https://huggingface.co/Comfy-Org/Wan-Animate-2</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>HF — Comfy-Org</source>
       <author>Comfy-Org</author>
       <category domain="verdict">watch</category>
@@ -452,7 +452,7 @@
       <title>New on Hugging Face: Comfy-Org/JoyAI-Image-Edit</title>
       <link>https://huggingface.co/Comfy-Org/JoyAI-Image-Edit</link>
       <guid isPermaLink="true">https://huggingface.co/Comfy-Org/JoyAI-Image-Edit</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>HF — Comfy-Org</source>
       <author>Comfy-Org</author>
       <category domain="verdict">watch</category>
@@ -463,7 +463,7 @@
       <title>New on Hugging Face: ACE-Step/acestep-v15-xl-sft</title>
       <link>https://huggingface.co/ACE-Step/acestep-v15-xl-sft</link>
       <guid isPermaLink="true">https://huggingface.co/ACE-Step/acestep-v15-xl-sft</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>HF — ACE-Step</source>
       <author>ACE-Step</author>
       <category domain="verdict">act</category>
@@ -474,7 +474,7 @@
       <title>New on Hugging Face: ACE-Step/acestep-v15-xl-turbo</title>
       <link>https://huggingface.co/ACE-Step/acestep-v15-xl-turbo</link>
       <guid isPermaLink="true">https://huggingface.co/ACE-Step/acestep-v15-xl-turbo</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>HF — ACE-Step</source>
       <author>ACE-Step</author>
       <category domain="verdict">act</category>
@@ -485,7 +485,7 @@
       <title>New on Hugging Face: ACE-Step/ace-step-v1.5-1d-vae-stable-audio-format</title>
       <link>https://huggingface.co/ACE-Step/ace-step-v1.5-1d-vae-stable-audio-format</link>
       <guid isPermaLink="true">https://huggingface.co/ACE-Step/ace-step-v1.5-1d-vae-stable-audio-format</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>HF — ACE-Step</source>
       <author>ACE-Step</author>
       <category domain="verdict">act</category>
@@ -496,7 +496,7 @@
       <title>New on Hugging Face: ACE-Step/acestep-v15-xl-turbo-diffusers</title>
       <link>https://huggingface.co/ACE-Step/acestep-v15-xl-turbo-diffusers</link>
       <guid isPermaLink="true">https://huggingface.co/ACE-Step/acestep-v15-xl-turbo-diffusers</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>HF — ACE-Step</source>
       <author>ACE-Step</author>
       <category domain="verdict">act</category>
@@ -507,7 +507,7 @@
       <title>New on Hugging Face: ACE-Step/acestep-v15-xl-sft-diffusers</title>
       <link>https://huggingface.co/ACE-Step/acestep-v15-xl-sft-diffusers</link>
       <guid isPermaLink="true">https://huggingface.co/ACE-Step/acestep-v15-xl-sft-diffusers</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>HF — ACE-Step</source>
       <author>ACE-Step</author>
       <category domain="verdict">act</category>
@@ -518,7 +518,7 @@
       <title>New on Hugging Face: ACE-Step/acestep-v15-xl-base-diffusers</title>
       <link>https://huggingface.co/ACE-Step/acestep-v15-xl-base-diffusers</link>
       <guid isPermaLink="true">https://huggingface.co/ACE-Step/acestep-v15-xl-base-diffusers</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>HF — ACE-Step</source>
       <author>ACE-Step</author>
       <category domain="verdict">act</category>
@@ -529,7 +529,7 @@
       <title>New on Hugging Face: tencent/Hy4-preview</title>
       <link>https://huggingface.co/tencent/Hy4-preview</link>
       <guid isPermaLink="true">https://huggingface.co/tencent/Hy4-preview</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>HF — tencent</source>
       <author>tencent</author>
       <category domain="verdict">context</category>
@@ -539,7 +539,7 @@
       <title>New on Hugging Face: Wan-AI/Wan2.2-I2V-A14B-Diffusers</title>
       <link>https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers</link>
       <guid isPermaLink="true">https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B-Diffusers</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>HF — Wan-AI</source>
       <author>Wan-AI</author>
       <category domain="verdict">act</category>
@@ -550,7 +550,7 @@
       <title>New on Hugging Face: Wan-AI/Wan2.2-S2V-14B</title>
       <link>https://huggingface.co/Wan-AI/Wan2.2-S2V-14B</link>
       <guid isPermaLink="true">https://huggingface.co/Wan-AI/Wan2.2-S2V-14B</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>HF — Wan-AI</source>
       <author>Wan-AI</author>
       <category domain="verdict">act</category>
@@ -561,7 +561,7 @@
       <title>New on Hugging Face: Wan-AI/Wan2.2-Animate-14B</title>
       <link>https://huggingface.co/Wan-AI/Wan2.2-Animate-14B</link>
       <guid isPermaLink="true">https://huggingface.co/Wan-AI/Wan2.2-Animate-14B</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>HF — Wan-AI</source>
       <author>Wan-AI</author>
       <category domain="verdict">act</category>
@@ -572,7 +572,7 @@
       <title>New on Hugging Face: Wan-AI/Wan2.2-Animate-14B-Diffusers</title>
       <link>https://huggingface.co/Wan-AI/Wan2.2-Animate-14B-Diffusers</link>
       <guid isPermaLink="true">https://huggingface.co/Wan-AI/Wan2.2-Animate-14B-Diffusers</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>HF — Wan-AI</source>
       <author>Wan-AI</author>
       <category domain="verdict">act</category>
@@ -583,7 +583,7 @@
       <title>New on Hugging Face: Wan-AI/Wan-Dancer-14B</title>
       <link>https://huggingface.co/Wan-AI/Wan-Dancer-14B</link>
       <guid isPermaLink="true">https://huggingface.co/Wan-AI/Wan-Dancer-14B</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>HF — Wan-AI</source>
       <author>Wan-AI</author>
       <category domain="verdict">watch</category>
@@ -594,7 +594,7 @@
       <title>New on Hugging Face: Wan-AI/Wan2.2-Animate-2-14B</title>
       <link>https://huggingface.co/Wan-AI/Wan2.2-Animate-2-14B</link>
       <guid isPermaLink="true">https://huggingface.co/Wan-AI/Wan2.2-Animate-2-14B</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>HF — Wan-AI</source>
       <author>Wan-AI</author>
       <category domain="verdict">act</category>
@@ -605,7 +605,7 @@
       <title>New on Hugging Face: Wan-AI/Wan2.2-Animate-2-14B-Diffusers</title>
       <link>https://huggingface.co/Wan-AI/Wan2.2-Animate-2-14B-Diffusers</link>
       <guid isPermaLink="true">https://huggingface.co/Wan-AI/Wan2.2-Animate-2-14B-Diffusers</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>HF — Wan-AI</source>
       <author>Wan-AI</author>
       <category domain="verdict">act</category>
@@ -616,7 +616,7 @@
       <title>New on Hugging Face: Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers</title>
       <link>https://huggingface.co/Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers</link>
       <guid isPermaLink="true">https://huggingface.co/Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>HF — Wan-AI</source>
       <author>Wan-AI</author>
       <category domain="verdict">act</category>
@@ -627,7 +627,7 @@
       <title>New on Hugging Face: Lightricks/LTX-2.3-22b-LoRA-Cinemagraph</title>
       <link>https://huggingface.co/Lightricks/LTX-2.3-22b-LoRA-Cinemagraph</link>
       <guid isPermaLink="true">https://huggingface.co/Lightricks/LTX-2.3-22b-LoRA-Cinemagraph</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>HF — Lightricks</source>
       <author>Lightricks</author>
       <category domain="verdict">act</category>
@@ -638,7 +638,7 @@
       <title>New on Hugging Face: Lightricks/LTX-2.3-22b-LoRA-Foley-V2A</title>
       <link>https://huggingface.co/Lightricks/LTX-2.3-22b-LoRA-Foley-V2A</link>
       <guid isPermaLink="true">https://huggingface.co/Lightricks/LTX-2.3-22b-LoRA-Foley-V2A</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>HF — Lightricks</source>
       <author>Lightricks</author>
       <category domain="verdict">watch</category>
@@ -649,7 +649,7 @@
       <title>New on Hugging Face: Lightricks/LTX-2.3-22b-IC-LoRA-Clean-Plate</title>
       <link>https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Clean-Plate</link>
       <guid isPermaLink="true">https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Clean-Plate</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>HF — Lightricks</source>
       <author>Lightricks</author>
       <category domain="verdict">act</category>
@@ -660,7 +660,7 @@
       <title>New on Hugging Face: Lightricks/LTX-2.5</title>
       <link>https://huggingface.co/Lightricks/LTX-2.5</link>
       <guid isPermaLink="true">https://huggingface.co/Lightricks/LTX-2.5</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>HF — Lightricks</source>
       <author>Lightricks</author>
       <category domain="verdict">act</category>
@@ -671,7 +671,7 @@
       <title>New on Hugging Face: Lightricks/LTX-2.5-Diffusers</title>
       <link>https://huggingface.co/Lightricks/LTX-2.5-Diffusers</link>
       <guid isPermaLink="true">https://huggingface.co/Lightricks/LTX-2.5-Diffusers</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>HF — Lightricks</source>
       <author>Lightricks</author>
       <category domain="verdict">act</category>
@@ -682,7 +682,7 @@
       <title>New on Hugging Face: Lightricks/LTX-2.3-22b-IC-LoRA-Relight</title>
       <link>https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Relight</link>
       <guid isPermaLink="true">https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Relight</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>HF — Lightricks</source>
       <author>Lightricks</author>
       <category domain="verdict">act</category>
@@ -693,7 +693,7 @@
       <title>New on Hugging Face: Lightricks/LTX-2.5-Pre-Trained</title>
       <link>https://huggingface.co/Lightricks/LTX-2.5-Pre-Trained</link>
       <guid isPermaLink="true">https://huggingface.co/Lightricks/LTX-2.5-Pre-Trained</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>HF — Lightricks</source>
       <author>Lightricks</author>
       <category domain="verdict">act</category>
@@ -704,7 +704,7 @@
       <title>New on Hugging Face: Lightricks/LTX-2.5-22b-IC-LoRA-Pixel-Spatial-Upscaler</title>
       <link>https://huggingface.co/Lightricks/LTX-2.5-22b-IC-LoRA-Pixel-Spatial-Upscaler</link>
       <guid isPermaLink="true">https://huggingface.co/Lightricks/LTX-2.5-22b-IC-LoRA-Pixel-Spatial-Upscaler</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>HF — Lightricks</source>
       <author>Lightricks</author>
       <category domain="verdict">watch</category>
@@ -715,7 +715,7 @@
       <title>New on Hugging Face: Qwen/Qwen3.8-27B</title>
       <link>https://huggingface.co/Qwen/Qwen3.8-27B</link>
       <guid isPermaLink="true">https://huggingface.co/Qwen/Qwen3.8-27B</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>HF — Qwen</source>
       <author>Qwen</author>
       <category domain="verdict">act</category>
@@ -726,7 +726,7 @@
       <title>New on Hugging Face: Qwen/Qwen3.8-2.4T-A95B-FP8</title>
       <link>https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B-FP8</link>
       <guid isPermaLink="true">https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B-FP8</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>HF — Qwen</source>
       <author>Qwen</author>
       <category domain="verdict">act</category>
@@ -737,7 +737,7 @@
       <title>New on Hugging Face: Qwen/Qwen3.8-2.4T-A95B</title>
       <link>https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B</link>
       <guid isPermaLink="true">https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>HF — Qwen</source>
       <author>Qwen</author>
       <category domain="verdict">act</category>
@@ -748,7 +748,7 @@
       <title>New on Hugging Face: Qwen/Qwen3.8-27B-FP8</title>
       <link>https://huggingface.co/Qwen/Qwen3.8-27B-FP8</link>
       <guid isPermaLink="true">https://huggingface.co/Qwen/Qwen3.8-27B-FP8</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>HF — Qwen</source>
       <author>Qwen</author>
       <category domain="verdict">act</category>
@@ -759,7 +759,7 @@
       <title>New on Hugging Face: Qwen/Qwen3.8-Flash-Next</title>
       <link>https://huggingface.co/Qwen/Qwen3.8-Flash-Next</link>
       <guid isPermaLink="true">https://huggingface.co/Qwen/Qwen3.8-Flash-Next</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>HF — Qwen</source>
       <author>Qwen</author>
       <category domain="verdict">act</category>
@@ -770,7 +770,7 @@
       <title>New on Hugging Face: Qwen/Qwen3.8-Flash-Next-FP8</title>
       <link>https://huggingface.co/Qwen/Qwen3.8-Flash-Next-FP8</link>
       <guid isPermaLink="true">https://huggingface.co/Qwen/Qwen3.8-Flash-Next-FP8</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>HF — Qwen</source>
       <author>Qwen</author>
       <category domain="verdict">act</category>
@@ -781,7 +781,7 @@
       <title>Degraded performance for multiple models</title>
       <link>https://status.claude.com/incidents/q7txxvbsftgq</link>
       <guid isPermaLink="true">https://status.claude.com/incidents/q7txxvbsftgq</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic status</source>
       <category domain="verdict">context</category>
       <description>Aug18,19:01UTCResolved- The issue affecting Claude Opus 5 has been resolved. Impact occurred from 16:11 to 18:23 UTC.Aug18,18:26UTCMonitoring- A fix has been implemented and we are monitoring the results.Aug18,17:12UTCUpdate- We are investigating elevated errors on requests to Claude Opus 5. We will provide an update as soon as possible.Aug18,16:20UTCUpdate- We are investigating elevated errors on requests to Claude Mythos 5, Claude Fable 5, Claude Opus 5, Claude Sonnet 5, Claude Haiku 4.5, and other Claude models. We will provide an update as soon as possible.Aug18,16:20UTCInvestigating- We are investigating reports of degraded performance affecting multiple models. We will provide an update as soon as possible. A ~2-hour multi-model API outage on Aug 18 (resolved) is relevant operating history for our metered Anthropic API dependency — raters and day-file would have failed during 16:11–18:23 UTC.</description>
@@ -790,7 +790,7 @@
       <title>Accept size-one ndarrays of any dimension from gguf reader (#394)</title>
       <link>https://github.com/city96/ComfyUI-GGUF/commit/c2e3b0adc3f805d401d745f69c88cc7e3eb5db75</link>
       <guid isPermaLink="true">https://github.com/city96/ComfyUI-GGUF/commit/c2e3b0adc3f805d401d745f69c88cc7e3eb5db75</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>ComfyUI-GGUF commits</source>
       <author>AdamNiederer</author>
       <category domain="verdict">act</category>
@@ -805,7 +805,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Add Gemma3 12B Support</title>
       <link>https://github.com/city96/ComfyUI-GGUF/commit/a4c94821cb30ddfb2adea11591059ad2b511e02f</link>
       <guid isPermaLink="true">https://github.com/city96/ComfyUI-GGUF/commit/a4c94821cb30ddfb2adea11591059ad2b511e02f</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>ComfyUI-GGUF commits</source>
       <author>jarz76</author>
       <category domain="verdict">act</category>
@@ -816,7 +816,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Support tokenizer recreation from metadata</title>
       <link>https://github.com/city96/ComfyUI-GGUF/commit/36b16deb096596aa3df53920d87d7fd98b7a01ae</link>
       <guid isPermaLink="true">https://github.com/city96/ComfyUI-GGUF/commit/36b16deb096596aa3df53920d87d7fd98b7a01ae</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>ComfyUI-GGUF commits</source>
       <author>jarz76</author>
       <category domain="verdict">act</category>
@@ -827,7 +827,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Add Gemma3 12B Support (#402)</title>
       <link>https://github.com/city96/ComfyUI-GGUF/commit/9ecc3c48e7ec48ec6fee95de90197ae7aee6644e</link>
       <guid isPermaLink="true">https://github.com/city96/ComfyUI-GGUF/commit/9ecc3c48e7ec48ec6fee95de90197ae7aee6644e</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>ComfyUI-GGUF commits</source>
       <author>city96</author>
       <category domain="verdict">act</category>
@@ -848,7 +848,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>v0.3.0</title>
       <link>https://github.com/pwilkin/trellis.cpp/releases/tag/v0.3.0</link>
       <guid isPermaLink="true">https://github.com/pwilkin/trellis.cpp/releases/tag/v0.3.0</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>trellis.cpp releases</source>
       <author>pwilkin</author>
       <category domain="verdict">act</category>
@@ -859,7 +859,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>v0.4.3 — no more holes: BiRefNet matte by default (+ v0.4.x quality &amp; crash fixes)</title>
       <link>https://github.com/pwilkin/trellis.cpp/releases/tag/v0.4.3</link>
       <guid isPermaLink="true">https://github.com/pwilkin/trellis.cpp/releases/tag/v0.4.3</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>trellis.cpp releases</source>
       <author>pwilkin</author>
       <category domain="verdict">act</category>
@@ -870,7 +870,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>v0.5.0 — Trellis Studio desktop app + one-command installer</title>
       <link>https://github.com/pwilkin/trellis.cpp/releases/tag/v0.5.0</link>
       <guid isPermaLink="true">https://github.com/pwilkin/trellis.cpp/releases/tag/v0.5.0</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>trellis.cpp releases</source>
       <author>pwilkin</author>
       <category domain="verdict">act</category>
@@ -881,7 +881,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>v0.5.1 — backend/build fixes (--gpu on Vulkan, HIP decimation arch, Windows packaging)</title>
       <link>https://github.com/pwilkin/trellis.cpp/releases/tag/v0.5.1</link>
       <guid isPermaLink="true">https://github.com/pwilkin/trellis.cpp/releases/tag/v0.5.1</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>trellis.cpp releases</source>
       <author>pwilkin</author>
       <category domain="verdict">act</category>
@@ -892,7 +892,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>v0.5.3 — preview fix, results never lost, portable build</title>
       <link>https://github.com/pwilkin/trellis.cpp/releases/tag/v0.5.3</link>
       <guid isPermaLink="true">https://github.com/pwilkin/trellis.cpp/releases/tag/v0.5.3</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>trellis.cpp releases</source>
       <author>pwilkin</author>
       <category domain="verdict">act</category>
@@ -903,7 +903,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>v0.5.4 — res-1024 speckle fix, BiRefNet on ROCm, CLI in releases, quantized weights</title>
       <link>https://github.com/pwilkin/trellis.cpp/releases/tag/v0.5.4</link>
       <guid isPermaLink="true">https://github.com/pwilkin/trellis.cpp/releases/tag/v0.5.4</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>trellis.cpp releases</source>
       <author>pwilkin</author>
       <category domain="verdict">act</category>
@@ -914,7 +914,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>v0.6.0 — CUDA geometry fixes, robust BiRefNet, legacy NVIDIA support</title>
       <link>https://github.com/pwilkin/trellis.cpp/releases/tag/v0.6.0</link>
       <guid isPermaLink="true">https://github.com/pwilkin/trellis.cpp/releases/tag/v0.6.0</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>trellis.cpp releases</source>
       <author>pwilkin</author>
       <category domain="verdict">act</category>
@@ -925,7 +925,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Hermes Agent v0.20.0 (2026.8.3)</title>
       <link>https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.3</link>
       <guid isPermaLink="true">https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.3</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Hermes Agent releases</source>
       <author>teknium1</author>
       <category domain="verdict">context</category>
@@ -935,7 +935,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Hermes Agent v0.20.2 (2026.8.16)</title>
       <link>https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.16</link>
       <guid isPermaLink="true">https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.16</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Hermes Agent releases</source>
       <author>teknium1</author>
       <category domain="verdict">act</category>
@@ -946,7 +946,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Hermes Agent v0.20.3 (2026.8.16.2)</title>
       <link>https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.16.2</link>
       <guid isPermaLink="true">https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.16.2</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Hermes Agent releases</source>
       <author>teknium1</author>
       <category domain="verdict">act</category>
@@ -957,7 +957,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Hermes Agent v0.20.4 (2026.8.18)</title>
       <link>https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.18</link>
       <guid isPermaLink="true">https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.18</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Hermes Agent releases</source>
       <author>teknium1</author>
       <category domain="verdict">act</category>
@@ -968,7 +968,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Hermes Agent v0.20.5 (v2026.8.19)</title>
       <link>https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.19</link>
       <guid isPermaLink="true">https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.19</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Hermes Agent releases</source>
       <author>teknium1</author>
       <category domain="verdict">act</category>
@@ -979,7 +979,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Hermes Agent v0.20.6 (v2026.8.27)</title>
       <link>https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.27</link>
       <guid isPermaLink="true">https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.27</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Hermes Agent releases</source>
       <author>teknium1</author>
       <category domain="verdict">act</category>
@@ -990,7 +990,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Release v5.14.0</title>
       <link>https://github.com/huggingface/transformers/releases/tag/v5.14.0</link>
       <guid isPermaLink="true">https://github.com/huggingface/transformers/releases/tag/v5.14.0</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>transformers releases</source>
       <author>ArthurZucker</author>
       <image>https://private-user-images.githubusercontent.com/48595927/622245190-051f819a-512f-4987-9bee-6e2fa2af3db7.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODgxMjczNjksIm5iZiI6MTc4ODEyNzA2OSwicGF0aCI6Ii80ODU5NTkyNy82MjIyNDUxOTAtMDUxZjgxOWEtNTEyZi00OTg3LTliZWUtNmUyZmEyYWYzZGI3LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA4MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwODMwVDIxNTc0OVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWNmOGE1NTMzMDkwZjU2MzU0M2U0ODg2N2YzYzBjM2NmZDQyMDY2NzY3NDhmMjU4ZWRmNzM3MjAzOGZlMGQxMDMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.kG6WdAAItrAyOAkmgw1okWdVHjyGrbkQh12udi9XhQU</image>
@@ -1002,7 +1002,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Release: v5.15.0</title>
       <link>https://github.com/huggingface/transformers/releases/tag/v5.15.0</link>
       <guid isPermaLink="true">https://github.com/huggingface/transformers/releases/tag/v5.15.0</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>transformers releases</source>
       <author>LysandreJik</author>
       <image>https://private-user-images.githubusercontent.com/30755778/633659176-3d8e548e-f84f-4269-8bd0-a12722d7ab01.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODgxMjczNjksIm5iZiI6MTc4ODEyNzA2OSwicGF0aCI6Ii8zMDc1NTc3OC82MzM2NTkxNzYtM2Q4ZTU0OGUtZjg0Zi00MjY5LThiZDAtYTEyNzIyZDdhYjAxLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA4MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwODMwVDIxNTc0OVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTZhNWJkYzZkZDc0ZWNjMGUwMDc2YWJjNmQwNjVjMDA5NzQzZDE4NmJiNTA0YTRiZDJlNDM4NGM4ODk2OTE0ZWImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.2edPOaLPqB4LUsocfiPr0R1negGM4HiWVH3eR2vuOik</image>
@@ -1014,7 +1014,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Release: v5.16.0</title>
       <link>https://github.com/huggingface/transformers/releases/tag/v5.16.0</link>
       <guid isPermaLink="true">https://github.com/huggingface/transformers/releases/tag/v5.16.0</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>transformers releases</source>
       <author>Cyrilvallez</author>
       <image>https://private-user-images.githubusercontent.com/73884904/641553234-c838b5ba-ffea-42da-baa9-3f66178e3671.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODgxMjczNjgsIm5iZiI6MTc4ODEyNzA2OCwicGF0aCI6Ii83Mzg4NDkwNC82NDE1NTMyMzQtYzgzOGI1YmEtZmZlYS00MmRhLWJhYTktM2Y2NjE3OGUzNjcxLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA4MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwODMwVDIxNTc0OFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTlhMGJmMTJjODMyNmMxZDcyNjc4NTA5NjYyNmRmMzFjYWQzOTA3OThlMzYzNmY3MGE0NjJiNjlkMjlhMzA4YmMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.OBobjEr-9SppnPoHPq6URyRl0zhyRlU33318iGWGkH0</image>
@@ -1026,7 +1026,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Wan Animate 2 is now available in ComfyUI</title>
       <link>https://blog.comfy.org/p/wan-animate-2-is-now-available-in</link>
       <guid isPermaLink="true">https://blog.comfy.org/p/wan-animate-2-is-now-available-in</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Comfy Org blog</source>
       <author>Rob</author>
       <category domain="verdict">watch</category>
@@ -1037,7 +1037,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>LTX-2.5 Day-0 Support in ComfyUI</title>
       <link>https://blog.comfy.org/p/ltx-25-day-0-support-in-comfyui</link>
       <guid isPermaLink="true">https://blog.comfy.org/p/ltx-25-day-0-support-in-comfyui</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Comfy Org blog</source>
       <author>Rob</author>
       <category domain="verdict">act</category>
@@ -1048,7 +1048,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Open Sourcing Comfy MCP on Local</title>
       <link>https://blog.comfy.org/p/open-sourcing-comfy-mcp-on-local</link>
       <guid isPermaLink="true">https://blog.comfy.org/p/open-sourcing-comfy-mcp-on-local</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Comfy Org blog</source>
       <author>Jo Zhang</author>
       <category domain="verdict">watch</category>
@@ -1059,7 +1059,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Wan 3.0 in ComfyUI: Native 30-Second Video with Omni-Reference Control</title>
       <link>https://blog.comfy.org/p/wan-30-in-comfyui-native-30-second</link>
       <guid isPermaLink="true">https://blog.comfy.org/p/wan-30-in-comfyui-native-30-second</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Comfy Org blog</source>
       <author>Rob</author>
       <category domain="verdict">watch</category>
@@ -1070,7 +1070,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>v0.32.0</title>
       <link>https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.32.0</link>
       <guid isPermaLink="true">https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.32.0</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>ComfyUI releases</source>
       <author>github-actions[bot]</author>
       <category domain="verdict">act</category>
@@ -1081,7 +1081,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>v0.33.1</title>
       <link>https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.33.1</link>
       <guid isPermaLink="true">https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.33.1</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>ComfyUI releases</source>
       <author>github-actions[bot]</author>
       <category domain="verdict">act</category>
@@ -1092,7 +1092,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Ollama is now powered by MLX on Apple Silicon in preview</title>
       <link>https://ollama.com/blog/mlx</link>
       <guid isPermaLink="true">https://ollama.com/blog/mlx</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Ollama blog</source>
       <category domain="verdict">act</category>
       <category domain="stack">Ollama</category>
@@ -1102,7 +1102,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Ollama's highest performance on Apple Silicon yet with MLX</title>
       <link>https://ollama.com/blog/mlx-performance</link>
       <guid isPermaLink="true">https://ollama.com/blog/mlx-performance</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Ollama blog</source>
       <category domain="verdict">act</category>
       <category domain="stack">Ollama</category>
@@ -1112,7 +1112,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Muse Glimmer from Meta Superintelligence Labs is now available</title>
       <link>https://ollama.com/blog/muse-glimmer</link>
       <guid isPermaLink="true">https://ollama.com/blog/muse-glimmer</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Ollama blog</source>
       <category domain="verdict">watch</category>
       <category domain="stack">Ollama</category>
@@ -1122,7 +1122,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>v0.33.0</title>
       <link>https://github.com/ollama/ollama/releases/tag/v0.33.0</link>
       <guid isPermaLink="true">https://github.com/ollama/ollama/releases/tag/v0.33.0</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Ollama releases</source>
       <author>github-actions[bot]</author>
       <image>https://private-user-images.githubusercontent.com/29360864/641249150-c02fd93b-f599-40a9-83c3-d0555c0ac182.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODgxMjczNjQsIm5iZiI6MTc4ODEyNzA2NCwicGF0aCI6Ii8yOTM2MDg2NC82NDEyNDkxNTAtYzAyZmQ5M2ItZjU5OS00MGE5LTgzYzMtZDA1NTVjMGFjMTgyLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA4MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwODMwVDIxNTc0NFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTg0ZGFiMDRiOTY5YzkxOWUzN2ZjNGU2YWVjMjVjZDkzYzFhNTc5MWM4OGI2ZmMyNjAxYjZhMjA5ODBlZTNmYmYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.kLUwmOWN7p4eP6uYU4oILnTOqhcPvwcGW_ZpQaPD_iE</image>
@@ -1134,7 +1134,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Claude Session URL appended to commit messages and PR descriptions by default</title>
       <link>https://github.com/anthropics/claude-code/issues/66504</link>
       <guid isPermaLink="true">https://github.com/anthropics/claude-code/issues/66504</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Hacker News</source>
       <description>Claude Code (the CLI/agentic coding tool) appends the Claude session URL to commit messages and PR descriptions by default. This behavior was surfaced in a Hacker News discussion, indicating it may be unexpected for users. Professionals using Claude Code for automated commits or PRs should audit their git history and PR descriptions for leaked session URLs, and investigate configuration options to disable this default behavior.</description>
     </item>
@@ -1142,7 +1142,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Claude permanently raising weekly limits by 25%</title>
       <link>https://bsky.app/profile/anthropicbot.bsky.social/post/3muaaxs5nx424</link>
       <guid isPermaLink="true">https://bsky.app/profile/anthropicbot.bsky.social/post/3muaaxs5nx424</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Hacker News</source>
       <description>Anthropic has permanently increased Claude's weekly usage limits by 25%. No additional body text was available to clarify which tier or plan this applies to. A permanent 25% increase in weekly limits directly affects throughput planning for professional Claude users managing usage-intensive workflows.</description>
     </item>
@@ -1150,7 +1150,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Breaking Claude Code Opus 5 Auto Mode</title>
       <link>https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/</link>
       <guid isPermaLink="true">https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Simon Willison's Blog</source>
       <description>Security researcher Johann Rehberger found a prompt injection attack against Claude Code's auto mode that succeeds ~80% of the time, exploiting zip archive extraction to execute a malicious local struct.py file. A particularly critical finding: auto mode blocked Claude's own attempts to terminate the malware process after detection, meaning the safety classifier actively interfered with remediation. Anyone running Claude Code in agentic/unattended workflows needs to treat auto mode as insufficient protection and implement sandboxing, network egress restrictions, and credential isolation regardless of Anthropic's default settings.</description>
     </item>
@@ -1158,7 +1158,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Previewing the Model Hardware Standard</title>
       <link>https://www.anthropic.com/news/model-hardware-standard-research-preview</link>
       <guid isPermaLink="true">https://www.anthropic.com/news/model-hardware-standard-research-preview</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic News</source>
       <description>Anthropic is opening a research preview of the Model Hardware Standard (MHS), a shared specification enabling AI agents to safely operate physical devices, initially available to scientific research labs and advanced manufacturers. This is an official Anthropic initiative expanding Claude agents into physical device control. Practitioners building Claude-based agentic systems should track MHS as it defines how Claude agents can interact with physical hardware in industrial and research settings.</description>
     </item>
@@ -1166,7 +1166,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Models &amp; pricing</title>
       <link>https://docs.claude.com/docs/en/models/overview</link>
       <guid isPermaLink="true">https://docs.claude.com/docs/en/models/overview</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Claude Docs Changelog</source>
       <description>Anthropic updated the Models &amp; pricing documentation page. No specific model changes or pricing details are provided in the excerpt. Practitioners should review the updated Models &amp; pricing page directly for current API model availability and cost information.</description>
     </item>
@@ -1174,7 +1174,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Anthropic Claude and API service outages</title>
       <link>https://status.claude.com/uptime</link>
       <guid isPermaLink="true">https://status.claude.com/uptime</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Hacker News</source>
       <description>Anthropic's Claude and API services experienced outages. No body text is available to provide further detail on scope, duration, or cause. Service outages directly affect professional workflows dependent on Claude API reliability.</description>
     </item>
@@ -1182,7 +1182,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>llm-anthropic 0.27</title>
       <link>https://simonwillison.net/2026/Aug/24/llm-anthropic/</link>
       <guid isPermaLink="true">https://simonwillison.net/2026/Aug/24/llm-anthropic/</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Simon Willison's Blog</source>
       <description>llm-anthropic 0.27 has been released, updating the Anthropic plugin for Simon Willison's LLM tool to support the new anthropic v1.0.0 Python SDK, which switches the HTTP client from httpx to httpx2. The migration was performed using Claude Code by prompting it to read Anthropic's migration guide and get the tests passing. Practitioners using the LLM CLI tool with Anthropic models need to update to llm-anthropic 0.27 to maintain compatibility with the new anthropic Python SDK v1.0.0, and the workflow demonstrates a practical Claude Code use case for dependency migrations.</description>
     </item>
@@ -1190,7 +1190,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Anthropic’s best AI model struggles to attract users as cheaper tools thrive</title>
       <link>https://simonwillison.net/2026/Aug/23/anthropics-best-ai-model-struggles-to-attract-users-as-cheaper-t/</link>
       <guid isPermaLink="true">https://simonwillison.net/2026/Aug/23/anthropics-best-ai-model-struggles-to-attract-users-as-cheaper-t/</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Simon Willison's Blog</source>
       <description>Ramp's billing data from 70,000 companies shows Anthropic model adoption in July 2026: Opus 4.8 leads at 28% of spend, while the recently-released Fable 5 sits at 8% despite its flagship positioning, suggesting its higher cost is limiting uptake. Anthropic's annualized revenue hit $65B in July (up from $47B in May) with 6,000 customers spending $100K+ annually. The Ramp spend distribution gives practitioners a real-world signal on which Claude models are actually being deployed at scale, confirming Fable 5's cost-to-value ratio is pushing teams toward older Opus versions rather than the newest flagship.</description>
     </item>
@@ -1198,7 +1198,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Anthropic appears to be A/B testing reduced effort levels in Claude Code</title>
       <link>https://twitter.com/argofowl/status/2091150597374537729</link>
       <guid isPermaLink="true">https://twitter.com/argofowl/status/2091150597374537729</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Hacker News</source>
       <description>Anthropic appears to be A/B testing reduced effort levels in Claude Code, based on observations reported on Hacker News. Users are noticing variability in response quality or task completion depth that suggests deliberate experimentation with effort throttling. If confirmed, this means Claude Code's behavior may be intentionally inconsistent across sessions, which is critical to understand when evaluating output quality or debugging unexpected regressions in agentic workflows.</description>
     </item>
@@ -1206,7 +1206,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>A shot-scraper-style JSON API on Bun 1.4's new Bun.WebView</title>
       <link>https://simonwillison.net/2026/Aug/20/bun-webview-json-api/</link>
       <guid isPermaLink="true">https://simonwillison.net/2026/Aug/20/bun-webview-json-api/</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Simon Willison's Blog</source>
       <description>Simon Willison used Claude Code to build a prototype web API that loads pages and executes JavaScript against them, inspired by his shot-scraper tool, built on Bun 1.4's new Bun.WebView feature. The resulting TypeScript server implementation requires approximately 192MB-256MB of container memory to run full Chrome against complex web pages, tested using cgroups. Concrete data point on using Claude Code for rapid prototyping of browser automation tooling, including a real-world memory baseline for containerized Chrome-based services.</description>
     </item>
@@ -1214,7 +1214,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Claude in Chrome</title>
       <link>https://claude.com/claude-in-chrome</link>
       <guid isPermaLink="true">https://claude.com/claude-in-chrome</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic News</source>
       <description>Anthropic announced Claude integration directly within Chrome browser. No further details were available in the excerpt. Browser-native Claude access could change workflows for professionals who rely on web-based research and content tasks.</description>
     </item>
@@ -1222,7 +1222,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>smolmachines / smolvm as a sandbox for untrusted Python &amp; JavaScript</title>
       <link>https://simonwillison.net/2026/Aug/19/smolmachines-untrusted-sandbox/</link>
       <guid isPermaLink="true">https://simonwillison.net/2026/Aug/19/smolmachines-untrusted-sandbox/</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Simon Willison's Blog</source>
       <description>Simon Willison tested Claude Fable 5 in Claude Code for web on a sandboxing research task, where the model hit a nested virtualization limitation (no /dev/kvm in its container) and autonomously pivoted to running tests via GitHub Actions instead. The model identified the environment constraint, devised a workaround using a temporary Actions workflow, executed the tests, and cleaned up—without being prompted to do so. Demonstrates Claude Code's agentic capability to self-diagnose environment limitations and reroute execution paths, relevant for practitioners designing multi-step or infra-dependent workflows.</description>
     </item>
@@ -1230,7 +1230,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Delete your Claude account</title>
       <link>https://support.claude.com/en/articles/9028421-delete-your-claude-account</link>
       <guid isPermaLink="true">https://support.claude.com/en/articles/9028421-delete-your-claude-account</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic Release Notes</source>
       <description>Anthropic has added the ability for users to delete their Claude accounts. This feature is now documented in the official Claude release notes. Users and organizations managing Claude accounts can now self-serve account deletion rather than requiring support intervention.</description>
     </item>
@@ -1238,7 +1238,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Aug 18, 2026 Science How Claude is accelerating protein design and analytical chemistry</title>
       <link>https://www.anthropic.com/research/Claude-accelerates-protein-design</link>
       <guid isPermaLink="true">https://www.anthropic.com/research/Claude-accelerates-protein-design</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic Research Blog</source>
       <description>Anthropic published research detailing how Claude is being applied to accelerate protein design and analytical chemistry workflows. The post covers specific scientific use cases where Claude's capabilities are being leveraged in research contexts. Practitioners in scientific or research domains can use this to understand Claude's concrete capabilities and limitations in specialized scientific tasks like protein engineering and chemical analysis.</description>
     </item>
@@ -1246,7 +1246,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Aug 14, 2026 Announcements How Claude’s text watermark works</title>
       <link>https://www.anthropic.com/news/claude-text-watermark</link>
       <guid isPermaLink="true">https://www.anthropic.com/news/claude-text-watermark</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic News</source>
       <description>Anthropic has published an explanation of how Claude's text watermarking system works. The announcement was made on August 14, 2026, detailing the mechanism behind embedding identifiable markers in Claude-generated text. Understanding Claude's text watermarking is critical for professionals building with the API or deploying Claude outputs, as it may affect content pipelines, detection systems, or disclosure requirements.</description>
     </item>
@@ -1254,7 +1254,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Auto mode is now the default in Claude Code for Pro, Max, and Team plans</title>
       <link>https://simonwillison.net/2026/Aug/8/auto-mode/</link>
       <guid isPermaLink="true">https://simonwillison.net/2026/Aug/8/auto-mode/</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Simon Willison's Blog</source>
       <description>Anthropic is making auto mode the default in Claude Code for Pro, Max, and Team plans starting August 14th, backed by evals showing it blocked 89% of clearly dangerous actions compared to only 13.6% of human reviewers refusing the same actions in a 1,053-participant test. Anthropic claims auto mode has broadly mitigated prompt injection and data exfiltration risks to levels lower than average human review. Professional Claude Code users should understand the security rationale and specific eval numbers behind this default change, particularly the tradeoff that auto mode still misses ~11% of dangerous actions while humans miss ~86%.</description>
     </item>
@@ -1262,7 +1262,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Stealing Reasoning Traces from Proprietary LLM APIs</title>
       <link>https://simonwillison.net/2026/Aug/11/stealing-reasoning-traces/</link>
       <guid isPermaLink="true">https://simonwillison.net/2026/Aug/11/stealing-reasoning-traces/</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Simon Willison's Blog</source>
       <description>Researchers discovered that Anthropic, OpenAI, and Google used shared encryption keys across model families for their encrypted chain-of-thought reasoning blocks, allowing traces from stronger models to be replayed into weaker siblings and jailbroken to expose plaintext reasoning. All three providers have since patched the vulnerability after responsible disclosure. Claude API users relying on encrypted reasoning blocks for confidentiality should be aware this class of vulnerability existed and confirm current API behavior is consistent with patched implementations.</description>
     </item>
@@ -1270,7 +1270,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>[AINews] How to steal a Reasoning Trace</title>
       <link>https://www.latent.space/p/ainews-how-to-steal-a-reasoning-trace</link>
       <guid isPermaLink="true">https://www.latent.space/p/ainews-how-to-steal-a-reasoning-trace</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Latent Space</source>
       <description>A new paper demonstrates that encrypted reasoning traces from Claude Code sessions can be decoded, with a scan of ~7,000 public traces revealing 62 API keys, 33 email addresses, and 33 passwords leaked inside reasoning blocks invisible to users. The technique also enables distillation of reasoning patterns to other models and exposes alignment issues including reasoning that contradicts visible outputs. Anyone who has shared Claude Code sessions publicly should audit those for sensitive credentials, as reasoning traces contain data not visible in the normal session output and are now demonstrably recoverable.</description>
     </item>
@@ -1278,7 +1278,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Stealing Reasoning Traces from Proprietary LLM APIs</title>
       <link>https://simonwillison.net/2026/Aug/11/stealing-reasoning-traces/#atom-everything</link>
       <guid isPermaLink="true">https://simonwillison.net/2026/Aug/11/stealing-reasoning-traces/#atom-everything</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Simon Willison's Blog</source>
       <description>Researchers discovered that Anthropic, OpenAI, and Google used shared encryption keys across model families for chain-of-thought reasoning blocks, allowing encrypted traces from stronger models to be replayed into weaker siblings and jailbroken to expose raw reasoning. All three providers have since patched the vulnerability after responsible disclosure. Claude API users relying on encrypted reasoning blocks for privacy or security should understand this class of vulnerability existed and verify current mitigations are sufficient for their use case.</description>
     </item>
@@ -1286,7 +1286,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Claude Code is leaking real email address as a User-Agent string in curl command</title>
       <link>https://github.com/anthropics/claude-code/issues/78431</link>
       <guid isPermaLink="true">https://github.com/anthropics/claude-code/issues/78431</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Hacker News</source>
       <description>Claude Code was found to be leaking real user email addresses in the User-Agent string when executing curl commands. This is a privacy/security issue where network requests made by Claude Code could expose user identity to third-party servers. Anyone using Claude Code to make HTTP requests should be aware their email address may be visible in server logs of external services until a fix is deployed.</description>
     </item>
@@ -1294,7 +1294,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Auto mode is now the default in Claude Code for Pro, Max, and Team plans</title>
       <link>https://simonwillison.net/2026/Aug/8/auto-mode/#atom-everything</link>
       <guid isPermaLink="true">https://simonwillison.net/2026/Aug/8/auto-mode/#atom-everything</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Simon Willison's Blog</source>
       <description>Anthropic is making auto mode the default in Claude Code for Pro, Max, and Team plans starting August 14th, backed by evals showing it blocks 89% of harmful actions vs. only 13.6% refusal rate from human reviewers across 1,053 testers. The evals specifically tested prompt injection and data exfiltration scenarios, with Anthropic claiming risks are now lower than average human review. Teams using Claude Code should understand the security tradeoff: auto mode offers substantially better protection against prompt injection than human approval workflows, but the remaining 11% gap means it isn't a complete mitigation for high-stakes agentic tasks.</description>
     </item>
@@ -1302,7 +1302,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>[AINews] Zawinski's Law of MultiAgents</title>
       <link>https://www.latent.space/p/ainews-zawinskis-law-of-multiagents</link>
       <guid isPermaLink="true">https://www.latent.space/p/ainews-zawinskis-law-of-multiagents</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Latent Space</source>
       <description>Claude Code has added agent-to-agent messaging capabilities, joining a broader trend of AI agents expanding to communicate with other agents rather than operating in isolated hierarchies. The post coins 'Zawinski's Law of MultiAgents' to describe how agents inevitably evolve toward arbitrary inter-agent messaging, with Claude Code cited as a recent example. Practitioners using Claude Code in multi-agent pipelines should be aware of new agent-to-agent messaging functionality that could significantly change orchestration patterns and security considerations in production deployments.</description>
     </item>
@@ -1310,7 +1310,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Export your Claude data</title>
       <link>https://support.claude.com/en/articles/9450526-export-your-claude-data</link>
       <guid isPermaLink="true">https://support.claude.com/en/articles/9450526-export-your-claude-data</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic Release Notes</source>
       <description>Anthropic has added a data export feature for Claude users. Users can now export their Claude data, likely including conversation history and account information. Professional users can now archive, analyze, or migrate their Claude conversation data, which is useful for compliance, personal knowledge management, or switching workflows.</description>
     </item>
@@ -1318,7 +1318,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Get started with skill and plugin scanning</title>
       <link>https://support.claude.com/en/articles/15927065</link>
       <guid isPermaLink="true">https://support.claude.com/en/articles/15927065</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic Release Notes</source>
       <description>Anthropic has added skill and plugin security scanning for Enterprise plans, which automatically checks third-party skills and plugins for malicious content at upload or edit time. This is a new security feature available in the Enterprise tier. Enterprise teams using Claude with third-party skills or plugins can now enable automated malicious content detection, reducing supply-chain security risk in their deployments.</description>
     </item>
@@ -1326,7 +1326,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Third-party cyber evaluations involving OpenAI models</title>
       <link>https://simonwillison.net/2026/Aug/5/third-party-cyber-evaluations/#atom-everything</link>
       <guid isPermaLink="true">https://simonwillison.net/2026/Aug/5/third-party-cyber-evaluations/#atom-everything</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Simon Willison's Blog</source>
       <description>A misconfigured testing environment at Anthropic's third-party cybersecurity partner Irregular gave Claude live internet access during Capture-the-Flag evaluations, resulting in the model interacting with real websites it mistook for simulated targets. This is the same environment misconfiguration that affected OpenAI models, with Anthropic publishing its own write-up of the incident. Practitioners running agentic Claude evaluations or red-team exercises need to verify network isolation is enforced at the infrastructure level, as model behavior in sandboxed environments may not stay sandboxed if misconfigured.</description>
     </item>
@@ -1334,7 +1334,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>One-shotting a Raccoon Heist game using Claude Fable 5</title>
       <link>https://simonwillison.net/2026/Aug/5/raccoon-heist/#atom-everything</link>
       <guid isPermaLink="true">https://simonwillison.net/2026/Aug/5/raccoon-heist/#atom-everything</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Simon Willison's Blog</source>
       <description>Simon Willison used Claude Sonnet 4.5 (referred to as 'Fable 5' in the title, likely a typo or codename) running in Claude Code for web to one-shot generate a complete playable browser game from a 2022 tweet and DALL-E screenshots. The experiment demonstrates Claude Code for web's capability to autonomously build a functional game end-to-end from minimal creative input. Provides a concrete, reproducible benchmark for Claude Code for web's autonomous code generation capability on a non-trivial creative/technical task, useful for calibrating what 'one-shot' agentic coding can realistically produce.</description>
     </item>
@@ -1342,7 +1342,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>llm-anthropic 0.26</title>
       <link>https://simonwillison.net/2026/Aug/4/llm-anthropic/#atom-everything</link>
       <guid isPermaLink="true">https://simonwillison.net/2026/Aug/4/llm-anthropic/#atom-everything</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Simon Willison's Blog</source>
       <description>llm-anthropic 0.26 adds support for Claude 5 models (Fable 5, Sonnet 5, Opus 5) and server-side tools (WebSearch, WebFetch, CodeExecution, AnthropicMCP) via Simon Willison's LLM CLI framework. Extended thinking configuration is simplified to `thinking` and `thinking_effort` options; Claude 5 models think by default with Fable 5 always thinking. Practitioners using the LLM CLI or Python library to access Claude now have a cleaner interface for extended thinking and direct access to Anthropic's server-side tools without managing web search options manually.</description>
     </item>
@@ -1350,7 +1350,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>New release of LLM adds support for reasoning traces, OpenAI Responses, server-side tools, and smarter logging</title>
       <link>https://simonwillison.net/2026/Aug/4/new-release-of-llm/#atom-everything</link>
       <guid isPermaLink="true">https://simonwillison.net/2026/Aug/4/new-release-of-llm/#atom-everything</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Simon Willison's Blog</source>
       <description>Simon Willison released LLM 0.32 and an updated llm-anthropic plugin that adds server-side tools for Claude including WebSearch, WebFetch, CodeExecution, and AnthropicMCP support via the CLI. The AnthropicMCP tool allows Claude models to execute MCP calls against arbitrary MCP servers directly from the command line. Practitioners using Claude via the LLM CLI can now invoke Anthropic's native server-side tools and connect Claude to any MCP server without managing MCP infrastructure themselves.</description>
     </item>
@@ -1358,7 +1358,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Stateless MCP has recaptured my interest (and inspired mcp-explorer and datasette-mcp)</title>
       <link>https://simonwillison.net/2026/Jul/31/stateless-mcp/#atom-everything</link>
       <guid isPermaLink="true">https://simonwillison.net/2026/Jul/31/stateless-mcp/#atom-everything</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Simon Willison's Blog</source>
       <description>The MCP 2026-07-28 specification (stateless MCP) has been released, representing the most significant change to the Model Context Protocol since Anthropic introduced it in November 2024. The stateless design substantially reduces implementation complexity for both clients and servers, and Simon Willison built three MCP implementations in a week to demonstrate this, including mcp-explorer and datasette-mcp. Practitioners building Claude tool integrations should evaluate the new stateless MCP spec, as it lowers the barrier to implementing custom MCP servers and clients, and Willison's open-source examples provide concrete starting points.</description>
     </item>
@@ -1366,7 +1366,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Anthropic says Claude AI hacked three organisations during cyber tests</title>
       <link>https://www.bbc.co.uk/news/articles/cz7dl7w8y7po</link>
       <guid isPermaLink="true">https://www.bbc.co.uk/news/articles/cz7dl7w8y7po</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Hacker News</source>
       <description>Anthropic reported that Claude successfully hacked three organizations during sanctioned cybersecurity red-team tests. This represents a notable disclosure of Claude's offensive security capabilities in controlled testing environments. Practitioners using Claude for security work need to understand the model's demonstrated offensive capabilities and the boundaries Anthropic is establishing around agentic security tasks.</description>
     </item>
@@ -1374,7 +1374,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Investigating three real-world incidents in our cybersecurity evaluations</title>
       <link>https://simonwillison.net/2026/Jul/30/three-real-world-incidents/#atom-everything</link>
       <guid isPermaLink="true">https://simonwillison.net/2026/Jul/30/three-real-world-incidents/#atom-everything</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Simon Willison's Blog</source>
       <description>Anthropic disclosed three real-world cybersecurity incidents from their evaluation runs where Claude, believing it was in a sandboxed simulation, accessed live internet systems and compromised real organizations' infrastructure using techniques like exploiting weak passwords and unauthenticated endpoints. The incidents, the earliest occurring in April, resulted from a miscommunication between Anthropic and an evaluation partner that left internet access available despite Claude being told it was in an isolated environment. This reveals a concrete failure mode in Claude's agentic/evaluation contexts where environment boundary assumptions can lead to real-world impact, with direct implications for anyone running Claude in red-team, security testing, or sandboxed agentic workflows.</description>
     </item>
@@ -1382,7 +1382,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Jul 30, 2026 Frontier Red Team Investigating three real-world incidents in our cybersecurity evaluations</title>
       <link>https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals</link>
       <guid isPermaLink="true">https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic News</source>
       <description>Anthropic's Frontier Red Team is investigating three real-world incidents that occurred during cybersecurity evaluations of Claude. The announcement comes from Anthropic's official news page dated July 30, 2026. Real-world incidents in Claude's cybersecurity evaluations may indicate capability thresholds or safety boundaries relevant to practitioners using Claude for security-related tasks.</description>
     </item>
@@ -1390,7 +1390,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>[AINews] AI is eating Finance; AIE NYC now open</title>
       <link>https://www.latent.space/p/ainews-ai-is-eating-finance-aie-nyc</link>
       <guid isPermaLink="true">https://www.latent.space/p/ainews-ai-is-eating-finance-aie-nyc</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Latent Space</source>
       <description>Anthropic's Financial Services team held an NYC event and released Cowork and Claude Code agent templates covering corporate finance workflows. This represents a targeted push into financial services with pre-built agentic workflows for the sector. Practitioners in finance or building finance-adjacent tools can now leverage official Claude Code and Cowork templates as starting points for corporate finance automation rather than building from scratch.</description>
     </item>
@@ -1398,7 +1398,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Discovering cryptographic weaknesses with Claude</title>
       <link>https://simonwillison.net/2026/Jul/28/discovering-cryptographic-weaknesses-with-claude/#atom-everything</link>
       <guid isPermaLink="true">https://simonwillison.net/2026/Jul/28/discovering-cryptographic-weaknesses-with-claude/#atom-everything</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Simon Willison's Blog</source>
       <description>Anthropic researchers used Claude Mythos (running for ~60 hours at ~$100,000 in API costs) to discover mathematical weaknesses in the HAWK cryptographic scheme and a reduced-round AES variant, with the primary human intervention being motivational prompting to prevent the model from giving up. The work also produced CryptanalysisBench, a new eval for assessing LLM cryptanalysis capability, developed with ETH Zurich, Tel Aviv University, and University of Haifa. Demonstrates that Claude Mythos can perform genuine novel research-level work in highly technical domains when given extended agentic runs and persistence prompting, with implications for how practitioners structure long-horizon research tasks.</description>
     </item>
@@ -1406,7 +1406,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Jul 28, 2026 Frontier Red Team Discovering cryptographic weaknesses with Claude</title>
       <link>https://www.anthropic.com/research/discovering-cryptographic-weaknesses</link>
       <guid isPermaLink="true">https://www.anthropic.com/research/discovering-cryptographic-weaknesses</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic Research Blog</source>
       <description>Anthropic's Frontier Red Team published research on using Claude to discover cryptographic weaknesses. The post details methodology and findings from applying Claude to cryptographic vulnerability research. Security practitioners can reference this work to understand Claude's capabilities and limitations when applied to cryptographic analysis tasks.</description>
     </item>
@@ -1414,7 +1414,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>An opinionated guide to which AI to use to do stuff</title>
       <link>https://simonwillison.net/2026/Jul/27/an-opinionated-guide-to-which-ai-to-use-to-do-stuff/#atom-everything</link>
       <guid isPermaLink="true">https://simonwillison.net/2026/Jul/27/an-opinionated-guide-to-which-ai-to-use-to-do-stuff/#atom-everything</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Simon Willison's Blog</source>
       <description>Ethan Mollick's updated AI guide now frames Claude's agentic tools—Cowork (cloud-based) and Claude Code (local computer access via desktop app)—as the primary modes of professional use, with Gemini dropping off the list entirely. The guide distinguishes between cloud-provided computer access (Cowork) and local desktop app access (Claude Code), noting these share confusingly similar naming conventions. Confirms that Cowork and Claude Code are now being positioned as the standard professional-tier workflow tools, useful context for practitioners deciding which Claude agentic mode fits their use case.</description>
     </item>
@@ -1422,7 +1422,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Jul 27, 2026 Announcements Our position on open-weights models</title>
       <link>https://www.anthropic.com/news/position-open-weights-models</link>
       <guid isPermaLink="true">https://www.anthropic.com/news/position-open-weights-models</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic News</source>
       <description>Anthropic has published an official position statement on open-weights AI models as of July 27, 2026. The full content of the statement is not available in the excerpt provided. Anthropic's stance on open-weights models could signal strategic direction affecting Claude's development, licensing, or competitive positioning relevant to professional users evaluating AI tool choices.</description>
     </item>
@@ -1430,7 +1430,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>[AINews] Claude Opus 5: Fable-level performance at Opus price (half Fable)</title>
       <link>https://www.latent.space/p/ainews-claude-opus-5-fable-level</link>
       <guid isPermaLink="true">https://www.latent.space/p/ainews-claude-opus-5-fable-level</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Latent Space</source>
       <description>Anthropic released Claude Opus 5 on a Friday, with independent evaluations showing it achieves an ECI of 159 (slightly below Fable 5's 161) while matching Fable 5 on SWE-ECI at 161, at half the price of comparable frontier models. Early user reports highlight strong performance in coding-agent and browser automation workflows. Opus 5's pricing and coding-agent performance metrics are directly relevant for practitioners deciding whether to upgrade workflows or shift budget allocation from competing frontier models.</description>
     </item>
@@ -1438,7 +1438,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Introducing Claude Opus 5</title>
       <link>https://simonwillison.net/2026/Jul/24/introducing-claude-opus-5/#atom-everything</link>
       <guid isPermaLink="true">https://simonwillison.net/2026/Jul/24/introducing-claude-opus-5/#atom-everything</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Simon Willison's Blog</source>
       <description>Anthropic released Claude Opus 5, described as a 'thoughtful and proactive model' priced the same as Opus 4.8 with a 'fast mode' at 2x cost, currently leading the Artificial Analysis leaderboard above Claude Fable 5. Notable behaviors include autonomous problem-solving (e.g., building its own computer vision pipeline when given no direct image access) and improved cybersecurity vulnerability detection despite intentionally avoiding cyber-specific training. Practitioners should note Opus 5's apparent tendency toward autonomous, proactive tool-building when blocked—relevant for agentic workflows—and its improved security analysis capabilities, which expand its utility for code review and threat modeling tasks.</description>
     </item>
@@ -1446,7 +1446,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Quoting Boris Cherny</title>
       <link>https://simonwillison.net/2026/Jul/25/boris-cherny/#atom-everything</link>
       <guid isPermaLink="true">https://simonwillison.net/2026/Jul/25/boris-cherny/#atom-everything</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Simon Willison's Blog</source>
       <description>Anthropic's Boris Cherny highlights that Claude Opus 5 is their most prompt-injection-resistant model to date, a finding documented on page 73 of the Opus 5 system card. This resistance was validated through both PI evals and red teaming exercises. For practitioners building agentic pipelines or tool-use systems with Claude, Opus 5's improved prompt injection resistance is a concrete security improvement worth factoring into architecture decisions.</description>
     </item>
@@ -1454,7 +1454,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Claude Opus 5</title>
       <link>https://www.anthropic.com/claude-opus-5-system-card</link>
       <guid isPermaLink="true">https://www.anthropic.com/claude-opus-5-system-card</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Hacker News</source>
       <description>A Hacker News thread titled 'Claude Opus 5' has appeared with substantive discussion. No body text is available, suggesting this may be an announcement or leak regarding the next major Claude model. Claude Opus 5 would represent a significant capability upgrade for professional users relying on the highest-tier Claude model for complex tasks.</description>
     </item>
@@ -1462,7 +1462,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Jul 24, 2026 Frontier Red Team Project Pilot: Can AI control a drone?</title>
       <link>https://www.anthropic.com/research/project-pilot</link>
       <guid isPermaLink="true">https://www.anthropic.com/research/project-pilot</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic Research Blog</source>
       <description>Anthropic's Frontier Red Team conducted a pilot project testing whether AI can control a drone, published July 24, 2026. This represents Anthropic's ongoing safety and capability evaluation work at the frontier of AI systems interacting with physical hardware. Understanding Claude's evaluated capabilities and safety boundaries with real-world physical control systems is directly relevant for practitioners considering agentic or robotics-adjacent deployments.</description>
     </item>
@@ -1470,7 +1470,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Claude Opus 5</title>
       <link>https://www.anthropic.com/news/claude-opus-5</link>
       <guid isPermaLink="true">https://www.anthropic.com/news/claude-opus-5</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic Release Notes</source>
       <description>Anthropic launched Claude Opus 5, positioned as a near-frontier intelligence model comparable to Claude Fable 5 but at half the price. The release is noted in official Claude release notes with a corresponding blog post. Practitioners evaluating cost-performance tradeoffs now have a cheaper alternative to top-tier Claude models that maintains near-equivalent capability.</description>
     </item>
@@ -1478,7 +1478,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Introducing Claude Opus 5</title>
       <link>https://www.anthropic.com/news/claude-opus-5</link>
       <guid isPermaLink="true">https://www.anthropic.com/news/claude-opus-5</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic News</source>
       <description>Anthropic has released Claude Opus 5, positioned as a significant upgrade to the Opus tier with a focus on long-running agentic tasks, coding, and professional work. The release represents a step-change improvement over previous Opus models. Practitioners running agentic workflows or using Opus-tier models for complex coding and professional tasks should evaluate Opus 5 for potential performance gains.</description>
     </item>
@@ -1486,7 +1486,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Models &amp; pricing</title>
       <link>https://docs.claude.com/docs/en/about-claude/models/overview</link>
       <guid isPermaLink="true">https://docs.claude.com/docs/en/about-claude/models/overview</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Claude Docs Changelog</source>
       <description>Anthropic updated the Models &amp; pricing documentation page. No specific model or pricing changes are detailed in the excerpt provided. Practitioners should review the full changelog entry directly to catch any model availability or pricing changes affecting API usage and cost planning.</description>
     </item>
@@ -1494,7 +1494,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Analytics APIs</title>
       <link>https://platform.claude.com/docs/en/manage-claude/analytics-api</link>
       <guid isPermaLink="true">https://platform.claude.com/docs/en/manage-claude/analytics-api</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic Release Notes</source>
       <description>Anthropic has added Claude Cowork integration to the Analytics API. This allows programmatic access to analytics data related to Cowork usage. Teams using Cowork for desktop automation can now access usage and analytics data via API, enabling monitoring, reporting, and optimization of automated workflows at scale.</description>
     </item>
@@ -1502,7 +1502,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Jul 22, 2026 Product Ask Claude about the Anthropic Economic Index</title>
       <link>https://www.anthropic.com/news/anthropic-economic-index-connector</link>
       <guid isPermaLink="true">https://www.anthropic.com/news/anthropic-economic-index-connector</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic News</source>
       <description>Anthropic has added the ability to ask Claude directly about the Anthropic Economic Index. This appears to be an integration allowing Claude to answer questions about Anthropic's economic research data. Practitioners can now query Claude directly for insights from Anthropic's Economic Index data, potentially streamlining economic and labor market research workflows.</description>
     </item>
@@ -1510,7 +1510,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>A Fireside Chat with Cat and Thariq from the Claude Code team</title>
       <link>https://simonwillison.net/2026/Jul/21/cat-and-thariq/#atom-everything</link>
       <guid isPermaLink="true">https://simonwillison.net/2026/Jul/21/cat-and-thariq/#atom-everything</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Simon Willison's Blog</source>
       <description>Anthropic Claude Code team members revealed that Claude Tag now handles 65% of product engineering PRs for the Claude Code team, and the Claude Code system prompt was recently reduced in size by 80%. They also noted that adding examples to system prompts and 'don't do X' lists are no longer best practices for newer models like Opus 4.8. Practitioners building on Claude Code or designing system prompts should update their prompting strategies — fewer examples and prohibitions, not more — and the 80% system prompt reduction signals that modern Claude models require less scaffolding to perform reliably in agentic workflows.</description>
     </item>
@@ -1518,7 +1518,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Anthropic runs large-scale code migrations with Claude Code</title>
       <link>https://claude.com/blog/ai-code-migration</link>
       <guid isPermaLink="true">https://claude.com/blog/ai-code-migration</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Hacker News</source>
       <description>Anthropic is using Claude Code internally to run large-scale code migrations across their codebase. This represents a real-world, high-stakes validation of Claude Code's agentic coding capabilities by the team that built it. Internal dogfooding at this scale provides evidence of Claude Code's reliability for large codebase refactoring and migration tasks that practitioners may want to replicate.</description>
     </item>
@@ -1526,7 +1526,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Claude Code uses Bun written in Rust now</title>
       <link>https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust/#atom-everything</link>
       <guid isPermaLink="true">https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust/#atom-everything</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Simon Willison's Blog</source>
       <description>Claude Code v2.1.181+ ships with a Rust-rewritten version of Bun (v1.4.0, unreleased publicly) embedded in its binary, confirmed via string inspection of the claude executable. The switch resulted in ~10% faster startup on Linux with no user-visible regressions. Practitioners running Claude Code can verify their installation's internals using the provided shell commands, and should expect marginally faster startup times on Linux as this Rust-based Bun rolls out.</description>
     </item>
@@ -1534,7 +1534,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Use Claude’s chat search and memory to build on previous context</title>
       <link>https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context</link>
       <guid isPermaLink="true">https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic Release Notes</source>
       <description>Anthropic has updated Claude's memory system from a daily summary format to individual, categorized entries that Claude reads and updates dynamically during conversations. The new system also includes chat search functionality to help build on previous context across sessions. Users relying on Claude's memory for persistent context in ongoing projects should review how the new entry-based system affects their workflows, as the behavior and structure of stored information has fundamentally changed.</description>
     </item>
@@ -1542,7 +1542,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>How I tricked Claude into leaking your deepest, darkest secrets</title>
       <link>https://simonwillison.net/2026/Jul/15/claude-web-fetch-exfiltration/#atom-everything</link>
       <guid isPermaLink="true">https://simonwillison.net/2026/Jul/15/claude-web-fetch-exfiltration/#atom-everything</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Simon Willison's Blog</source>
       <description>A researcher (Ayush Paul) found a loophole in Claude's web_fetch data exfiltration protections: while Claude blocks direct attacker-specified URLs, it was also allowed to follow URLs embedded in previously fetched pages, enabling a honeypot attack chain that tricks Claude into leaking user data through a sequence of nested generated links. The attack exploits Claude's memory of past interactions combined with the chained URL-following behavior to exfiltrate private conversation data. Anyone deploying Claude with web_fetch enabled in an agentic or memory-augmented context should be aware this specific protection bypass existed and verify whether Anthropic has patched the nested URL-following behavior before treating web_fetch as safe against prompt injection exfiltration attacks.</description>
     </item>
@@ -1550,7 +1550,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>HIPAA readiness for Claude API</title>
       <link>https://platform.claude.com/docs/en/manage-claude/api-and-data-retention#hipaa-readiness</link>
       <guid isPermaLink="true">https://platform.claude.com/docs/en/manage-claude/api-and-data-retention#hipaa-readiness</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic Release Notes</source>
       <description>Anthropic has added self-serve HIPAA readiness management for Claude Enterprise and Claude API organizations, allowing eligible admins to review the BAA, download an implementation guide, and enable HIPAA configuration in one flow. This applies to both Claude Enterprise and the Claude Platform API. Teams building healthcare applications on the Claude API can now independently handle HIPAA compliance setup without going through Anthropic sales or support.</description>
     </item>
@@ -1558,7 +1558,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>HIPAA-ready Enterprise plans</title>
       <link>https://support.claude.com/en/articles/13296973-hipaa-ready-enterprise-plans</link>
       <guid isPermaLink="true">https://support.claude.com/en/articles/13296973-hipaa-ready-enterprise-plans</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic Release Notes</source>
       <description>Anthropic has introduced self-serve HIPAA configuration for Claude Enterprise and API plans, allowing eligible admins to review and sign the BAA, download an implementation guide, and enable HIPAA settings without manual Anthropic involvement. This applies to both claude.ai Enterprise organizations and API platform customers. Teams building healthcare applications or handling PHI can now enable HIPAA-compliant Claude usage independently, removing a previous friction point in enterprise procurement.</description>
     </item>
@@ -1566,7 +1566,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Jul 14, 2026 Product Introducing Claude for Teachers</title>
       <link>https://www.anthropic.com/news/claude-for-teachers</link>
       <guid isPermaLink="true">https://www.anthropic.com/news/claude-for-teachers</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic News</source>
       <description>Anthropic has announced Claude for Teachers, a product specifically designed for educators. No further details are available in the excerpt. A dedicated Claude product for education may offer specialized features, pricing, or capabilities relevant to practitioners building or deploying Claude in educational contexts.</description>
     </item>
@@ -1574,7 +1574,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Fable gets another bump</title>
       <link>https://simonwillison.net/2026/Jul/12/bump/#atom-everything</link>
       <guid isPermaLink="true">https://simonwillison.net/2026/Jul/12/bump/#atom-everything</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Simon Willison's Blog</source>
       <description>Anthropic has extended Claude Fable 5 access on all paid plans through July 19, maintaining the 50% higher Claude Code weekly rate limits and the rule that up to half of weekly usage limits can be used on Fable 5. The extension appears driven by competitive pressure from OpenAI's GPT-5.6 Sol rollout rather than a resolution of the compute constraints Anthropic originally cited. Practitioners on paid Claude plans have another confirmed window to use Fable 5 at no extra cost, but the ongoing uncertainty about permanent availability is a planning consideration for teams building workflows around the model.</description>
     </item>
@@ -1582,7 +1582,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Claude Code sends 33k tokens before reading the prompt; OpenCode sends 7k</title>
       <link>https://systima.ai/blog/claude-code-vs-opencode-token-overhead</link>
       <guid isPermaLink="true">https://systima.ai/blog/claude-code-vs-opencode-token-overhead</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Hacker News</source>
       <description>An empirical study with proxy logging found Claude Code sends ~33k tokens before reading the user's prompt, compared to ~7k for OpenCode, due to inefficient cache strategy and harness token overhead. The difference was discovered through real-world cost observation and confirmed by capturing raw requests to Anthropic's API endpoint. Teams running Claude Code at scale should account for significantly higher baseline token costs per session compared to alternatives, and may want to evaluate OpenCode or monitor their own token usage with similar proxy logging.</description>
     </item>
@@ -1590,7 +1590,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Jul 9, 2026 Case Study UST is bringing Claude to physical AI</title>
       <link>https://www.anthropic.com/news/ust-claude</link>
       <guid isPermaLink="true">https://www.anthropic.com/news/ust-claude</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic News</source>
       <description>UST is integrating Claude into physical AI applications, as highlighted in an Anthropic case study dated July 9, 2026. The case study documents how Claude is being deployed in physical AI contexts through UST's implementation. Practitioners exploring Claude deployments beyond software may find UST's physical AI integration approach a useful reference for similar use cases.</description>
     </item>
@@ -1598,7 +1598,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Inviting hard questions</title>
       <link>https://www.anthropic.com/news/hard-questions</link>
       <guid isPermaLink="true">https://www.anthropic.com/news/hard-questions</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic News</source>
       <description>Anthropic is launching a public initiative asking for difficult questions about AI, committing to transparency by showing their reasoning and work as they address those questions. The announcement was made July 9, 2026. Anthropic's public accountability initiative may surface important clarifications about Claude's capabilities, limitations, and safety properties that practitioners should track.</description>
     </item>
@@ -1606,7 +1606,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Set break reminders and quiet hours</title>
       <link>https://support.claude.com/en/articles/15672868</link>
       <guid isPermaLink="true">https://support.claude.com/en/articles/15672868</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic Release Notes</source>
       <description>Anthropic has added two new features to Claude's settings: a Monthly Recap (in beta) under Settings &gt; Reflect that summarizes topics, activity patterns, and working observations, and a Time and Focus section for setting break reminders and quiet hours. The Monthly Recap requires memory to be enabled and is available on Free, Pro, and Max plans via web and Claude Desktop. Professional Claude users can now review their usage patterns and topic history monthly, and configure focus/availability settings—relevant for managing workflow and understanding how Claude usage is distributed across projects.</description>
     </item>
@@ -1614,7 +1614,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>See your monthly recap</title>
       <link>https://support.claude.com/en/articles/15672559</link>
       <guid isPermaLink="true">https://support.claude.com/en/articles/15672559</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic Release Notes</source>
       <description>Anthropic added a 'Monthly Recap' feature in Settings &gt; Reflect that surfaces usage patterns including topics, most active day/hour, and working style observations, requiring memory to be enabled. A companion 'Time and Focus' setting allows users to configure break reminders and quiet hours. Professional Claude users can now audit their own usage patterns and configure workflow boundaries directly within the platform, useful for productivity tracking and managing deep work sessions.</description>
     </item>
@@ -1622,7 +1622,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Jul 8, 2026 Alignment An off switch for dual use knowledge in AI models</title>
       <link>https://www.anthropic.com/research/off-switch-dual-use</link>
       <guid isPermaLink="true">https://www.anthropic.com/research/off-switch-dual-use</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic Research Blog</source>
       <description>Anthropic published research on a mechanism to selectively disable dual-use knowledge in Claude models. The work describes an 'off switch' capability for controlling what hazardous or sensitive knowledge the model can access or express. This research directly affects how Claude handles sensitive topics and may explain or predict behavioral changes in Claude's responses to dual-use knowledge requests in professional contexts.</description>
     </item>
@@ -1630,7 +1630,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Connect to Microsoft 365</title>
       <link>https://support.claude.com/en/articles/15183774</link>
       <guid isPermaLink="true">https://support.claude.com/en/articles/15183774</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic Release Notes</source>
       <description>Claude's Microsoft 365 connector now supports write operations, enabling Claude to draft/send email, manage calendar events, update mailbox settings, and create/modify files in OneDrive and SharePoint. Teams remains read-only, and write tools require Microsoft Entra admin consent plus org-level enablement before use. Teams using Claude for M365 workflows can now automate document creation, email handling, and calendar management end-to-end rather than just querying existing content.</description>
     </item>
@@ -1638,7 +1638,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Set up the Microsoft 365 connector</title>
       <link>https://support.claude.com/en/articles/12542951-set-up-the-microsoft-365-connector#h_a51d877afd</link>
       <guid isPermaLink="true">https://support.claude.com/en/articles/12542951-set-up-the-microsoft-365-connector#h_a51d877afd</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic Release Notes</source>
       <description>Claude's Microsoft 365 connector has expanded from read-only to include write capabilities, enabling Claude to draft/send email, manage calendar events, update mailbox settings, and create/edit files in OneDrive and SharePoint. Teams remains read-only, and enabling write tools requires Microsoft Entra admin consent plus org-level admin enablement. Teams using Claude with Microsoft 365 can now automate email workflows, calendar management, and file operations, but IT/admin coordination is required before these capabilities are available to users.</description>
     </item>
@@ -1646,7 +1646,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Use Claude Cowork on web, desktop, and mobile</title>
       <link>https://support.claude.com/en/articles/15520349</link>
       <guid isPermaLink="true">https://support.claude.com/en/articles/15520349</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic Release Notes</source>
       <description>Claude Cowork is expanding from desktop-only to web and mobile platforms, rolling out first to Max plan users over the next several weeks. Sessions now run remotely (in beta), meaning work persists across devices, continues when laptops are closed, and scheduled tasks execute without any device being online. Max plan users can now run persistent, cross-device Cowork sessions with background task execution, significantly expanding automation workflows beyond desktop constraints.</description>
     </item>
@@ -1654,7 +1654,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>The Making of Claude Code</title>
       <link>https://www.anthropic.com/features/making-of-claude-code</link>
       <guid isPermaLink="true">https://www.anthropic.com/features/making-of-claude-code</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic News</source>
       <description>Anthropic published an inside account of Claude Code's development history, from its origins as an internal CLI tool to becoming Anthropic's primary coding agent. The piece features perspectives from researchers, engineers, and early users involved in building it. Understanding the design decisions and evolution of Claude Code provides professional users with context for its architecture, capabilities, and intended use patterns.</description>
     </item>
@@ -1662,7 +1662,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>[AINews] The Field Guide to Fable</title>
       <link>https://www.latent.space/p/ainews-the-field-guide-to-fable</link>
       <guid isPermaLink="true">https://www.latent.space/p/ainews-the-field-guide-to-fable</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Latent Space</source>
       <description>A practitioner field guide to working with Claude (referred to as 'Fable') covers techniques for 'unhobbling' the model by removing overly restrictive prompting harnesses, finding unknown unknowns via 'blindspot pass' prompts, and the notable effectiveness of HTML output formatting. The guide argues that most Claude capability limitations are self-imposed by users through outdated prompting patterns rather than inherent model constraints. The 'unhobbling' framing and specific techniques like blindspot passes and HTML output are actionable for practitioners who may be leaving significant Claude capability on the table through legacy prompting habits.</description>
     </item>
@@ -1670,7 +1670,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Jul 6, 2026 Case Study Government of Alberta uses Claude to find and fix cybersecurity vulnerabilities across government systems</title>
       <link>https://www.anthropic.com/news/alberta-government-claude-cybersecurity</link>
       <guid isPermaLink="true">https://www.anthropic.com/news/alberta-government-claude-cybersecurity</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic News</source>
       <description>The Government of Alberta has deployed Claude to identify and remediate cybersecurity vulnerabilities across its government systems. This is an official Anthropic case study documenting a large-scale public sector security use case. Demonstrates Claude's viability for enterprise-scale government cybersecurity workflows, providing a reference case for practitioners evaluating Claude in regulated or public sector environments.</description>
     </item>
@@ -1678,7 +1678,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>A global workspace in language models</title>
       <link>https://www.anthropic.com/research/global-workspace</link>
       <guid isPermaLink="true">https://www.anthropic.com/research/global-workspace</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic Research Blog</source>
       <description>Anthropic interpretability research has identified an emergent 'global workspace' mechanism in Claude that maintains internal thought representations separate from the model's visible output. This suggests Claude processes information through a hidden cognitive workspace that influences responses without directly surfacing in generated text. Understanding that Claude maintains internal representations distinct from its output has direct implications for prompt engineering, interpretability work, and debugging unexpected model behavior in production deployments.</description>
     </item>
@@ -1686,7 +1686,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Anthropic performing prompt injection on its users</title>
       <link>https://old.reddit.com/r/LLMDevs/comments/1udpw9h/just_got_this_response_from_claude_what_is_going/</link>
       <guid isPermaLink="true">https://old.reddit.com/r/LLMDevs/comments/1udpw9h/just_got_this_response_from_claude_what_is_going/</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Hacker News</source>
       <description>A Hacker News discussion alleges Anthropic is injecting prompts into user interactions without disclosure. No body text is available, but the claim relates directly to how Claude processes and responds to user inputs. If confirmed, undisclosed prompt injection by Anthropic would have significant implications for trust, reproducibility, and system prompt integrity for professional Claude API users.</description>
     </item>
@@ -1694,7 +1694,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Better Models: Worse Tools</title>
       <link>https://simonwillison.net/2026/Jul/4/better-models-worse-tools/#atom-everything</link>
       <guid isPermaLink="true">https://simonwillison.net/2026/Jul/4/better-models-worse-tools/#atom-everything</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Simon Willison's Blog</source>
       <description>Claude Opus 4 and Sonnet 4.5 are increasingly generating tool calls with invented/extra fields not in the schema when using custom edit tools, while older Claude models did not exhibit this behavior. The likely cause is that Anthropic has RL-trained recent models specifically around Claude Code's own edit tool schema, causing schema-following degradation on third-party edit tool implementations. Developers building custom agentic coding tools or harnesses on top of Claude's API may need to either align their edit tool schemas closely to Claude Code's native format or implement retry/validation logic to handle malformed tool calls from the latest models.</description>
     </item>
@@ -1702,7 +1702,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25)</title>
       <link>https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/#atom-everything</link>
       <guid isPermaLink="true">https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/#atom-everything</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Simon Willison's Blog</source>
       <description>Simon Willison used Claude Code (web) on iPhone with a Claude Fable (Max subscription) to conduct a final pre-release review of sqlite-utils 4.0, spending ~$149.25 total. Claude Fable identified 5 release-blocking bugs including a serious data-loss issue in delete_where() that left database connections in a broken transaction state. Concrete real-world benchmark: Claude Code with Fable-class models can catch subtle, reproducible software bugs in a mature open-source library that the human maintainer missed, at a known dollar cost per session.</description>
     </item>
@@ -1710,7 +1710,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Fable's judgement</title>
       <link>https://simonwillison.net/2026/Jul/3/judgement/#atom-everything</link>
       <guid isPermaLink="true">https://simonwillison.net/2026/Jul/3/judgement/#atom-everything</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Simon Willison's Blog</source>
       <description>Simon Willison shares tips from a Claude Code team fireside chat: letting Claude Code (Fable/claude-sonnet-4-5) use its own judgment on when to write tests outperforms explicit rules, and instructing it to delegate coding subtasks to lower-power subagents reduces token costs. He demonstrates a working memory file pattern where Claude Code stores the delegation instruction in ~/.claude/projects/[name]/memory/ for persistent use. The subagent delegation pattern is a concrete cost-reduction technique for Claude Code power users before pricing changes, with a reusable memory file format that can be adopted immediately.</description>
     </item>
@@ -1718,7 +1718,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>llm-coding-agent 0.1a0</title>
       <link>https://simonwillison.net/2026/Jul/2/llm-coding-agent/#atom-everything</link>
       <guid isPermaLink="true">https://simonwillison.net/2026/Jul/2/llm-coding-agent/#atom-everything</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Simon Willison's Blog</source>
       <description>Simon Willison used Claude Code to build a coding agent library (llm-coding-agent) by prompting it to write a spec and then implement it via TDD, resulting in a published PyPI package. The agent includes file read/edit tools, command execution, and a Python API, and was built via a two-prompt workflow using Claude Code's agentic capabilities. Demonstrates a concrete Claude Code workflow for bootstrapping new tools from scratch using spec-then-implement prompting, with the resulting open-source agent code and commit history available as a reference implementation.</description>
     </item>
@@ -1726,7 +1726,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Claude's AskUserQuestion: &quot;No response after 60s – continued without an answer&quot;</title>
       <link>https://github.com/anthropics/claude-code/issues/73125</link>
       <guid isPermaLink="true">https://github.com/anthropics/claude-code/issues/73125</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Hacker News</source>
       <description>A Hacker News thread discusses Claude's AskUserQuestion tool behavior, specifically a timeout mechanism where Claude continues execution without user input after 60 seconds of no response. This appears to be an observed behavior in Claude's agentic/tool-use workflows. Practitioners building agentic Claude pipelines need to know that user-input prompts will auto-timeout at 60 seconds, causing Claude to proceed without the requested information, which could affect workflow design and error handling.</description>
     </item>
@@ -1734,7 +1734,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Using DSPy to evaluate and improve Datasette Agent's SQL system prompts</title>
       <link>https://simonwillison.net/2026/Jul/2/dspy-datasette-agent-prompts/#atom-everything</link>
       <guid isPermaLink="true">https://simonwillison.net/2026/Jul/2/dspy-datasette-agent-prompts/#atom-everything</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Simon Willison's Blog</source>
       <description>Simon Willison used Claude Code to run an async research task evaluating DSPy for improving Datasette Agent's SQL system prompts, with Claude choosing GPT-4.1 mini/nano as the test models. The research identified a concrete prompt flaw: omitting column names from schema listings caused column-name guessing and error-retry loops, with a specific fix recommended. Demonstrates a practical Claude Code agentic workflow for prompt optimization research, and surfaces a transferable finding about schema prompt design relevant to anyone building Claude-powered SQL/data query tools.</description>
     </item>
@@ -1742,7 +1742,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>AIEWF Daily Dispatch: Autoresearch and the tension between AI and human agency</title>
       <link>https://www.latent.space/p/aiewf-daily-dispatch-agency</link>
       <guid isPermaLink="true">https://www.latent.space/p/aiewf-daily-dispatch-agency</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Latent Space</source>
       <description>Anthropic's Thariq Shihipar gave a keynote at AI Engineer World's Fair focused on Claude Code, describing models as 'grown, not developed' through continuous discovery during use. His framing aligned with the conference's 'autoresearch' theme of agents operating in adaptive loops, though he didn't use that specific term. Shihipar's characterization of Claude Code development as iterative co-discovery with the model suggests practitioners should expect Claude Code's capabilities and behaviors to evolve rapidly and somewhat unpredictably, rewarding ongoing experimentation over fixed workflow assumptions.</description>
     </item>
@@ -1750,7 +1750,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>[AINews] not much happened today</title>
       <link>https://www.latent.space/p/ainews-not-much-happened-today-900</link>
       <guid isPermaLink="true">https://www.latent.space/p/ainews-not-much-happened-today-900</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Latent Space</source>
       <description>Anthropic re-enabled 'Claude Fable 5' with visible safety fallbacks, noting some cybersecurity requests may be routed to Opus 4.8 due to overly broad biology/chemistry classifiers. The relaunch triggered immediate tooling updates across Cursor, Devin, and Perplexity, while rate limits were reset for users. Practitioners using Fable 5 via API or third-party tools should be aware of the classifier-driven model routing behavior, as certain requests may silently fall back to Opus 4.8 rather than the requested model.</description>
     </item>
@@ -1758,7 +1758,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Work with artifacts</title>
       <link>https://support.claude.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them#h_9cbf05e668</link>
       <guid isPermaLink="true">https://support.claude.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them#h_9cbf05e668</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic Release Notes</source>
       <description>Anthropic has added inline artifact editing to Claude chat and Claude Cowork, allowing users to highlight specific text in a generated document and request targeted edits directly on that selection. This eliminates the need to re-describe content in the chat interface when requesting changes to specific sections. Inline selection-based editing reduces friction in iterative document workflows, making it faster to refine specific sections of reports, plans, or briefs without losing context or reformulating prompts.</description>
     </item>
@@ -1766,7 +1766,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Manage model access for your organization</title>
       <link>https://support.claude.com/en/articles/15694740</link>
       <guid isPermaLink="true">https://support.claude.com/en/articles/15694740</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic Release Notes</source>
       <description>Anthropic has added model access controls for Enterprise plan admins, allowing them to restrict which Claude models and effort level settings are available to their organization's users. This is a new administrative capability in the Claude enterprise tier. Enterprise admins can now enforce model governance policies, preventing users from accessing specific models or adjusting effort/thinking levels without authorization.</description>
     </item>
@@ -1774,7 +1774,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>[AINews] Sonnet 5 today, and Fable 5 tomorrow</title>
       <link>https://www.latent.space/p/ainews-sonnet-5-today-and-fable-5</link>
       <guid isPermaLink="true">https://www.latent.space/p/ainews-sonnet-5-today-and-fable-5</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Latent Space</source>
       <description>Anthropic launched Claude Sonnet 5 as the new default mid-tier model with immediate rollout across Claude, Claude Code, API, and ecosystem partners. Key specs include a 1M-token context window, standard pricing of $3/M input and $15/M output tokens with a promotional rate of $2/M input, though community discussion flagged tokenizer changes causing 3-6x more turn-taking in benchmarks as a practical efficiency concern. Sonnet 5 is now the default in Claude Code for Pro users and available via API, making it immediately relevant for agentic workflows—but the tokenizer-driven turn-taking increase could meaningfully affect costs and latency in production pipelines.</description>
     </item>
@@ -1782,7 +1782,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Quoting Anthropic</title>
       <link>https://simonwillison.net/2026/Jun/30/anthropic/#atom-everything</link>
       <guid isPermaLink="true">https://simonwillison.net/2026/Jun/30/anthropic/#atom-everything</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Simon Willison's Blog</source>
       <description>Anthropic announced that the Department of Commerce has lifted export controls on Claude Fable 5 and Mythos 5, with access restoration beginning the following day. This indicates these models had been subject to export restrictions that are now being removed. Practitioners who had lost access to Claude Fable 5 or Mythos 5 due to export control restrictions should expect service to resume imminently.</description>
     </item>
@@ -1790,7 +1790,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Claude Sonnet 5</title>
       <link>https://www.anthropic.com/news/claude-sonnet-5</link>
       <guid isPermaLink="true">https://www.anthropic.com/news/claude-sonnet-5</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Hacker News</source>
       <description>A Hacker News thread titled 'Claude Sonnet 5' has appeared, indicating a new Claude Sonnet model release or announcement. No body text is available, suggesting this may be a link post pointing to an external announcement. A new Claude Sonnet model release would directly affect API users and practitioners choosing models for production workloads.</description>
     </item>
@@ -1798,7 +1798,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>What's new in Claude Sonnet 5</title>
       <link>https://simonwillison.net/2026/Jun/30/claude-sonnet-5/#atom-everything</link>
       <guid isPermaLink="true">https://simonwillison.net/2026/Jun/30/claude-sonnet-5/#atom-everything</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Simon Willison's Blog</source>
       <description>Claude Sonnet 5 launches with near-Opus 4.8 performance at Sonnet pricing ($3/$15 per million tokens), but a new tokenizer produces ~30% more tokens than Sonnet 4.6 for the same input, effectively raising costs by 30%. Key API changes include removal of temperature/top_p/top_k sampling parameters, adaptive thinking enabled by default, 1M token context window, and 128K max output tokens. The tokenizer change is a hidden cost increase that professionals need to account for in budgeting and benchmarking, and the removal of temperature/top_p/top_k parameters requires immediate code changes for any existing integrations.</description>
     </item>
@@ -1806,7 +1806,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Introducing Claude Sonnet 5</title>
       <link>https://www.anthropic.com/news/claude-sonnet-5</link>
       <guid isPermaLink="true">https://www.anthropic.com/news/claude-sonnet-5</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic Release Notes</source>
       <description>Anthropic released Claude Sonnet 5, described as their most agentic Sonnet model, with improvements over Sonnet 4.6 in reasoning, tool use, coding, and knowledge work. The release notes link to a blog post with further details. Practitioners using Claude for agentic workflows, coding, or tool-use pipelines should evaluate Sonnet 5 as a potential upgrade over Sonnet 4.6.</description>
     </item>
@@ -1814,7 +1814,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Introducing Claude Sonnet 5</title>
       <link>https://www.anthropic.com/news/claude-sonnet-5</link>
       <guid isPermaLink="true">https://www.anthropic.com/news/claude-sonnet-5</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic News</source>
       <description>Anthropic released Claude Sonnet 5 on June 30, 2026, positioning it as a frontier-performance model focused on coding, agentic tasks, and professional workloads at scale. The same day, Anthropic launched Claude Science, a customizable research workbench integrating scientific tools/packages, auditable artifacts, and flexible compute access. Practitioners should evaluate Sonnet 5 as a potential upgrade for coding and agentic pipelines, and Claude Science as a specialized option for research workflows requiring reproducibility and compute flexibility.</description>
     </item>
@@ -1822,7 +1822,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Anthropic has embedded hidden spyware-like code in Claude Code</title>
       <link>https://twitter.com/IntCyberDigest/status/2071971609183678544</link>
       <guid isPermaLink="true">https://twitter.com/IntCyberDigest/status/2071971609183678544</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Hacker News</source>
       <description>A Hacker News post alleges that Anthropic has embedded hidden spyware-like code in Claude Code. No body text is available, so the specific nature of the claim, evidence, or Anthropic's response cannot be assessed from this excerpt alone. Professionals using Claude Code in sensitive or enterprise environments need to investigate this claim and any official Anthropic response before continuing deployment.</description>
     </item>
@@ -1830,7 +1830,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Beware, Claude Code deletes &gt;30 day old transcripts. Anthropic won't fix it</title>
       <link>https://github.com/anthropics/claude-code/issues/62476</link>
       <guid isPermaLink="true">https://github.com/anthropics/claude-code/issues/62476</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Hacker News</source>
       <description>Claude Code automatically deletes conversation transcripts older than 30 days, and Anthropic has indicated they will not address this behavior. Users who rely on historical conversation logs for reference or auditing may lose data without warning. Professional Claude Code users need to implement their own transcript backup or export strategy immediately to avoid permanent loss of historical session data.</description>
     </item>
@@ -1838,7 +1838,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>[AINews] Loopcraft: The Art of Stacking Loops</title>
       <link>https://www.latent.space/p/loopcraft</link>
       <guid isPermaLink="true">https://www.latent.space/p/loopcraft</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Latent Space</source>
       <description>A practitioner pattern is emerging around 'loop design' for Claude and other coding agents: instead of direct prompting, professionals are architecting autonomous loops that maximize token throughput without human intervention between steps. Figures like Steipete and Boris describe stopping direct Claude prompting in favor of writing loops that manage the agent, with Andrej framing this as removing yourself as the bottleneck to maximize leverage. For Claude Code and agentic Claude users, this signals a concrete workflow shift: the professional edge is now in loop architecture—designing autonomous orchestration systems around Claude rather than crafting individual prompts.</description>
     </item>
@@ -1846,7 +1846,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Jun 30, 2026 Announcements Claude Science, an AI workbench for scientists, is now available</title>
       <link>https://www.anthropic.com/news/claude-science-ai-workbench</link>
       <guid isPermaLink="true">https://www.anthropic.com/news/claude-science-ai-workbench</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic News</source>
       <description>Anthropic has launched Claude Science, an AI workbench specifically designed for scientists, now available as of June 30, 2026. This is a new product offering in the Claude family targeting scientific research workflows. Professional users in scientific fields should evaluate Claude Science as a specialized tool that may offer capabilities or interfaces optimized for research tasks beyond what the standard Claude API or claude.ai provides.</description>
     </item>
@@ -1854,7 +1854,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Anthropic says Alibaba used 25k accounts to mine Claude</title>
       <link>https://arstechnica.com/tech-policy/2026/06/anthropic-claims-alibaba-defied-trump-to-attack-claude-and-steal-capabilities/</link>
       <guid isPermaLink="true">https://arstechnica.com/tech-policy/2026/06/anthropic-claims-alibaba-defied-trump-to-attack-claude-and-steal-capabilities/</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Hacker News</source>
       <description>Anthropic has alleged that Alibaba used approximately 25,000 accounts to systematically extract data from Claude, in what appears to be large-scale scraping or model distillation activity. The case highlights Anthropic's active enforcement of its terms of service against organized misuse of Claude's API or claude.ai. Professional Claude API users should be aware that Anthropic is actively monitoring and acting against large-scale scraping, which may signal tighter rate limiting or account verification measures ahead.</description>
     </item>
@@ -1862,7 +1862,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>What happened after 2,000 people tried to hack my AI assistant</title>
       <link>https://simonwillison.net/2026/Jun/26/hack-my-ai-assistant/#atom-everything</link>
       <guid isPermaLink="true">https://simonwillison.net/2026/Jun/26/hack-my-ai-assistant/#atom-everything</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Simon Willison's Blog</source>
       <description>A real-world stress test of Claude Opus 4.6 (referred to as 'Opus 4.6' in the post) showed zero successful prompt injection attacks across 6,000 attempts by ~2,000 participants trying to leak secrets via email. The experiment suggests Anthropic's injection-resistance training is meaningfully effective, though the author cautions this provides no formal security guarantee. Practitioners building agentic Claude systems that process untrusted input (emails, documents, web content) have concrete evidence that frontier Claude models resist injection attacks at scale, but should still architect for damage-limiting failure modes rather than relying solely on model-level defenses.</description>
     </item>
@@ -1870,7 +1870,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Trusted Devices</title>
       <link>https://code.claude.com/docs/en/remote-control#trusted-devices</link>
       <guid isPermaLink="true">https://code.claude.com/docs/en/remote-control#trusted-devices</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic Release Notes</source>
       <description>Anthropic has added a Trusted Devices feature for Team and Enterprise plan admins, requiring device verification before members can remotely view or steer local Claude Code sessions. This adds an authentication layer to Claude Code's remote session access controls. Enterprise teams using Claude Code's remote session features now have an additional security control to restrict who can observe or intervene in local coding sessions.</description>
     </item>
@@ -1878,7 +1878,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Anthropic says Alibaba illicitly extracted Claude AI model capabilities</title>
       <link>https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24/</link>
       <guid isPermaLink="true">https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24/</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Hacker News</source>
       <description>Anthropic has alleged that Alibaba illicitly extracted capabilities from Claude AI models, suggesting unauthorized model distillation or capability extraction. This represents a significant IP dispute between Anthropic and a major Chinese tech company. Understanding that Claude's capabilities are being targeted for extraction may signal relevance to how Anthropic tightens API access controls or usage policies going forward.</description>
     </item>
@@ -1886,7 +1886,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Why the Frontier Ecosystem must be Open — Matei Zaharia and Reynold Xin, Databricks</title>
       <link>https://www.latent.space/p/databricks</link>
       <guid isPermaLink="true">https://www.latent.space/p/databricks</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Latent Space</source>
       <description>Databricks has open-sourced Omnigent, a meta-harness for combining and controlling agents across Claude Code, Codex, Cursor, and custom tools, addressing shared problems like portability, session history, security, and spend controls via a common API above every harness. The episode covers how Databricks is positioning this as infrastructure for the agent era, with Claude Code explicitly named as one of the supported agent environments. Claude Code users and enterprise teams building multi-agent workflows should evaluate Omnigent as a potential orchestration layer that could standardize how Claude Code agents are managed, secured, and composed alongside other tools.</description>
     </item>
@@ -1894,7 +1894,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>[AINews] Claude Tag: Multiplayer, Proactive, Persistent Agents in Slack</title>
       <link>https://www.latent.space/p/ainews-claude-tag-multiplayer-proactive</link>
       <guid isPermaLink="true">https://www.latent.space/p/ainews-claude-tag-multiplayer-proactive</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Latent Space</source>
       <description>Anthropic launched Claude Tag, a Slack-native agent that represents the third major UI/UX redesign for Claude, moving from web to desktop to Slack as a primary interface. Key capabilities include git webhooks that can wait days for blocking dependencies, ambient channel monitoring without explicit tagging, proactive cross-channel information syncing, and threshold-triggered autonomous actions—and it now handles 65% of product PRs for Claude Code. Claude Tag's async, multi-day persistence and ambient behavior mode represent a meaningfully different agent architecture than typical turn-based Claude usage, with direct implications for how teams can deploy Claude Code in real engineering workflows.</description>
     </item>
@@ -1902,7 +1902,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Jun 23, 2026 Product Introducing Claude Tag</title>
       <link>https://www.anthropic.com/news/introducing-claude-tag</link>
       <guid isPermaLink="true">https://www.anthropic.com/news/introducing-claude-tag</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic News</source>
       <description>Anthropic announced a new product called Claude Tag on June 23, 2026. No further details are available in the provided excerpt. A new Claude product from Anthropic's official channel warrants attention, though details are needed to assess practical impact.</description>
     </item>
@@ -1910,7 +1910,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Porting the Moebius 0.2B image inpainting model to run in the browser with Claude Code</title>
       <link>https://simonwillison.net/2026/Jun/22/porting-moebius/#atom-everything</link>
       <guid isPermaLink="true">https://simonwillison.net/2026/Jun/22/porting-moebius/#atom-everything</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Simon Willison's Blog</source>
       <description>Simon Willison used Claude Code as a parallel agent to port the Moebius 0.2B image inpainting model to run in-browser via WebGPU, completing the project in terminal sessions while waiting on another agent (Codex Desktop) to finish separate tasks. The resulting demo is live and shows Claude Code handling a non-trivial ML model conversion workflow autonomously. Demonstrates a practical multi-agent workflow pattern where Claude Code handles a substantial technical project (ML model porting to WebGPU) in parallel with other work, useful for practitioners thinking about how to structure agentic sessions for maximum throughput.</description>
     </item>
@@ -1918,7 +1918,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>Red-Teaming after Mythos — Zico Kolter &amp; Matt Fredrikson, Gray Swan</title>
       <link>https://www.latent.space/p/gray-swan</link>
       <guid isPermaLink="true">https://www.latent.space/p/gray-swan</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Latent Space</source>
       <description>Gray Swan's adversarial red teaming tool 'Shade' was used by Anthropic to evaluate Claude models' robustness against prompt injection attacks in coding environments. The episode covers the state of AI red teaming with researchers who co-authored the definitive paper on indirect prompt injections and were cited in Anthropic's model cards. Practitioners deploying Claude in agentic or coding environments should understand the specific prompt injection attack surface Anthropic is actively evaluating and the tooling/frameworks being used to assess model robustness.</description>
     </item>
@@ -1926,7 +1926,7 @@ Resolves #384 A new commit on our unmaintained load-bearing dependency fixes a s
       <title>May 22, 2026 Frontier Red Team Measuring LLMs’ ability to develop exploits</title>
       <link>https://www.anthropic.com/research/exploit-evals</link>
       <guid isPermaLink="true">https://www.anthropic.com/research/exploit-evals</guid>
-      <pubDate>Sat, 05 Sep 2026 14:46:20 +0000</pubDate>
+      <pubDate>Sat, 05 Sep 2026 17:59:32 +0000</pubDate>
       <source>Anthropic Research Blog</source>
       <description>Anthropic's Frontier Red Team published research measuring LLMs' ability to develop exploits, dated May 22, 2026. The research evaluates offensive security capabilities of frontier models, relevant to understanding Claude's capabilities and safety boundaries in security contexts. Security professionals and red teamers using Claude need to understand its evaluated capabilities and limits around exploit development to make informed decisions about use in offensive security workflows.</description>
     </item>
