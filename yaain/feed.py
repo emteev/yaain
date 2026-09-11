@@ -5,6 +5,7 @@ feed.py — generates and updates a valid RSS 2.0 feed file.
 import os
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
+from email.utils import parsedate_to_datetime
 from xml.dom import minidom
 
 FEED_TITLE = "YAAIN — stack signal"
@@ -16,15 +17,42 @@ FEED_LINK = "https://emteev.github.io/yaain"
 MAX_ITEMS = 250  # ~a week at current volume; the homepage renders from this
 
 
-def _rfc822(iso_str: str) -> str:
-    """Convert ISO 8601 to RFC 822 for RSS."""
-    if not iso_str:
-        return datetime.now(timezone.utc).strftime("%a, %d %b %Y %H:%M:%S +0000")
+_RFC822_FMT = "%a, %d %b %Y %H:%M:%S +0000"
+
+
+def _render_utc(dt: datetime) -> str:
+    """Render a datetime as RFC 822, normalised to UTC.
+
+    The format string hardcodes +0000, so a date carrying any other offset has
+    to be converted rather than relabelled. A naive datetime is taken as UTC.
+    """
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt.astimezone(timezone.utc).strftime(_RFC822_FMT)
+
+
+def _rfc822(date_str: str) -> str:
+    """Render a stored date as RFC 822, accepting both shapes we actually hold.
+
+    The fetchers hand us ISO 8601. But load_existing_items reads pubDate back
+    out of feed.xml, so from the second build onwards an existing item's stored
+    date is the RFC 822 string we wrote last time. Parsing ISO only meant every
+    one of those fell through to now() -- silently re-dating the entire feed on
+    all six daily builds, so the feed always looked as though everything had
+    been published in the last few minutes. Accept RFC 822 too and a date is
+    written once and then kept.
+    """
+    if not date_str:
+        return _render_utc(datetime.now(timezone.utc))
     try:
-        dt = datetime.fromisoformat(iso_str.replace("Z", "+00:00"))
-        return dt.strftime("%a, %d %b %Y %H:%M:%S +0000")
-    except Exception:
-        return datetime.now(timezone.utc).strftime("%a, %d %b %Y %H:%M:%S +0000")
+        return _render_utc(datetime.fromisoformat(date_str.replace("Z", "+00:00")))
+    except ValueError:
+        pass
+    try:
+        return _render_utc(parsedate_to_datetime(date_str))
+    except (TypeError, ValueError):
+        pass
+    return _render_utc(datetime.now(timezone.utc))
 
 
 def _cdata(text: str) -> str:
