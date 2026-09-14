@@ -208,6 +208,9 @@
   .vhead h2 { font-size: 19px; font-weight: 700; letter-spacing: -0.2px; }
   .vhead .vq { font-size: 12px; color: #5f5e5a; }
   .vhead .vcount { font-size: 11px; color: #888780; margin-left: auto; }
+  .vgroup-act_old .vhead { border-bottom-color: #B98A7A; }
+  .vgroup-act_old .vhead h2 { color: #8A6A5E; }
+  .vgroup-act_old .stack-badge { background: #B98A7A; }
   .vgroup-act  .vhead { border-bottom-color: #9A2C13; }
   .vgroup-act  .vhead h2 { color: #9A2C13; }
   .vgroup-watch .vhead h2 { color: #633806; }
@@ -251,9 +254,24 @@
   // The page is organised by what the item DEMANDS, not by who published it.
   const GROUPS = [
     { key: "act",     title: "Act on this",   q: "Something we run has changed." },
+    { key: "act_old", title: "Older, still unactioned",
+      q: "Judged `act`, but published more than six weeks ago." },
     { key: "watch",   title: "Worth watching", q: "We could run this, and might want to." },
     { key: "context", title: "Context",        q: "Background worth having. Nothing to do." },
   ];
+
+  // ⚠️ WHY `act` IS SPLIT BY AGE (2026-09-14). The tier held 89 items, and
+  // dating each against its own source API showed 82% of the datable ones
+  // predated the 2026-08-30 rebuild — some by seventeen months. That was not
+  // the filter misjudging: a newly-added source's whole back catalogue is
+  // unseen on its first poll, so all of it was judged, correctly, as new
+  // variants of things we run. freshness.py stops it recurring.
+  //
+  // Nothing is deleted, because the backfill contains real finds — the LTX-2.3
+  // IC-LoRAs and the Foley LoRA among them. But an item from April 2025 must
+  // not sit in the same list as this morning's news looking identical to it.
+  // The same 45 days as the pipeline's floor, so one number governs both.
+  const ACT_FRESH_DAYS = 45;
 
   // Pills are only a visual cue for where an item came from; a source with no
   // entry falls back to neutral rather than disappearing.
@@ -437,7 +455,7 @@
     const ratings = await fetchJSON("ratings.json", {});
     const blocklist = new Set(await fetchJSON("blocklist.json", []));
 
-    const buckets = { act: [], watch: [], context: [] };
+    const buckets = { act: [], act_old: [], watch: [], context: [] };
     let hidden = 0, untiered = 0;
     for (const item of parseFeed(xml)) {
       if (blocklist.has(item.url)) { hidden++; continue; }
@@ -450,12 +468,24 @@
       buckets[v].push(item);
     }
 
+    // Move the stale `act` items into their own group. An item whose date we
+    // could not establish stays in `act` — fail open, matching the pipeline:
+    // we demote what we can prove is old, never what we merely cannot date.
+    const staleBefore = Date.now() - ACT_FRESH_DAYS * 86400 * 1000;
+    const stillFresh = [];
+    for (const item of buckets.act) {
+      const t = Date.parse(item.published);
+      if (!isNaN(t) && t < staleBefore) buckets.act_old.push(item);
+      else stillFresh.push(item);
+    }
+    buckets.act = stillFresh;
+
     const parts = [];
     for (const g of GROUPS) {
       const list = buckets[g.key].sort(sortKey);
       if (!list.length) continue;
       const body = g.key === "act" ? renderAct(list)
-                 : g.key === "watch" ? renderWatch(list)
+                 : (g.key === "watch" || g.key === "act_old") ? renderWatch(list)
                  : renderContext(list);
       parts.push(`
         <div class="vgroup vgroup-${g.key}">

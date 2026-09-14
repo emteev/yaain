@@ -96,9 +96,24 @@ def fetch_rss(source: dict) -> list[dict]:
               + (f" - bozo: {feed.bozo_exception}" if getattr(feed, "bozo", 0) else "")
               + f" - starts: {head!r}")
 
+    # ⚠️ Per-source title filter, enforced HERE rather than asked of the model.
+    # The filter prompt already rules that a tool's bare version number is
+    # `skip` — "v2.1.251", "Update loader.py" — and the model does not reliably
+    # obey it: on 2026-09-14 ten llama.cpp build tags (b10707 … b10950) sat in
+    # the `act` tier, which llama.cpp cuts several of per DAY and which we
+    # consume only indirectly, through Ollama. A rule the prompt states and the
+    # model ignores belongs in code, next to the two rules filter.py already
+    # enforces there. Real releases (v0.4.0) are untouched, so nothing that
+    # says what changed is lost — only the bare tags are.
+    skip_re = source.get("title_skip")
+    skipped_by_title = 0
+
     # Per-source cap: noisy feeds (hardware news at ~170 items) declare their
     # own `limit` so one source cannot dominate a run's API spend.
     for entry in feed.entries[:source.get("limit", 20)]:
+        if skip_re and re.match(skip_re, (entry.get("title") or "").strip()):
+            skipped_by_title += 1
+            continue
         # Extract body (full HTML content or summary)
         body_html = ""
         if hasattr(entry, "content"):
@@ -130,6 +145,9 @@ def fetch_rss(source: dict) -> list[dict]:
             "image": image,
             "published": _iso(entry.get("published_parsed") or entry.get("updated_parsed")),
         })
+    if skipped_by_title:
+        print(f"  [title filter] {source['name']}: {skipped_by_title} bare "
+              f"version tag(s) skipped before judging")
     return items
 
 

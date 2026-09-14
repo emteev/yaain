@@ -52,7 +52,18 @@ CASES = [
     ("Qwen",       "Qwen3.8",     "qwen3.8"),
     ("Lightricks", "LTX-2.5",     "LTX-2.3"),
 ]
-MAX_JUDGED = 4   # judge several variants, as a real run would
+# ⚠️ RAISED 4 → 20 on 2026-09-14, because at 4 THIS TEST WAS FAILING ITS OWN
+# HEADLINE CASE and nobody was running it to notice. `hf_org` returns newest
+# first; Lightricks published NINE LTX-2.5 LoRAs through August and September,
+# which pushed the base `Lightricks/LTX-2.5` repo — the entire point of the
+# case — down to position 11, outside a 4-item window. The test judged four
+# LoRAs, they were skipped, and it reported that the filter had missed LTX-2.5.
+# The filter had not; the test never showed it the item.
+#
+# A real run judges every new item an org publishes, so the faithful test does
+# too. 20 covers every variant either org has ever shipped in one generation
+# with room to spare, at a cost of a few cents per run.
+MAX_JUDGED = 20
 
 
 def main():

@@ -21,6 +21,7 @@ from sources import SOURCES
 from fetcher import fetch_all
 from filter import filter_items
 from feed import load_existing_items, build_feed, touch_feed
+import freshness as freshness_module
 import state as state_module
 import stack as stack_module
 
@@ -66,6 +67,26 @@ def main():
     new_candidates = state_module.filter_new(candidates, seen)
     print(f"  {len(new_candidates)} new (unseen) items")
 
+    # An item older than the floor is history, not news. This is where the
+    # 2026-08-30 first-poll backfill would have been stopped: 82% of the `act`
+    # tier on 2026-09-14 turned out to predate the rebuild, some by seventeen
+    # months, because a newly-added source's whole back catalogue is unseen on
+    # day one. Undated items are KEPT (fail open). See freshness.py.
+    print(f"Step 2b: Dropping anything older than {freshness_module.MAX_AGE_DAYS} days...")
+    new_candidates, too_old = freshness_module.split_by_age(new_candidates)
+    if too_old:
+        by_source = Counter(i.get("source_name", "?") for i in too_old)
+        print(f"  {len(too_old)} item(s) too old to be news — not judged, not billed:")
+        for src, n in by_source.most_common():
+            print(f"    {n:>3}  {src}")
+        # Marked seen anyway, or they are re-fetched and re-dropped forever.
+        # ⚠️ Not in a dry run: a dry run must not change what the next real run
+        # does. It says "nothing written" and that has to stay true.
+        if not dry_run:
+            state_module.mark_seen(too_old, seen)
+            state_module.save(seen, state_path)
+    print(f"  {len(new_candidates)} item(s) to judge")
+
     if dry_run:
         print("\n  Per-source yield (fetched / new):")
         newc = Counter(c.get("source_name", "?") for c in new_candidates)
@@ -73,7 +94,8 @@ def main():
             n = s["name"]
             flag = "  ⚠️ SILENT" if got.get(n, 0) == 0 else ""
             print(f"    {got.get(n,0):>3} / {newc.get(n,0):>3}  {n}{flag}")
-        print(f"\n  Would send {len(new_candidates)} items to the filter.")
+        print(f"\n  Would send {len(new_candidates)} items to the filter"
+              f" ({len(too_old)} held back by the {freshness_module.MAX_AGE_DAYS}-day floor).")
         print("── Dry run done. Nothing spent, nothing written. ──")
         return
 
@@ -81,9 +103,9 @@ def main():
         # Still stamp the feed, so "ran and found nothing" is distinguishable
         # from "stopped running" — the watchdog reads lastBuildDate.
         if touch_feed(feed_path):
-            print("  Nothing new to process. Feed heartbeat stamped. Done.")
+            print("  Nothing fresh to process. Feed heartbeat stamped. Done.")
         else:
-            print("  Nothing new to process. Done.")
+            print("  Nothing fresh to process. Done.")
         return
 
     print("Step 3: Filtering against the stack...")

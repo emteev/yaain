@@ -32,7 +32,15 @@ SOURCES = [
         "type": "rss",
         "url": "https://github.com/ggml-org/llama.cpp/releases.atom",
         "limit": 10,
-        "notes": "The GGUF lineage every quantised model we run depends on.",
+        # llama.cpp cuts a numbered BUILD several times a day (b10950) as well
+        # as real releases (v0.4.0). We consume llama.cpp only through Ollama,
+        # never building it ourselves, so a per-build tag cannot be something
+        # we act on — and ten of them were sitting in `act` on 2026-09-14.
+        # Bare tags out; anything that announces itself by name stays.
+        "title_skip": r"^b\d+$",
+        "notes": "The GGUF lineage every quantised model we run depends on. "
+                 "Bare per-build tags are filtered out before judging; real "
+                 "releases come through.",
     },
     {
         "name": "Ollama releases",
