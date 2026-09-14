@@ -35,8 +35,21 @@ import filter as filter_module
 from fetcher import fetch_hf_org
 
 # (HF org, substring identifying the model, the stack item it should name)
+#
+# ⚠️ THE QWEN CASE WENT HISTORICAL ON 2026-09-12. It was written as "we run
+# qwen3.6, the world has Qwen3.8, and nothing of ours said so" — then we took
+# the upgrade, so the stack item it must name changed from `qwen3.6` to
+# `qwen3.8` (the manifest keeps qwen3.6 as an alias, and `resolve` returns the
+# canonical name). What it still proves is real but smaller: the live HF fetch,
+# the alias resolution and the `act` path all work end to end. It no longer
+# proves the filter catches a generation we are BEHIND on.
+#
+# LTX-2.5 now carries that bar alone — we run LTX-2.3, and 2.5 shipped the day
+# after we installed 2.3. When we take LTX-2.5, this test needs a new live case
+# rather than a third historical one; do not let it decay into two tests that
+# can only pass.
 CASES = [
-    ("Qwen",       "Qwen3.8",     "qwen3.6"),
+    ("Qwen",       "Qwen3.8",     "qwen3.8"),
     ("Lightricks", "LTX-2.5",     "LTX-2.3"),
 ]
 MAX_JUDGED = 4   # judge several variants, as a real run would

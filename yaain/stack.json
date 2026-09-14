@@ -1,6 +1,6 @@
 {
-  "_README": "The manifest that decides what news matters. YAAIN's filter reads THIS, not a hardcoded prompt. If you install something on brownie or the studio, or pin/upgrade a tool, UPDATE THIS FILE IN THE SAME BREATH — otherwise YAAIN decays into exactly the staleness it exists to prevent. Last audited against the machines: 2026-08-30 (refs/yaain-landscape-review-2026-08-30.md part (a)). AND WHEN YOU ADD A MODEL, WRITE ITS `chosen` BLOCK IN THE SAME COMMIT — the reason, the date, and a pointer to the entry that records it. A model with no recorded reason is one nobody can supersede on purpose later; if there genuinely was no decision, say so.",
-  "updated": "2026-08-30",
+  "_README": "The manifest that decides what news matters. YAAIN's filter reads THIS, not a hardcoded prompt. If you install something on brownie or the studio, or pin/upgrade a tool, UPDATE THIS FILE IN THE SAME BREATH — otherwise YAAIN decays into exactly the staleness it exists to prevent. Last audited against the machines: 2026-09-14 (refs/yaain-review-2026-09-14.md). Prior audit 2026-08-30 (refs/yaain-landscape-review-2026-08-30.md part (a)). AND WHEN YOU ADD A MODEL, WRITE ITS `chosen` BLOCK IN THE SAME COMMIT — the reason, the date, and a pointer to the entry that records it. A model with no recorded reason is one nobody can supersede on purpose later; if there genuinely was no decision, say so.",
+  "updated": "2026-09-14",
   "machines": [
     {
       "name": "studio",
@@ -23,24 +23,26 @@
   ],
   "models": [
     {
-      "name": "qwen3.6",
+      "name": "qwen3.8",
       "aliases": [
+        "qwen3.8",
+        "qwen 3.8",
         "qwen3.6",
         "qwen 3.6",
         "qwen3",
-        "bosun-brain",
-        "qwen3.8",
-        "qwen4"
+        "qwen4",
+        "bosun-brain"
       ],
       "runs_on": "studio",
-      "detail": "27b-bf16 / 27b-coding-bf16 / 27b-q8_0 / 27b-q4_K_M / 35b-a3b MoE. `bosun-brain` is the q4_K_M at 98,304 ctx, ~23.6GB resident.",
+      "detail": "`bosun-brain` is **qwen3.8:27b-mlx** (Apple MLX build, nvfp4, 18.2GB on disk / ~19.4GB resident) at a PINNED num_ctx of 98,304 — without that pin Hermes auto-detects the training max. Also on the studio: qwen3.8:latest (Q4_K_M), and the qwen3.6 line (27b-bf16 / 27b-coding-bf16 / 27b-q8_0 / 27b-q4_K_M / 35b-a3b MoE) kept as rollback.",
       "used_by": "Bosun's own brain; repo-hunter enrich+explain; mac-hunter llm_generic; takomagether social drafts + council attribution",
       "chosen": {
-        "date": "2026-08-14",
-        "why": "Bosun's brain, set in the Hermes phase-1 build: the largest model the studio already served that still leaves room for co-tenants, and off-API per the local-first preference. RECORDED AS PROVISIONAL AT THE TIME — a brain bake-off was planned and has still never run (it was waiting on the council batch to release the studio; that finished 2026-08-21, so it is unblocked).",
-        "ref": "observations.md 2026-08-14; refs/hermes-phase1-results-2026-08-14.md; tracker bosun-brain",
-        "revisit_if": "the bake-off runs, OR a newer Qwen generation clears the same four bars — Apache-2.0, ungated, ~27B class, served by Ollama. Qwen3.8-27B meets all four as of 2026-08-30 and this decision was never finalised, so it is the weakest of our model choices, not the strongest."
-      }
+        "date": "2026-09-12",
+        "why": "Em's call, taken in two steps on the same day. qwen3.8 over qwen3.6 on QUALITY: it beats 3.6 on all nine shared published benchmarks. Then MLX over GGUF on MEASURED SPEED, head to head at the same model and window — read 198.3/181.7/143.3 tok/s at 22K/45K/90K against GGUF's 179.2/164.0/139.9, and WROTE at 28.8 vs 15.7 tok/s, 83% faster. The 'MLX prefill collapses past 40K' claim that had justified a move back to GGUF is FALSE on this machine at every depth Bosun can reach. ⚠️ KNOWINGLY BOUGHT: nvfp4 has no published quality figures from anyone, for any model, where Q4_K_M does — a measured speed paid for with a quality assurance given up.",
+        "ref": "observations.md 2026-09-12 (three entries); refs/studio-model-choice-2026-09-12.md; refs/exec-2026-09-13-bosun-brain-swap.md (EXECUTED — corrects its own handoff in four places); tracker bosun-brain-qwen38",
+        "revisit_if": "a newer Qwen generation clears the same bars (Apache-2.0, ungated, ~27B class, served by Ollama), OR published quality figures appear for nvfp4 and contradict the bet. ⚠️ Qwen3.8-Flash-Next (180B) and Qwen3.8-2.4T-A95B do NOT clear them — both are far beyond 128GB at any quantisation, and both carry an 'other' licence rather than Apache-2.0. Behaviour DID shift between formats: the MLX brain refused the watchdog's bare-token health check as injection-shaped where the GGUF brain complied. The probe was at fault and is fixed."
+      },
+      "licence": "Apache-2.0, ungated (the 27B line). NB the Flash-Next and 2.4T flagships are licensed \"other\", not Apache-2.0."
     },
     {
       "name": "Qwen-Image",
@@ -230,7 +232,7 @@
       "aliases": [
         "ollama"
       ],
-      "detail": "serves every studio model, tailnet-bound. num_ctx pins and keep-alive behaviour are load-bearing for us.",
+      "detail": "serves every studio model, tailnet-bound. num_ctx pins and keep-alive behaviour are load-bearing for us. Running the MLX engine on Apple silicon since 2026-09-12 — so Ollama's MLX work is no longer a preview we are watching, it is the engine under Bosun's brain.",
       "critical": true
     },
     {
@@ -250,7 +252,7 @@
         "unetloadergguf",
         "city96"
       ],
-      "detail": "provides UnetLoaderGGUF + DualCLIPLoaderGGUF — THE ONLY WAY our LTX-2.3 model AND its gemma text encoder load. Verified 2026-08-31: we sit EXACTLY at upstream HEAD (6ea2651, rev-list 0/0), and upstream's newest commit is still 2026-01-12. Unmaintained (7.5 months) but NOT stale — there is nothing to take. The Gemma3 12B commits are already installed and add TEXT support only; they do NOT fix the transposed vision mmproj.",
+      "detail": "provides UnetLoaderGGUF + DualCLIPLoaderGGUF — THE ONLY WAY our LTX-2.3 model AND its gemma text encoder load. Re-verified 2026-09-14 against the GitHub API: upstream HEAD is STILL 6ea2651 of 2026-01-12, and we sit exactly on it. Unmaintained (8 months) but NOT stale — there is nothing to take. ⚠️ The Gemma3 12B commits are ALREADY INSTALLED and add TEXT support only; they do NOT fix the transposed vision mmproj. If a 'new ComfyUI-GGUF commit' ever appears in the feed again, check the commit DATE before believing maintenance resumed — the 2026-08-30 first poll reported these January commits as news.",
       "critical": true
     },
     {
@@ -288,7 +290,7 @@
         "claude code",
         "claude-code"
       ],
-      "detail": "the agent this whole operation is built in; subscription, not metered",
+      "detail": "the agent this whole operation is built in. ⚠️ NOT purely subscription: interactive sessions are, but the @bosun Slack bot shells to the CLI with `--bare`, which forces API-key auth and IS METERED — so a prompt-cache regression in Claude Code costs real money on the Anthropic bill, not just patience. The Mini runs 2.1.197 (2026-09-14), which is ~70 releases behind.",
       "critical": true
     },
     {
@@ -298,7 +300,7 @@
         "hermes-agent",
         "nousresearch"
       ],
-      "detail": "PINNED v0.20.1 at commit f80f453a — NEVER AUTO-UPDATE. Our loop patches are re-applied by hand after any update.",
+      "detail": "PINNED v0.20.6 — verified live on the harness 2026-09-14 (/health reports 0.20.6). NEVER AUTO-UPDATE: our loop patches are re-applied by hand after any update. ⚠️ DO NOT TAKE 0.21.x YET — v0.21.0 was a ~5,800-commit rewrite and v0.21.2 is the patch fixing state.db fragility that v0.21.0 itself introduced. Revisit when 0.21.x has been quiet for a few weeks. (This line said 'PINNED v0.20.1 at commit f80f453a' until 2026-09-14, two weeks after the pin actually moved — which is why every 0.20.x patch release read as news.)",
       "critical": true
     },
     {
