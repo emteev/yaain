@@ -5,8 +5,29 @@
     <link>https://emteev.github.io/yaain</link>
     <description>AI news filtered against one specific stack: what changed that affects something we actually run. Tiered act / watch / context.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 15 Sep 2026 16:30:11 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 15 Sep 2026 22:45:56 +0000</lastBuildDate>
     <atom:link href="https://emteev.github.io/yaain/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Claude Code 2.1.273</title>
+      <link>https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md#21273</link>
+      <guid isPermaLink="true">https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md#21273</guid>
+      <pubDate>Tue, 15 Sep 2026 22:45:56 +0000</pubDate>
+      <source>Claude Code Changelog</source>
+      <category domain="verdict">act</category>
+      <category domain="stack">Claude Code</category>
+      <description>Claude Code 2.1.273 fixes a bug where /login, /upgrade, and /extra-usage discarded earlier thinking from the conversation, forcing a full prompt-cache rewrite on the next request. The Mini is running 2.1.197, which is ~76 releases behind this fix. The prompt-cache rewrite bug is directly cost-relevant since the @bosun Slack bot uses API-key auth and is metered — this fix reduces unnecessary cache misses and real Anthropic API charges.</description>
+    </item>
+    <item>
+      <title>v0.34.1</title>
+      <link>https://github.com/ollama/ollama/releases/tag/v0.34.1</link>
+      <guid isPermaLink="true">https://github.com/ollama/ollama/releases/tag/v0.34.1</guid>
+      <pubDate>Tue, 15 Sep 2026 20:10:42 +0000</pubDate>
+      <source>Ollama releases</source>
+      <author>github-actions[bot]</author>
+      <category domain="verdict">act</category>
+      <category domain="stack">Ollama</category>
+      <description>What's ChangedMLX safetensorsollama createno longer experimental.  GGUF model creation now requires using llama.cpp tooling for safetensor conversion and quantization.Improved MLX memory handling on Apple SiliconRunaway repeat token detection now requires 100 repeat tokens for reduced false positives (e.g. OCR)/api/tagsis much faster on large model libraries (3.1 s → 294 ms cold in testing), and model capabilities are now reported consistently.Deprecatedtypical_p: it can no longer be set when creating new models, existing GGUF models retain support.MLX and llama.cpp updatesFull Changelog:v0.34.0...v0.34.1-rc1 MLX safetensors creation is now non-experimental and GGUF creation now requires llama.cpp tooling — both changes affect how we build and manage models for bosun-brain and the studio fleet, and the MLX memory handling improvement directly affects our Apple M1 Ultra setup.</description>
+    </item>
     <item>
       <title>Intermittent error spikes for Claude Mythos 5.1 and Claude Fable 5.1</title>
       <link>https://status.claude.com/incidents/6304r9jjhj34</link>
