@@ -5,8 +5,19 @@
     <link>https://emteev.github.io/yaain</link>
     <description>AI news filtered against one specific stack: what changed that affects something we actually run. Tiered act / watch / context.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 15 Sep 2026 03:52:20 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 15 Sep 2026 09:16:09 +0000</lastBuildDate>
     <atom:link href="https://emteev.github.io/yaain/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>v0.34.1</title>
+      <link>https://github.com/ollama/ollama/releases/tag/v0.34.1-rc2</link>
+      <guid isPermaLink="true">https://github.com/ollama/ollama/releases/tag/v0.34.1-rc2</guid>
+      <pubDate>Tue, 15 Sep 2026 05:08:21 +0000</pubDate>
+      <source>Ollama releases</source>
+      <author>github-actions[bot]</author>
+      <category domain="verdict">act</category>
+      <category domain="stack">Ollama</category>
+      <description>What's Changedapp: fix ChatGPT model selector spacingmlxrunner: Evict prefix cache snapshots from the active conversationmlxrunner: check system free memory and wait for evicted runners before loading the next MLX modelllm: raise token repeat limit to 100 and return error instead of incomplete resultmlx: scope array lifetimes instead of pinning and sweepingllm: keep gemma3n projector off the CPUapp: refresh Apps layout and command copy feedbackMLX and llama.cpp updatesFull Changelog:v0.34.0...v0.34.1-rc1 The mlxrunner memory eviction and free-memory check fixes directly affect bosun-brain (qwen3.8:27b-mlx on the MLX engine), which runs under memory pressure on the studio — this is a real stability improvement for our pinned 98,304-token context.</description>
+    </item>
     <item>
       <title>v0.4.1</title>
       <link>https://github.com/ggml-org/llama.cpp/releases/tag/v0.4.1</link>
