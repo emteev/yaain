@@ -5,8 +5,17 @@
     <link>https://emteev.github.io/yaain</link>
     <description>AI news filtered against one specific stack: what changed that affects something we actually run. Tiered act / watch / context.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 15 Sep 2026 09:16:09 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 15 Sep 2026 16:30:11 +0000</lastBuildDate>
     <atom:link href="https://emteev.github.io/yaain/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Intermittent error spikes for Claude Mythos 5.1 and Claude Fable 5.1</title>
+      <link>https://status.claude.com/incidents/6304r9jjhj34</link>
+      <guid isPermaLink="true">https://status.claude.com/incidents/6304r9jjhj34</guid>
+      <pubDate>Tue, 15 Sep 2026 11:14:44 +0000</pubDate>
+      <source>Anthropic status</source>
+      <category domain="verdict">context</category>
+      <description>Sep15,11:14UTCResolved- A fix has been deployed for Claude Mythos 5.1 and Claude Fable 5.1 and we are monitoring to ensure it has resolved the issue.Sep15,10:50UTCMonitoring- A fix has been deployed for Claude Mythos 5.1 and Claude Fable 5.1 and we are monitoring to ensure it has resolved the issue.Sep15,09:52UTCUpdate- We are investigating elevated errors on requests to Claude Mythos 5.1 and Claude Fable 5.1. We will provide an update as soon as possible.Sep15,09:48UTCInvestigating- We are investigating elevated errors on requests to Claude Mythos 5.1 and Claude Fable 5.1. We will provide an update as soon as possible. New Anthropic model names (Mythos 5.1, Fable 5.1) not in our config suggest the API model lineup has evolved — worth knowing for when we next audit which models our raters and day-file actually call, even though the incident itself is resolved.</description>
+    </item>
     <item>
       <title>v0.34.1</title>
       <link>https://github.com/ollama/ollama/releases/tag/v0.34.1-rc2</link>
