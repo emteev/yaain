@@ -5,8 +5,19 @@
     <link>https://emteev.github.io/yaain</link>
     <description>AI news filtered against one specific stack: what changed that affects something we actually run. Tiered act / watch / context.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 16 Sep 2026 16:21:11 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 16 Sep 2026 22:42:57 +0000</lastBuildDate>
     <atom:link href="https://emteev.github.io/yaain/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Show HN: Swift-Qwen3.8-27B, -58.3% thinking, x1.95 speed, accuracy of xhigh</title>
+      <link>https://huggingface.co/ukisai/Swift-Qwen3.8-27b</link>
+      <guid isPermaLink="true">https://huggingface.co/ukisai/Swift-Qwen3.8-27b</guid>
+      <pubDate>Wed, 16 Sep 2026 14:24:05 +0000</pubDate>
+      <source>Hacker News — gguf</source>
+      <author>kisjovan</author>
+      <category domain="verdict">watch</category>
+      <category domain="stack">qwen3.8</category>
+      <description>Swift-Qwen3.8-27B is a post-trained variant of Qwen3.8 27B with 58.3% fewer thinking tokens, 1.95x speed improvement, and &lt;1% accuracy loss via on-policy distillation; GGUF versions Q1–Q8 are available on HuggingFace. The Q4_K_M variant would fit within studio's memory envelope and run under Ollama. Bosun's brain runs qwen3.8:27b-mlx at a pinned 98,304 context; a 1.95x throughput gain with near-identical accuracy on the same base model is directly relevant to whether we swap or supplement that pin.</description>
+    </item>
     <item>
       <title>Claude Code 2.1.273</title>
       <link>https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md#21273</link>
