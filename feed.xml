@@ -5,8 +5,29 @@
     <link>https://emteev.github.io/yaain</link>
     <description>AI news filtered against one specific stack: what changed that affects something we actually run. Tiered act / watch / context.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 17 Sep 2026 22:44:05 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2026 03:41:19 +0000</lastBuildDate>
     <atom:link href="https://emteev.github.io/yaain/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Claude Code 2.1.276</title>
+      <link>https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md#21276</link>
+      <guid isPermaLink="true">https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md#21276</guid>
+      <pubDate>Fri, 18 Sep 2026 03:41:19 +0000</pubDate>
+      <source>Claude Code Changelog</source>
+      <category domain="verdict">act</category>
+      <category domain="stack">Claude Code</category>
+      <description>Claude Code 2.1.276 fixes a regression introduced in 2.1.275 where every request failed with a 400 error ('Input tag advisor_20260301') when ANTHROPIC_BASE_URL pointed at a proxy or gateway. The Mini currently runs 2.1.197, which is ~79 releases behind. If the @bosun Slack bot's CLI path uses ANTHROPIC_BASE_URL with any proxy or gateway, upgrading past 2.1.275 without landing on 2.1.276 would break every request — and we're far enough behind that a targeted upgrade review is warranted.</description>
+    </item>
+    <item>
+      <title>v2.1.276</title>
+      <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.276</link>
+      <guid isPermaLink="true">https://github.com/anthropics/claude-code/releases/tag/v2.1.276</guid>
+      <pubDate>Fri, 18 Sep 2026 02:12:26 +0000</pubDate>
+      <source>Claude Code releases</source>
+      <author>ashwin-ant</author>
+      <category domain="verdict">act</category>
+      <category domain="stack">Claude Code</category>
+      <description>What's changedFixed every request failing with400 … Input tag 'advisor_20260301'whenANTHROPIC_BASE_URLpoints at a proxy or gateway (2.1.275 regression) 2.1.275 introduced a regression that breaks every request when using a proxy/gateway via ANTHROPIC_BASE_URL — 2.1.276 fixes it, and our Mini runs 2.1.197 which is now ~79 releases behind a critical breakage/fix cycle.</description>
+    </item>
     <item>
       <title>Claude Code 2.1.275</title>
       <link>https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md#21275</link>
