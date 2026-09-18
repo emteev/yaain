@@ -5,8 +5,18 @@
     <link>https://emteev.github.io/yaain</link>
     <description>AI news filtered against one specific stack: what changed that affects something we actually run. Tiered act / watch / context.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 18 Sep 2026 03:41:19 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2026 08:52:30 +0000</lastBuildDate>
     <atom:link href="https://emteev.github.io/yaain/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>[AINews] not much happened today</title>
+      <link>https://www.latent.space/p/ainews-not-much-happened-today-612</link>
+      <guid isPermaLink="true">https://www.latent.space/p/ainews-not-much-happened-today-612</guid>
+      <pubDate>Fri, 18 Sep 2026 06:28:43 +0000</pubDate>
+      <source>Latent Space</source>
+      <category domain="verdict">act</category>
+      <category domain="stack">Claude Code</category>
+      <description>a quiet day Claude Code now has a Projects feature enabling parallel cloud sessions with context passing — this affects how the @bosun Slack bot (which shells to Claude Code CLI with --bare and IS METERED) may accumulate costs if multi-session orchestration is triggered inadvertently.</description>
+    </item>
     <item>
       <title>Claude Code 2.1.276</title>
       <link>https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md#21276</link>
