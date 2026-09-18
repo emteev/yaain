@@ -5,8 +5,18 @@
     <link>https://emteev.github.io/yaain</link>
     <description>AI news filtered against one specific stack: what changed that affects something we actually run. Tiered act / watch / context.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 18 Sep 2026 16:00:21 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2026 19:01:01 +0000</lastBuildDate>
     <atom:link href="https://emteev.github.io/yaain/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Claude Code 2.1.277</title>
+      <link>https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md#21277</link>
+      <guid isPermaLink="true">https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md#21277</guid>
+      <pubDate>Fri, 18 Sep 2026 19:01:01 +0000</pubDate>
+      <source>Claude Code Changelog</source>
+      <category domain="verdict">act</category>
+      <category domain="stack">Claude Code</category>
+      <description>Claude Code 2.1.277 adds AGENTS.md support as a CLAUDE.md fallback, fixes `-p`/Agent SDK sessions that hung silently on internal errors, and fixes conversations failing with 'text content blocks must be non-empty' after resuming sessions with empty assistant turns. The Mini is running 2.1.197, which is now ~80 releases behind. The hung-session and empty-block-crash fixes are directly relevant to the @bosun Slack bot's `--bare` CLI sessions, which are metered API calls — silent hangs or failures there cost money and pipeline time.</description>
+    </item>
     <item>
       <title>[AINews] not much happened today</title>
       <link>https://www.latent.space/p/ainews-not-much-happened-today-612</link>
